@@ -42,7 +42,6 @@ export default function HomePage() {
           imageAiHint={highlightContent.imageAiHint}
           features={highlightContent.features}
           imagePosition="left" 
-          className="bg-black text-primary-foreground"
         />
       </FadeInScroll>
 
