@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 export default function ImageGallery() {
   const images = [
-    { id: 1, alt: 'Gallery image 1', hint: 'product lifestyle' },
-    { id: 2, alt: 'Gallery image 2', hint: 'action shot' },
-    { id: 3, alt: 'Gallery image 3', hint: 'flavor ingredients' },
+    { id: 1, src: '/Smoke-Package.png', alt: 'Smoke flavor Primal Cuts package', hint: 'product package smoke' },
+    { id: 2, src: 'https://placehold.co/300x424.png', alt: 'Gallery image 2', hint: 'action shot' },
+    { id: 3, src: 'https://placehold.co/300x424.png', alt: 'Gallery image 3', hint: 'flavor ingredients' },
   ];
 
   return (
@@ -14,7 +14,7 @@ export default function ImageGallery() {
           {images.map((image) => (
             <div key={image.id} className="aspect-[300/424] w-full rounded-lg overflow-hidden shadow-lg group transform transition-transform duration-300 hover:scale-105">
               <Image
-                src="https://placehold.co/300x424.png"
+                src={image.src}
                 alt={image.alt}
                 width={300}
                 height={424}
