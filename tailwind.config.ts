@@ -68,6 +68,7 @@ export default {
         buttonCta: {
           DEFAULT: 'hsl(var(--button-cta-background))',
           foreground: 'hsl(var(--button-cta-foreground))',
+          text: 'hsl(var(--button-cta-text))',
         },
       },
       borderRadius: {

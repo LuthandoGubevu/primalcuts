@@ -50,6 +50,7 @@
 
     --button-cta-background: 45 51% 35%; /* Approx #866f2b */
     --button-cta-foreground: 0 0% 0%; /* Black text */
+    --button-cta-text: 45 51% 35%; /* #866f2b for text */
   }
 
   .dark {
@@ -93,6 +94,7 @@
 
     --button-cta-background: 45 51% 35%; /* Approx #866f2b */
     --button-cta-foreground: 0 0% 0%; /* Black text */
+    --button-cta-text: 45 51% 35%; /* #866f2b for text */
   }
 }
 
