@@ -20,6 +20,17 @@ const highlightContent = {
   ],
 };
 
+const newSectionContent = {
+  imageSrc: "https://placehold.co/600x500.png",
+  imageAlt: "New section placeholder image",
+  imageAiHint: "product detail quality",
+  features: [
+    { text: "Discover our commitment to quality ingredients." },
+    { text: "Sourced from the finest American farms." },
+    { text: "Experience unmatched flavor and texture in every bite." },
+  ],
+};
+
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -41,7 +52,17 @@ export default function HomePage() {
           imageAlt={highlightContent.imageAlt}
           imageAiHint={highlightContent.imageAiHint}
           features={highlightContent.features}
-          className="bg-background" 
+        />
+      </FadeInScroll>
+
+      <FadeInScroll threshold={0.1} delay="md:delay-100">
+        <Highlight
+          imageSrc={newSectionContent.imageSrc}
+          imageAlt={newSectionContent.imageAlt}
+          imageAiHint={newSectionContent.imageAiHint}
+          features={newSectionContent.features}
+          imagePosition="left" // Default, but explicit for clarity
+          className="bg-secondary/10" // A slightly different background for distinction
         />
       </FadeInScroll>
       
@@ -61,4 +82,3 @@ export default function HomePage() {
     </div>
   );
 }
-
