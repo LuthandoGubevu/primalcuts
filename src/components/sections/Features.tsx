@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { WheatOff, Leaf, Beef, VenetianMask, ShieldCheck, type LucideProps } from 'lucide-react'; // Changed CandyOff to VenetianMask (more abstract for 'zero')
+import { Leaf, Beef, VenetianMask, ShieldCheck, type LucideProps } from 'lucide-react'; // Changed CandyOff to VenetianMask (more abstract for 'zero')
 
 interface FeatureItem {
   name: string;
@@ -10,7 +10,7 @@ interface FeatureItem {
 
 const featuresData: FeatureItem[] = [
   { name: 'Gluten Free', icon: '/PC-Elements-06.png', description: 'Product is free from gluten.', isImage: true },
-  { name: 'Keto Friendly', icon: Leaf, description: 'Suitable for ketogenic diets.' }, // Leaf as a more general 'natural/diet' icon
+  { name: 'Keto Friendly', icon: '/PC-Elements-07.png', description: 'Suitable for ketogenic diets.', isImage: true },
   { name: '32G Protein', icon: Beef, description: 'Contains 32 grams of protein per serving.' },
   { name: 'Zero Sugar', icon: VenetianMask, description: 'Contains no added sugar.' }, // VenetianMask as abstract representation of 'Zero' or 'No'
   { name: 'Whole30 Approved', icon: ShieldCheck, description: 'Approved for the Whole30 program.' },
