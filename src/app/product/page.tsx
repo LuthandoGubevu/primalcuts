@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Hero from '@/components/sections/Hero'; // Import the Hero component
 import ProductHero from '@/components/product/ProductHero';
 import ProductFeatures from '@/components/product/ProductFeatures';
 import NutritionFacts from '@/components/product/NutritionFacts';
@@ -11,6 +12,17 @@ import Footer from '@/components/sections/Footer';
 export default function ProductPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-black">
+      <FadeInScroll threshold={0.01}>
+        <Hero
+          backgroundImageSrc="https://placehold.co/1920x1080.png"
+          backgroundImageAlt="Product page hero background"
+          backgroundImageAiHint="product lifestyle background"
+          priorityBackgroundImage={true}
+          priorityLogoImage={true}
+          // Defaults for logo and minHeight will be used from Hero component
+        />
+      </FadeInScroll>
+
       <main className="container mx-auto px-4 py-8 flex-grow">
         <FadeInScroll threshold={0.1} delay="md:delay-100">
           <ProductHero />
@@ -43,4 +55,3 @@ export default function ProductPage() {
     </div>
   );
 }
-
