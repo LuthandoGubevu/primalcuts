@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import ProductHero from '@/components/product/ProductHero';
 import ProductFeatures from '@/components/product/ProductFeatures';
 import NutritionFacts from '@/components/product/NutritionFacts';
-import ProductDetails from '@/components/product/ProductDetails';
 import FadeInScroll from '@/components/utils/FadeInScroll';
 import Footer from '@/components/sections/Footer';
 
@@ -36,13 +35,11 @@ export default function ProductPage() {
           <ProductFeatures />
         </FadeInScroll>
 
-        <FadeInScroll threshold={0.1} delay="md:delay-400">
-          <ProductDetails />
-        </FadeInScroll>
       </main>
-      <FadeInScroll threshold={0.1} delay="md:delay-500">
+      <FadeInScroll threshold={0.1} delay="md:delay-400">
         <Footer />
       </FadeInScroll>
     </div>
   );
 }
+
