@@ -24,7 +24,7 @@ export default function Highlight({
   className,
 }: HighlightProps) {
   return (
-    <section className={cn("py-16 md:py-24 bg-background", className)}>
+    <section className={cn("py-16 md:py-24 bg-muted", className)}>
       <div className="container mx-auto px-4">
         <div className={cn(
           "flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16",
