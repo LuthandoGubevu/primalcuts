@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Leaf, Beef, VenetianMask, ShieldCheck, type LucideProps } from 'lucide-react'; // Changed CandyOff to VenetianMask (more abstract for 'zero')
 
@@ -23,14 +24,14 @@ export default function Features() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8 text-center">
           {featuresData.map((feat) => (
             <div key={feat.name} className="flex flex-col items-center space-y-3 group transform transition-transform duration-300 hover:scale-105">
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-primary-foreground/10 border-2 border-primary-foreground/30 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-accent group-hover:border-accent shadow-md group-hover:shadow-lg p-2">
+              <div className="w-20 md:w-24 aspect-[2/3] bg-primary-foreground/10 border-2 border-primary-foreground/30 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-accent group-hover:border-accent shadow-md group-hover:shadow-lg p-2">
                 {feat.isImage && typeof feat.icon === 'string' ? (
                   <Image
                     src={feat.icon}
                     alt={`${feat.name} icon`}
-                    width={60} // Adjust size as needed
-                    height={60} // Adjust size as needed
-                    className="object-contain"
+                    width={60} 
+                    height={60} 
+                    className="object-contain w-full h-full"
                     data-ai-hint="feature icon"
                   />
                 ) : (
