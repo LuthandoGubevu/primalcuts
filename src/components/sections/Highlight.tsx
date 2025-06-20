@@ -10,6 +10,7 @@ interface HighlightProps {
   imageSrc: string;
   imageAlt: string;
   imageAiHint: string;
+  heading?: string; // Added optional heading
   features: FeatureItem[];
   imagePosition?: 'left' | 'right';
   className?: string;
@@ -20,13 +21,14 @@ export default function Highlight({
   imageSrc,
   imageAlt,
   imageAiHint,
+  heading, // Destructure new heading prop
   features,
   imagePosition = 'left',
   className,
-  displayMode = 'list', // Default to 'list'
+  displayMode = 'list',
 }: HighlightProps) {
   return (
-    <section className={cn("py-16 md:py-24 bg-background", className)}>
+    <section className={cn("py-16 md:py-24", className)}>
       <div className="container mx-auto px-4">
         <div className={cn(
           "flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16",
@@ -47,9 +49,19 @@ export default function Highlight({
             imagePosition === 'right' ? "md:text-right" : "md:text-left"
           )}>
             {displayMode === 'paragraph' ? (
-              <p className="font-body text-lg md:text-xl leading-relaxed">
-                {features.map(feature => feature.text).join(' ')}
-              </p>
+              <div>
+                {heading && (
+                  <h3 className={cn(
+                    "font-headline text-2xl md:text-3xl font-semibold mb-4",
+                    "text-accent" // Apply accent color to heading
+                  )}>
+                    {heading}
+                  </h3>
+                )}
+                <p className="font-body text-lg md:text-xl leading-relaxed">
+                  {features.map(feature => feature.text).join(' ')}
+                </p>
+              </div>
             ) : (
               <ul className="space-y-4 font-body text-lg md:text-xl leading-relaxed">
                 {features.map((feature, index) => (

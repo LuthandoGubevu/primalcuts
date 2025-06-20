@@ -9,25 +9,13 @@ import ContactCTA from '@/components/sections/ContactCTA';
 import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
 
-const highlightContent = {
-  imageSrc: "/PC-Elements-11.png",
-  imageAlt: "Primal Cuts steak with spices",
-  imageAiHint: "steak spices",
-  features: [
-    { text: "HIGH PROTEIN CONTENT (16G PROTEIN PER OUNCE)" },
-    { text: "NO ARTIFICIAL PRESERVATIVES OR NITRATES" },
-    { text: "NUTRIENT-DENSE" },
-  ],
-};
-
 const newSectionContent = {
   imageSrc: "/black-pepper.jpg",
-  imageAlt: "Black pepper corns",
-  imageAiHint: "black pepper spices",
+  imageAlt: "Black pepper corns with premium steak",
+  imageAiHint: "black pepper steak",
+  heading: "GRASS-FED. AIR-DRIED. PREMIUM PROTEIN",
   features: [
-    { text: "Discover our commitment to quality ingredients." },
-    { text: "Sourced from the finest American farms." },
-    { text: "Experience unmatched flavor and texture in every bite." },
+    { text: "Enriched with a select blend of all-natural spices, unveiling a deep, refined umami reminiscent of the finest grilled steak." },
   ],
 };
 
@@ -48,18 +36,10 @@ export default function HomePage() {
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
         <Highlight
-          imageSrc={highlightContent.imageSrc} 
-          imageAlt={highlightContent.imageAlt}
-          imageAiHint={highlightContent.imageAiHint}
-          features={highlightContent.features}
-        />
-      </FadeInScroll>
-
-      <FadeInScroll threshold={0.1} delay="md:delay-100">
-        <Highlight
           imageSrc={newSectionContent.imageSrc}
           imageAlt={newSectionContent.imageAlt}
           imageAiHint={newSectionContent.imageAiHint}
+          heading={newSectionContent.heading}
           features={newSectionContent.features}
           imagePosition="right" 
           className="bg-[#05080b] text-primary-foreground dark:text-foreground"
@@ -83,4 +63,3 @@ export default function HomePage() {
     </div>
   );
 }
-
