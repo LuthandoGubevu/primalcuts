@@ -24,7 +24,7 @@ export default function Highlight({
   className,
 }: HighlightProps) {
   return (
-    <section className={cn("py-16 md:py-24 bg-black text-white", className)}>
+    <section className={cn("py-16 md:py-24 bg-background", className)}>
       <div className="container mx-auto px-4">
         <div className={cn(
           "flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16",
@@ -51,7 +51,7 @@ export default function Highlight({
                   imagePosition === 'right' ? "md:justify-end" : "md:justify-start"
                 )}>
                   <CheckCircle 
-                    className="w-6 h-6 mr-3 text-white shrink-0 mt-1"
+                    className="w-6 h-6 mr-3 text-primary shrink-0 mt-1"
                     aria-hidden="true" 
                   />
                   <span>{feature.text}</span>
