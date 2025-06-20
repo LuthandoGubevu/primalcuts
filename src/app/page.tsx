@@ -62,7 +62,7 @@ export default function HomePage() {
           imageAiHint={newSectionContent.imageAiHint}
           features={newSectionContent.features}
           imagePosition="right" 
-          className="bg-secondary/10"
+          className="bg-[#05080b] text-primary-foreground dark:text-foreground"
           displayMode="paragraph"
         />
       </FadeInScroll>
