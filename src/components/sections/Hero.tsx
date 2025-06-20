@@ -18,9 +18,9 @@ export default function Hero() {
         <Image
           src="/Primal-Logo.png"
           alt="Primal Cuts Logo"
-          width={400} // You can adjust this
-          height={200} // You can adjust this
-          className="mb-8" // Added some margin for spacing
+          width={300} 
+          height={150} 
+          className="mb-8" 
           data-ai-hint="company logo"
           priority
         />
