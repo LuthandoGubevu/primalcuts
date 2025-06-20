@@ -42,6 +42,7 @@ export default function HomePage() {
           imageAiHint={highlightContent.imageAiHint}
           features={highlightContent.features}
           imagePosition="left" 
+          className="bg-black text-primary-foreground"
         />
       </FadeInScroll>
 
@@ -52,7 +53,7 @@ export default function HomePage() {
           imageAiHint={highlightContent.imageAiHint}
           features={highlightContent.features}
           imagePosition="right" 
-          className="bg-background" // Revert second instance to page background
+          className="bg-background" 
         />
       </FadeInScroll>
       
