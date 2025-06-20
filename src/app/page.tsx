@@ -19,6 +19,17 @@ const newSectionContent = {
   ],
 };
 
+const anotherNewSectionContent = {
+  imageSrc: "https://placehold.co/600x500.png",
+  imageAlt: "Placeholder image for new section",
+  imageAiHint: "placeholder details",
+  heading: "Another Quality Feature",
+  features: [
+    { text: "This is some descriptive text about another great feature of our product. We focus on excellence." },
+    { text: "Crafted with care and precision for the best experience." }
+  ],
+};
+
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -32,6 +43,19 @@ export default function HomePage() {
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
         <Features />
+      </FadeInScroll>
+
+      <FadeInScroll threshold={0.1} delay="md:delay-100">
+        <Highlight
+          imageSrc={anotherNewSectionContent.imageSrc}
+          imageAlt={anotherNewSectionContent.imageAlt}
+          imageAiHint={anotherNewSectionContent.imageAiHint}
+          heading={anotherNewSectionContent.heading}
+          features={anotherNewSectionContent.features}
+          imagePosition="left"
+          className="bg-background"
+          displayMode="list" 
+        />
       </FadeInScroll>
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
