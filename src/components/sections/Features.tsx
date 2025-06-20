@@ -15,7 +15,7 @@ const featuresData: FeatureItem[] = [
   { name: 'Keto Friendly', icon: '/PC-Elements-07.png', description: 'Suitable for ketogenic diets.', isImage: true },
   { name: '32G Protein', icon: '/PC-Elements-08.png', description: 'Contains 32 grams of protein per serving.', isImage: true },
   { name: 'Zero Sugar', icon: '/PC-Elements-09.png', description: 'Contains no added sugar.', isImage: true },
-  { name: 'Whole30 Approved', icon: ShieldCheck, description: 'Approved for the Whole30 program.' },
+  { name: 'Whole30 Approved', icon: '/PC-Elements-10.png', description: 'Approved for the Whole30 program.', isImage: true },
 ];
 
 export default function Features() {
