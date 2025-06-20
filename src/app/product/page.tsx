@@ -7,11 +7,12 @@ import ProductFeatures from '@/components/product/ProductFeatures';
 import NutritionFacts from '@/components/product/NutritionFacts';
 import ProductDetails from '@/components/product/ProductDetails';
 import FadeInScroll from '@/components/utils/FadeInScroll';
+import Footer from '@/components/sections/Footer';
 
 export default function ProductPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-black">
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 flex-grow">
         <FadeInScroll threshold={0.01}>
           <div className="mb-8">
             <Button variant="outline" asChild className="border-gray-400 text-black hover:bg-buttonCta-text hover:text-white hover:border-buttonCta-text">
@@ -39,6 +40,9 @@ export default function ProductPage() {
           <ProductDetails />
         </FadeInScroll>
       </main>
+      <FadeInScroll threshold={0.1} delay="md:delay-500">
+        <Footer />
+      </FadeInScroll>
     </div>
   );
 }
