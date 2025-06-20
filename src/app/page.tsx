@@ -19,7 +19,7 @@ const newSectionContent = {
 };
 
 const anotherNewSectionContent = {
-  imageSrc: "/PC-Elements-11.png", // Updated from PC-Elements-11.jpg to PC-Elements-11.png
+  imageSrc: "/PC-Elements-11.png",
   imageAlt: "Primal Cuts ingredients",
   imageAiHint: "ingredients meat product",
   heading: "Another Quality Feature",
@@ -45,41 +45,40 @@ export default function HomePage() {
         <ImageGallery />
       </FadeInScroll>
       
-      <FadeInScroll threshold={0.1} delay="md:delay-100">
-        <Features />
-      </FadeInScroll>
+      {/* Features component now handles its own item animations */}
+      <Features />
 
-      <FadeInScroll threshold={0.1} delay="md:delay-100">
-        <Highlight
-          imageSrc={anotherNewSectionContent.imageSrc}
-          imageAlt={anotherNewSectionContent.imageAlt}
-          imageAiHint={anotherNewSectionContent.imageAiHint}
-          heading={anotherNewSectionContent.heading}
-          features={anotherNewSectionContent.features}
-          imagePosition="left"
-          className="bg-background"
-          displayMode="list" 
-        />
-      </FadeInScroll>
+      {/* Highlight components now handle their own internal animations */}
+      <Highlight
+        imageSrc={anotherNewSectionContent.imageSrc}
+        imageAlt={anotherNewSectionContent.imageAlt}
+        imageAiHint={anotherNewSectionContent.imageAiHint}
+        heading={anotherNewSectionContent.heading}
+        features={anotherNewSectionContent.features}
+        imagePosition="left"
+        className="bg-background"
+        displayMode="list" 
+      />
       
-      <FadeInScroll threshold={0.1} delay="md:delay-100">
-        <Highlight
-          imageSrc={newSectionContent.imageSrc}
-          imageAlt={newSectionContent.imageAlt}
-          imageAiHint={newSectionContent.imageAiHint}
-          heading={newSectionContent.heading}
-          features={newSectionContent.features}
-          imagePosition="right" 
-          className="bg-[#05080b] text-primary-foreground dark:text-foreground"
-          displayMode="paragraph"
-        />
-      </FadeInScroll>
+      <Highlight
+        imageSrc={newSectionContent.imageSrc}
+        imageAlt={newSectionContent.imageAlt}
+        imageAiHint={newSectionContent.imageAiHint}
+        heading={newSectionContent.heading}
+        features={newSectionContent.features}
+        imagePosition="right" 
+        className="bg-[#05080b] text-primary-foreground dark:text-foreground"
+        displayMode="paragraph"
+      />
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
         <ContactCTA />
       </FadeInScroll>
       
-      <Footer />
+      {/* Footer is wrapped with FadeInScroll by default, which gives a fade-up effect */}
+      <FadeInScroll threshold={0.1}>
+        <Footer />
+      </FadeInScroll>
     </div>
   );
 }

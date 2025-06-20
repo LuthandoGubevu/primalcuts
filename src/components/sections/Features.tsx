@@ -1,6 +1,7 @@
 
 import Image from 'next/image';
 import type { LucideProps } from 'lucide-react';
+import FadeInScroll from '@/components/utils/FadeInScroll';
 
 interface FeatureItem {
   name: string;
@@ -22,23 +23,36 @@ export default function Features() {
     <section className="py-12 md:py-16 bg-black text-primary-foreground">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8 text-center">
-          {featuresData.map((feat) => (
-            <div key={feat.name} className="flex flex-col items-center space-y-3 group transform transition-transform duration-300 hover:scale-105" aria-label={feat.description}>
-              <div className="w-20 md:w-24 aspect-[2/3] bg-transparent rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-transparent shadow-md group-hover:shadow-lg p-2">
-                {feat.isImage && typeof feat.icon === 'string' ? (
-                  <Image
-                    src={feat.icon}
-                    alt={`${feat.name} icon`}
-                    width={60}
-                    height={90}
-                    className="object-contain w-full h-full"
-                    data-ai-hint="feature icon"
-                  />
-                ) : (
-                  <feat.icon className="w-8 h-8 md:w-10 md:h-10 text-primary-foreground transition-colors duration-300 group-hover:text-accent-foreground" aria-hidden="true" />
-                )}
+          {featuresData.map((feat, index) => (
+            <FadeInScroll 
+              key={feat.name} 
+              threshold={0.1} 
+              // Example of simple incremental delay using Tailwind classes
+              // More complex staggering could involve dynamic style={{ transitionDelay: ... }}
+              delay={index === 0 ? '' : `delay-${Math.min(index * 100, 500)}`} 
+              slideDirection="up"
+            >
+              <div 
+                className="flex flex-col items-center space-y-3 group transform transition-transform duration-300 hover:scale-105" 
+                aria-label={feat.description}
+              >
+                <div className="w-20 md:w-24 aspect-[2/3] bg-transparent rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-transparent shadow-md group-hover:shadow-lg p-2">
+                  {feat.isImage && typeof feat.icon === 'string' ? (
+                    <Image
+                      src={feat.icon}
+                      alt={`${feat.name} icon`}
+                      width={60}
+                      height={90}
+                      className="object-contain w-full h-full"
+                      data-ai-hint="feature icon"
+                    />
+                  ) : (
+                    // Ensure feat.icon is a component here
+                    typeof feat.icon !== 'string' && <feat.icon className="w-8 h-8 md:w-10 md:h-10 text-primary-foreground transition-colors duration-300 group-hover:text-accent-foreground" aria-hidden="true" />
+                  )}
+                </div>
               </div>
-            </div>
+            </FadeInScroll>
           ))}
         </div>
       </div>
