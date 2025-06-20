@@ -52,7 +52,7 @@ export default function Highlight({
               <div>
                 {heading && (
                   <h3 className={cn(
-                    "font-headline text-2xl md:text-3xl font-semibold mb-4",
+                    "font-body text-2xl md:text-3xl font-semibold mb-4", // Changed from font-headline
                     "text-accent" // Apply accent color to heading
                   )}>
                     {heading}
