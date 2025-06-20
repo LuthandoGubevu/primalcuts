@@ -14,8 +14,8 @@ export default function ProductPage() {
     <div className="flex flex-col min-h-screen bg-white text-black">
       <FadeInScroll threshold={0.01}>
         <Hero
-          backgroundImageSrc="https://placehold.co/1920x1080.png"
-          backgroundImageAlt="Product page hero background"
+          backgroundImageSrc="/PC-Elements-27.jpg"
+          backgroundImageAlt="Primal Cuts product page hero background"
           backgroundImageAiHint="product lifestyle background"
           priorityBackgroundImage={true}
           priorityLogoImage={true}
