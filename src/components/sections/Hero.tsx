@@ -15,15 +15,7 @@ export default function Hero() {
       {/* <div className="absolute inset-0 bg-gradient-to-b from-primary/50 to-transparent z-0"></div> */}
       {/* <div className="absolute inset-0 bg-black/20 z-0"></div> */}
       <div className="relative z-10 flex flex-col items-center">
-        <Image
-          src="/Primal-Logo.png"
-          alt="Primal Cuts Logo"
-          width={300} 
-          height={300} 
-          priority
-          className="object-contain"
-          data-ai-hint="company logo steak" 
-        />
+        {/* The logo image placeholder has been removed */}
       </div>
     </section>
   );
