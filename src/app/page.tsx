@@ -1,4 +1,5 @@
 import Hero from '@/components/sections/Hero';
+import ImageGallery from '@/components/sections/ImageGallery';
 import Features from '@/components/sections/Features';
 import Highlight from '@/components/sections/Highlight';
 import Showcase from '@/components/sections/Showcase';
@@ -13,6 +14,10 @@ export default function HomePage() {
       {/* Hero section typically doesn't need fade-in as it's immediately visible, but can be added for consistency */}
       <FadeInScroll threshold={0.01}>
         <Hero />
+      </FadeInScroll>
+
+      <FadeInScroll threshold={0.1} delay="md:delay-100">
+        <ImageGallery />
       </FadeInScroll>
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
