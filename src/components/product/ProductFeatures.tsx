@@ -31,7 +31,7 @@ export default function ProductFeatures() {
                   data-ai-hint="feature icon product"
                 />
               </div>
-              <p className="font-body text-sm md:text-base font-medium text-primary-foreground text-center">{feat.name}</p>
+              {/* The paragraph displaying feat.name has been removed */}
             </div>
           ))}
         </div>
