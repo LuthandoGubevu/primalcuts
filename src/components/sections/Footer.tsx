@@ -1,11 +1,22 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-10 md:py-12 bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 flex flex-col items-center text-center">
+    <footer className="relative py-10 md:py-12 text-primary-foreground">
+      <Image
+        src="/PC-Elements-13.jpg"
+        alt="Primal Cuts textured background for footer"
+        layout="fill"
+        objectFit="cover"
+        className="absolute inset-0 z-0"
+        data-ai-hint="texture dark wood"
+      />
+      <div className="absolute inset-0 bg-black/60 z-10"></div> {/* Overlay for text readability */}
+      
+      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center">
         <div
           className="h-20 w-20 md:h-24 md:w-24 bg-primary-foreground/10 border-2 border-primary-foreground/30 rounded-full mb-4 flex items-center justify-center shadow-lg"
           aria-label="Primal Cuts Logo Placeholder"
