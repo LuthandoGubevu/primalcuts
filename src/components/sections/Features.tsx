@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import { Beef, VenetianMask, ShieldCheck, type LucideProps } from 'lucide-react';
+import { VenetianMask, ShieldCheck, type LucideProps } from 'lucide-react';
 
 interface FeatureItem {
   name: string;
@@ -12,7 +12,7 @@ interface FeatureItem {
 const featuresData: FeatureItem[] = [
   { name: 'Gluten Free', icon: '/PC-Elements-06.png', description: 'Product is free from gluten.', isImage: true },
   { name: 'Keto Friendly', icon: '/PC-Elements-07.png', description: 'Suitable for ketogenic diets.', isImage: true },
-  { name: '32G Protein', icon: Beef, description: 'Contains 32 grams of protein per serving.' },
+  { name: '32G Protein', icon: '/PC-Elements-08.png', description: 'Contains 32 grams of protein per serving.', isImage: true },
   { name: 'Zero Sugar', icon: VenetianMask, description: 'Contains no added sugar.' },
   { name: 'Whole30 Approved', icon: ShieldCheck, description: 'Approved for the Whole30 program.' },
 ];
@@ -38,7 +38,6 @@ export default function Features() {
                   <feat.icon className="w-8 h-8 md:w-10 md:h-10 text-primary-foreground transition-colors duration-300 group-hover:text-accent-foreground" aria-hidden="true" />
                 )}
               </div>
-              {/* The span element displaying feat.name has been removed */}
             </div>
           ))}
         </div>
