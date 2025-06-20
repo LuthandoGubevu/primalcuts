@@ -14,7 +14,7 @@ export default function Footer() {
         className="absolute inset-0 z-0"
         data-ai-hint="texture dark wood"
       />
-      <div className="absolute inset-0 bg-black/60 z-10"></div> {/* Overlay for text readability */}
+      <div className="absolute inset-0 bg-black/40 z-10"></div> {/* Overlay for text readability, opacity reduced */}
       
       <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center">
         <div
