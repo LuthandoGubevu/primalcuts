@@ -16,19 +16,43 @@ const placeholderImages = [
 ];
 
 export default function ProductHero() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0); // Index of the first image in the pair
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? placeholderImages.length - 1 : prevIndex - 1
+      // If prevIndex is 0, wrap to the start of the last possible pair (length - 2).
+      // Otherwise, decrement by 1.
+      prevIndex === 0 ? Math.max(0, placeholderImages.length - 2) : prevIndex - 1
     );
   };
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === placeholderImages.length - 1 ? 0 : prevIndex + 1
+      // If prevIndex is at or beyond the start of the last pair (length - 2), wrap to 0.
+      // Otherwise, increment by 1.
+      prevIndex >= Math.max(0, placeholderImages.length - 2) ? 0 : prevIndex + 1
     );
   };
+
+  // Ensure we have at least one image to display
+  if (placeholderImages.length === 0) {
+    return (
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold text-buttonCta-text">
+              ORIGINAL
+            </h1>
+            <p className="font-body text-xl md:text-2xl text-black/80 mt-2">
+              2oz SLICED BILTONG
+            </p>
+          </div>
+          <div className="text-center text-black/50">No images to display.</div>
+        </div>
+      </section>
+    );
+  }
+
 
   return (
     <section className="py-12 md:py-16 bg-white">
@@ -43,41 +67,68 @@ export default function ProductHero() {
         </div>
 
         {/* Image Slider */}
-        <div className="relative max-w-xl mx-auto"> {/* Adjusted max-width for better visual balance */}
-          <div className="aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-            {placeholderImages.map((image, index) => (
+        <div className="relative max-w-3xl mx-auto"> {/* Increased max-width */}
+          <div className="flex gap-4 justify-center"> {/* Flex container for two images */}
+            {/* Left Image */}
+            <div className="w-1/2 aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden shadow-lg">
               <Image
-                key={index}
-                src={image.src}
-                alt={image.alt}
-                width={600}
+                key={placeholderImages[currentIndex].src + '-1'}
+                src={placeholderImages[currentIndex].src}
+                alt={placeholderImages[currentIndex].alt}
+                width={600} // Original dimensions for quality hint
                 height={800}
-                className={`object-cover w-full h-full transition-opacity duration-500 ease-in-out ${currentIndex === index ? 'opacity-100' : 'opacity-0 absolute'}`}
-                data-ai-hint={image.hint}
-                priority={index === 0} // Prioritize loading the first image
+                className="object-cover w-full h-full"
+                data-ai-hint={placeholderImages[currentIndex].hint}
+                priority={currentIndex === 0} // Prioritize loading the first image of the initial pair
               />
-            ))}
+            </div>
+
+            {/* Right Image - render if available */}
+            {placeholderImages.length > 1 && placeholderImages[currentIndex + 1] && (
+              <div className="w-1/2 aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  key={placeholderImages[currentIndex + 1].src + '-2'}
+                  src={placeholderImages[currentIndex + 1].src}
+                  alt={placeholderImages[currentIndex + 1].alt}
+                  width={600}
+                  height={800}
+                  className="object-cover w-full h-full"
+                  data-ai-hint={placeholderImages[currentIndex + 1].hint}
+                  priority={currentIndex === 0} // Prioritize loading the second image of the initial pair
+                />
+              </div>
+            )}
+             {/* Fallback for single image or last image if odd number */}
+            {placeholderImages.length === 1 || (placeholderImages.length % 2 !== 0 && currentIndex === placeholderImages.length -1) && placeholderImages.length > 1 && !placeholderImages[currentIndex+1] && (
+                 <div className="w-1/2 aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden shadow-lg flex items-center justify-center text-gray-400">
+                    {/* Optional: Placeholder for the second slot if only one image is left and total is odd */}
+                 </div>
+            )}
           </div>
 
-          {/* Navigation Buttons */}
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute top-1/2 left-1 sm:left-2 md:-left-10 transform -translate-y-1/2 bg-white/80 hover:bg-white border-gray-300 text-black rounded-full shadow-md"
-            onClick={goToPrevious}
-            aria-label="Previous Image"
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </Button>
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute top-1/2 right-1 sm:right-2 md:-right-10 transform -translate-y-1/2 bg-white/80 hover:bg-white border-gray-300 text-black rounded-full shadow-md"
-            onClick={goToNext}
-            aria-label="Next Image"
-          >
-            <ChevronRight className="h-6 w-6" />
-          </Button>
+          {/* Navigation Buttons (only if more than one pair can be shown) */}
+          {placeholderImages.length > 2 && (
+            <>
+              <Button
+                variant="outline"
+                size="icon"
+                className="absolute top-1/2 left-[-20px] sm:left-[-30px] md:-left-14 transform -translate-y-1/2 bg-white/80 hover:bg-white border-gray-300 text-black rounded-full shadow-md"
+                onClick={goToPrevious}
+                aria-label="Previous Images"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </Button>
+              <Button
+                variant="outline"
+                size="icon"
+                className="absolute top-1/2 right-[-20px] sm:right-[-30px] md:-right-14 transform -translate-y-1/2 bg-white/80 hover:bg-white border-gray-300 text-black rounded-full shadow-md"
+                onClick={goToNext}
+                aria-label="Next Images"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </section>
