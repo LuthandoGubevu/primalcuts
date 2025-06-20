@@ -1,5 +1,6 @@
 
 import Hero from '@/components/sections/Hero';
+import TaglineBanner from '@/components/sections/TaglineBanner';
 import ImageGallery from '@/components/sections/ImageGallery';
 import Features from '@/components/sections/Features';
 import Highlight from '@/components/sections/Highlight';
@@ -34,6 +35,10 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen bg-background">
       <FadeInScroll threshold={0.01}>
         <Hero />
+      </FadeInScroll>
+
+      <FadeInScroll threshold={0.05}>
+        <TaglineBanner />
       </FadeInScroll>
 
       <FadeInScroll threshold={0.1} delay="md:delay-100">
