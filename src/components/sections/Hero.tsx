@@ -30,7 +30,7 @@ export default function Hero({
   logoHeight = 150,
   children,
   className,
-  minHeight = 'min-h-screen',
+  minHeight = 'min-h-[60vh] sm:min-h-[75vh] md:min-h-screen', // Responsive minHeight
 }: HeroProps) {
   return (
     <section
