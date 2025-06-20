@@ -18,14 +18,14 @@ export default function Footer() {
       
       <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center">
         <div
-          className="h-20 w-20 md:h-24 md:w-24 bg-transparent rounded-full mb-4 flex items-center justify-center"
+          className="h-40 w-40 bg-transparent rounded-full mb-4 flex items-center justify-center"
           aria-label="Primal Cuts Logo"
         >
           <Image
             src="/PC-Elements-15.png"
             alt="Primal Cuts Footer Logo"
-            width={80} 
-            height={80}
+            width={150} 
+            height={150}
             className="object-contain"
             data-ai-hint="company logo icon"
           />
