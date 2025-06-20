@@ -1,4 +1,11 @@
 import Image from 'next/image';
+import { CheckCircle } from 'lucide-react'; // Using CheckCircle as placeholder
+
+const features = [
+  { text: "HIGH PROTEIN CONTENT (16G PROTEIN PER OUNCE)" },
+  { text: "NO ARTIFICIAL PRESERVATIVES OR NITRATES" },
+  { text: "NUTRIENT-DENSE" },
+];
 
 export default function Highlight() {
   return (
@@ -16,9 +23,14 @@ export default function Highlight() {
             />
           </div>
           <div className="md:w-1/2 text-center md:text-left">
-            <p className="mt-4 text-lg md:text-xl text-foreground/80 font-body leading-relaxed">
-              Enriched with a select blend of all-natural spices, our Primal Cuts are meticulously air-dried to perfection. This traditional process locks in the rich, savory flavor and tender texture, delivering a high-protein snack that's both satisfying and wholesome. Experience the taste of quality craftsmanship in every bite.
-            </p>
+            <ul className="space-y-4 font-body text-foreground/80 text-lg md:text-xl leading-relaxed">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-start">
+                  <CheckCircle className="w-6 h-6 mr-3 text-primary shrink-0 mt-1" aria-hidden="true" />
+                  <span>{feature.text}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
