@@ -3,7 +3,6 @@ import Hero from '@/components/sections/Hero';
 import ImageGallery from '@/components/sections/ImageGallery';
 import Features from '@/components/sections/Features';
 import Highlight from '@/components/sections/Highlight';
-import DescriptionSection from '@/components/sections/DescriptionSection';
 import ContactCTA from '@/components/sections/ContactCTA';
 import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
@@ -19,7 +18,7 @@ const newSectionContent = {
 };
 
 const anotherNewSectionContent = {
-  imageSrc: "/PC-Elements-11.png",
+  imageSrc: "/PC-Elements-11.png", // Updated from PC-Elements-11.jpg to PC-Elements-11.png
   imageAlt: "Primal Cuts ingredients",
   imageAiHint: "ingredients meat product",
   heading: "Another Quality Feature",
@@ -69,10 +68,6 @@ export default function HomePage() {
           className="bg-[#05080b] text-primary-foreground dark:text-foreground"
           displayMode="paragraph"
         />
-      </FadeInScroll>
-      
-      <FadeInScroll threshold={0.1} delay="md:delay-100">
-        <DescriptionSection />
       </FadeInScroll>
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
