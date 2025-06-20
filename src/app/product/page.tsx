@@ -14,7 +14,7 @@ export default function ProductPage() {
       <main className="container mx-auto px-4 py-8">
         <FadeInScroll threshold={0.01}>
           <div className="mb-8">
-            <Button variant="outline" asChild className="border-gray-400 text-black hover:bg-buttonCta hover:text-white hover:border-buttonCta">
+            <Button variant="outline" asChild className="border-gray-400 text-black hover:bg-buttonCta-text hover:text-white hover:border-buttonCta-text">
               <Link href="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Home
@@ -28,11 +28,11 @@ export default function ProductPage() {
         </FadeInScroll>
 
         <FadeInScroll threshold={0.1} delay="md:delay-200">
-          <ProductFeatures />
+          <NutritionFacts />
         </FadeInScroll>
 
         <FadeInScroll threshold={0.1} delay="md:delay-300">
-          <NutritionFacts />
+          <ProductFeatures />
         </FadeInScroll>
 
         <FadeInScroll threshold={0.1} delay="md:delay-400">
