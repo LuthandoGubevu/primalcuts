@@ -1,3 +1,4 @@
+
 import Hero from '@/components/sections/Hero';
 import ImageGallery from '@/components/sections/ImageGallery';
 import Features from '@/components/sections/Features';
@@ -40,17 +41,18 @@ export default function HomePage() {
           imageAlt={highlightContent.imageAlt}
           imageAiHint={highlightContent.imageAiHint}
           features={highlightContent.features}
-          imagePosition="left" // Explicitly set for clarity, though it's the default
+          imagePosition="left" 
         />
       </FadeInScroll>
 
       <FadeInScroll threshold={0.1} delay="md:delay-100">
         <Highlight
-          imageSrc={highlightContent.imageSrc} // Using the same content
+          imageSrc={highlightContent.imageSrc} 
           imageAlt={highlightContent.imageAlt}
           imageAiHint={highlightContent.imageAiHint}
           features={highlightContent.features}
-          imagePosition="right" // Image on the right for this instance
+          imagePosition="right" 
+          className="bg-background" // Revert second instance to page background
         />
       </FadeInScroll>
       
