@@ -1,7 +1,6 @@
 
 import Image from 'next/image';
 import type { LucideProps } from 'lucide-react';
-import { ShieldCheck } from 'lucide-react';
 
 interface FeatureItem {
   name: string;
@@ -16,13 +15,14 @@ const featuresData: FeatureItem[] = [
   { name: '32G Protein', icon: '/PC-Elements-08.png', description: 'Contains 32 grams of protein per serving.', isImage: true },
   { name: 'Zero Sugar', icon: '/PC-Elements-09.png', description: 'Contains no added sugar.', isImage: true },
   { name: 'Whole30 Approved', icon: '/PC-Elements-10.png', description: 'Approved for the Whole30 program.', isImage: true },
+  { name: 'Freshness Guaranteed', icon: '/PC-Elements-11.png', description: 'Sealed for maximum freshness.', isImage: true },
 ];
 
 export default function Features() {
   return (
     <section className="py-12 md:py-16 bg-black text-primary-foreground">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8 text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 text-center">
           {featuresData.map((feat) => (
             <div key={feat.name} className="flex flex-col items-center space-y-3 group transform transition-transform duration-300 hover:scale-105" aria-label={feat.description}>
               <div className="w-20 md:w-24 aspect-[2/3] bg-transparent rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-transparent shadow-md group-hover:shadow-lg p-2">
@@ -46,3 +46,4 @@ export default function Features() {
     </section>
   );
 }
+
