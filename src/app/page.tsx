@@ -22,11 +22,12 @@ const newSectionContent = {
 const anotherNewSectionContent = {
   imageSrc: "https://placehold.co/600x500.png",
   imageAlt: "Placeholder image for new section",
-  imageAiHint: "placeholder details",
+  imageAiHint: "quality ingredients meat",
   heading: "Another Quality Feature",
   features: [
-    { text: "This is some descriptive text about another great feature of our product. We focus on excellence." },
-    { text: "Crafted with care and precision for the best experience." }
+    { text: "HIGH PROTEIN CONTENT (16G PROTEIN PER OUNCE)" },
+    { text: "NO ARTIFICIAL PRESERVATIVES OR NITRATES" },
+    { text: "NUTRIENT-DENSE" }
   ],
 };
 
