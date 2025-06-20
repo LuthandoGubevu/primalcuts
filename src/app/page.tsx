@@ -61,7 +61,7 @@ export default function HomePage() {
           imageAlt={newSectionContent.imageAlt}
           imageAiHint={newSectionContent.imageAiHint}
           features={newSectionContent.features}
-          imagePosition="left" 
+          imagePosition="right" 
           className="bg-secondary/10"
           displayMode="paragraph"
         />
