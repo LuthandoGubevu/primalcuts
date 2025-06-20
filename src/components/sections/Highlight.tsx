@@ -24,13 +24,12 @@ export default function Highlight({
   className,
 }: HighlightProps) {
   return (
-    <section className={cn("py-16 md:py-24 bg-background", className)}>
+    <section className={cn("py-16 md:py-24 bg-black text-white", className)}>
       <div className="container mx-auto px-4">
         <div className={cn(
           "flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16",
-          imagePosition === 'right' && "md:flex-row-reverse" // Reverses order of image and text divs on md screens
+          imagePosition === 'right' && "md:flex-row-reverse"
         )}>
-          {/* Image Div */}
           <div className="md:w-1/2 w-full aspect-video md:aspect-[5/4] rounded-lg overflow-hidden shadow-xl group">
             <Image
               src={imageSrc}
@@ -41,23 +40,18 @@ export default function Highlight({
               data-ai-hint={imageAiHint}
             />
           </div>
-          {/* Text Div */}
           <div className={cn(
             "md:w-1/2 text-center",
-            // If image is on the right, the text block is on the left, so its content aligns right on md screens.
-            // If image is on the left (default), text block is on the right, so its content aligns left on md screens.
             imagePosition === 'right' ? "md:text-right" : "md:text-left"
           )}>
-            <ul className="space-y-4 font-body text-foreground/80 text-lg md:text-xl leading-relaxed">
+            <ul className="space-y-4 font-body text-lg md:text-xl leading-relaxed">
               {features.map((feature, index) => (
                 <li key={index} className={cn(
                   "flex items-start",
-                  // If the text block is aligned right (md:text-right), 
-                  // then justify the content of the li to the end (right) on md screens.
                   imagePosition === 'right' ? "md:justify-end" : "md:justify-start"
                 )}>
                   <CheckCircle 
-                    className="w-6 h-6 mr-3 text-primary shrink-0 mt-1" // Icon always to the left of text
+                    className="w-6 h-6 mr-3 text-white shrink-0 mt-1"
                     aria-hidden="true" 
                   />
                   <span>{feature.text}</span>
