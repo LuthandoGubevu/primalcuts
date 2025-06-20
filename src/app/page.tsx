@@ -20,9 +20,9 @@ const newSectionContent = {
 };
 
 const anotherNewSectionContent = {
-  imageSrc: "https://placehold.co/600x500.png",
-  imageAlt: "Placeholder image for new section",
-  imageAiHint: "quality ingredients meat",
+  imageSrc: "/PC-Elements-11.jpg",
+  imageAlt: "Primal Cuts ingredients",
+  imageAiHint: "ingredients meat product",
   heading: "Another Quality Feature",
   features: [
     { text: "HIGH PROTEIN CONTENT (16G PROTEIN PER OUNCE)" },
