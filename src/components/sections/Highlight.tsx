@@ -13,6 +13,7 @@ interface HighlightProps {
   features: FeatureItem[];
   imagePosition?: 'left' | 'right';
   className?: string;
+  displayMode?: 'list' | 'paragraph';
 }
 
 export default function Highlight({
@@ -20,8 +21,9 @@ export default function Highlight({
   imageAlt,
   imageAiHint,
   features,
-  imagePosition = 'left', // Default to 'left'
+  imagePosition = 'left',
   className,
+  displayMode = 'list', // Default to 'list'
 }: HighlightProps) {
   return (
     <section className={cn("py-16 md:py-24 bg-background", className)}>
@@ -44,20 +46,26 @@ export default function Highlight({
             "md:w-1/2 text-center",
             imagePosition === 'right' ? "md:text-right" : "md:text-left"
           )}>
-            <ul className="space-y-4 font-body text-lg md:text-xl leading-relaxed">
-              {features.map((feature, index) => (
-                <li key={index} className={cn(
-                  "flex items-start",
-                  imagePosition === 'right' ? "md:justify-end" : "md:justify-start"
-                )}>
-                  <CheckCircle 
-                    className="w-6 h-6 mr-3 text-primary shrink-0 mt-1" 
-                    aria-hidden="true" 
-                  />
-                  <span>{feature.text}</span>
-                </li>
-              ))}
-            </ul>
+            {displayMode === 'paragraph' ? (
+              <p className="font-body text-lg md:text-xl leading-relaxed">
+                {features.map(feature => feature.text).join(' ')}
+              </p>
+            ) : (
+              <ul className="space-y-4 font-body text-lg md:text-xl leading-relaxed">
+                {features.map((feature, index) => (
+                  <li key={index} className={cn(
+                    "flex items-start",
+                    imagePosition === 'right' ? "md:justify-end" : "md:justify-start"
+                  )}>
+                    <CheckCircle 
+                      className="w-6 h-6 mr-3 text-primary shrink-0 mt-1" 
+                      aria-hidden="true" 
+                    />
+                    <span>{feature.text}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>

@@ -61,8 +61,9 @@ export default function HomePage() {
           imageAlt={newSectionContent.imageAlt}
           imageAiHint={newSectionContent.imageAiHint}
           features={newSectionContent.features}
-          imagePosition="left" // Default, but explicit for clarity
-          className="bg-secondary/10" // A slightly different background for distinction
+          imagePosition="left" 
+          className="bg-secondary/10"
+          displayMode="paragraph"
         />
       </FadeInScroll>
       
