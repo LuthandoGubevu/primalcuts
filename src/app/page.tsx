@@ -41,7 +41,6 @@ export default function HomePage() {
           imageAlt={highlightContent.imageAlt}
           imageAiHint={highlightContent.imageAiHint}
           features={highlightContent.features}
-          imagePosition="right" 
           className="bg-background" 
         />
       </FadeInScroll>
@@ -62,3 +61,4 @@ export default function HomePage() {
     </div>
   );
 }
+
