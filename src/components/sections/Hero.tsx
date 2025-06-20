@@ -18,7 +18,7 @@ export default function Hero() {
         <Image
           src="/Primal-Logo.png"
           alt="Primal Cuts Logo"
-          width={500} 
+          width={300} 
           height={300} 
           priority
           className="object-contain"
