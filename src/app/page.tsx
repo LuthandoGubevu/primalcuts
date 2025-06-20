@@ -21,9 +21,9 @@ const highlightContent = {
 };
 
 const newSectionContent = {
-  imageSrc: "https://placehold.co/600x500.png",
-  imageAlt: "New section placeholder image",
-  imageAiHint: "product detail quality",
+  imageSrc: "/black-pepper.jpg",
+  imageAlt: "Black pepper corns",
+  imageAiHint: "black pepper spices",
   features: [
     { text: "Discover our commitment to quality ingredients." },
     { text: "Sourced from the finest American farms." },
@@ -83,3 +83,4 @@ export default function HomePage() {
     </div>
   );
 }
+
