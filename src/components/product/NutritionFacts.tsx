@@ -51,7 +51,7 @@ export default function NutritionFacts() {
             <h3 className="font-headline text-3xl font-bold text-buttonCta-text">Calories</h3>
             <p className="font-headline text-3xl font-bold text-buttonCta-text">180</p>
           </div>
-          <Separator className="bg-black my-1 h-[6px]" />
+          <Separator className="bg-buttonCta-text my-1 h-[2px]" />
           <p className="font-body text-right font-bold text-sm text-black mb-1">% Daily Value*</p>
           
           <NutritionItem label="Total Fat" value="6g" percent="8%" bold borderTop={false}/>
@@ -64,7 +64,7 @@ export default function NutritionFacts() {
           <NutritionItem label="Total Sugars" value="0g" indent isSubItem/>
           <NutritionItem label="Protein" value="32g" percent="64%" bold />
 
-          <Separator className="bg-black my-1 h-[6px]" />
+          <Separator className="bg-buttonCta-text my-1 h-[2px]" />
 
           <NutritionItem label="Vitamin D" value="0mcg" percent="0%" borderTop={false} />
           <NutritionItem label="Calcium" value="104mg" percent="8%" />
