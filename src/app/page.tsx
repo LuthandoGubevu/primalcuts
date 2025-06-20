@@ -37,16 +37,6 @@ export default function HomePage() {
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
         <Highlight
-          imageSrc={highlightContent.imageSrc}
-          imageAlt={highlightContent.imageAlt}
-          imageAiHint={highlightContent.imageAiHint}
-          features={highlightContent.features}
-          imagePosition="left" 
-        />
-      </FadeInScroll>
-
-      <FadeInScroll threshold={0.1} delay="md:delay-100">
-        <Highlight
           imageSrc={highlightContent.imageSrc} 
           imageAlt={highlightContent.imageAlt}
           imageAiHint={highlightContent.imageAiHint}
