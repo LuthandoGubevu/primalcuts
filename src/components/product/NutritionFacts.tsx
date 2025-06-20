@@ -35,7 +35,7 @@ export default function NutritionFacts() {
   return (
     <section className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto border-4 border-black p-4 md:p-6 rounded-lg shadow-lg bg-white">
+        <div className="max-w-2xl mx-auto p-4 md:p-6 rounded-lg shadow-lg bg-white">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-buttonCta-text mb-1">NUTRITION FACTS</h2>
           <Separator className="bg-black/50 my-1" />
           <p className="font-body text-sm text-black/80">1 Serving Per Container</p>
