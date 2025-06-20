@@ -48,8 +48,8 @@
     --sidebar-border: 240 4% 16%;
     --sidebar-ring: 340 100% 25%;
 
-    --button-cta-background: 45 51% 35%;
-    --button-cta-foreground: 20 90% 15%;
+    --button-cta-background: 45 51% 35%; /* Approx #866f2b */
+    --button-cta-foreground: 0 0% 0%; /* Black text */
   }
 
   .dark {
@@ -91,8 +91,8 @@
     --sidebar-border: 240 4% 16%;
     --sidebar-ring: 47 100% 67%;
 
-    --button-cta-background: 45 51% 35%;
-    --button-cta-foreground: 0 0% 95%;
+    --button-cta-background: 45 51% 35%; /* Approx #866f2b */
+    --button-cta-foreground: 0 0% 0%; /* Black text */
   }
 }
 
