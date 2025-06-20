@@ -10,9 +10,9 @@ import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
 
 const highlightContent = {
-  imageSrc: "/black-pepper.jpg",
-  imageAlt: "Primal Cuts steak with black pepper seasoning",
-  imageAiHint: "black pepper steak",
+  imageSrc: "/PC-Elements-11.png",
+  imageAlt: "Primal Cuts steak with spices",
+  imageAiHint: "steak spices",
   features: [
     { text: "HIGH PROTEIN CONTENT (16G PROTEIN PER OUNCE)" },
     { text: "NO ARTIFICIAL PRESERVATIVES OR NITRATES" },
