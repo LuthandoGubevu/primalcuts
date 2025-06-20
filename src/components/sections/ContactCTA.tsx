@@ -8,7 +8,7 @@ export default function ContactCTA() {
         <div className="flex justify-center items-center">
           <Button 
             size="lg" 
-            className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 font-semibold text-base md:text-lg py-3 px-8 rounded-md transition-transform hover:scale-105 focus-visible:ring-2 focus-visible:ring-accent-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="w-full sm:w-auto bg-buttonCta text-buttonCta-foreground hover:bg-buttonCta/90 font-semibold text-base md:text-lg py-3 px-8 rounded-md transition-transform hover:scale-105 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             aria-label="Sign in for exclusive access to Primal Cuts"
           >
             EXCLUSIVE ACCESS – SIGN IN
