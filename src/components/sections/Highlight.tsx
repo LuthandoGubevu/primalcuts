@@ -16,9 +16,6 @@ export default function Highlight() {
             />
           </div>
           <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
-              Grass-Fed. Air-Dried. Premium Protein.
-            </h2>
             <p className="mt-4 text-lg md:text-xl text-foreground/80 font-body leading-relaxed">
               Enriched with a select blend of all-natural spices, our Primal Cuts are meticulously air-dried to perfection. This traditional process locks in the rich, savory flavor and tender texture, delivering a high-protein snack that's both satisfying and wholesome. Experience the taste of quality craftsmanship in every bite.
             </p>
