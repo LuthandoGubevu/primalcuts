@@ -7,12 +7,12 @@ export default function Highlight() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           <div className="md:w-1/2 w-full aspect-video md:aspect-[5/4] rounded-lg overflow-hidden shadow-xl group">
             <Image
-              src="https://placehold.co/600x500.png"
+              src="/PC-Elements-11.png"
               alt="Grass-fed premium protein product shot"
               width={600}
               height={500}
               className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-              data-ai-hint="beef product appetizing"
+              data-ai-hint="product ingredient quality"
             />
           </div>
           <div className="md:w-1/2 text-center md:text-left">
