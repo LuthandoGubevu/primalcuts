@@ -4,7 +4,7 @@ export default function ImageGallery() {
   const images = [
     { id: 1, src: '/Smoke-Package.png', alt: 'Smoke flavor Primal Cuts package', hint: 'product package smoke' },
     { id: 2, src: '/Original-Package.png', alt: 'Original flavor Primal Cuts package', hint: 'product package original' },
-    { id: 3, src: 'https://placehold.co/300x424.png', alt: 'Gallery image 3', hint: 'flavor ingredients' },
+    { id: 3, src: '/Red-Package.png', alt: 'Fire flavor Primal Cuts package', hint: 'product package fire' },
   ];
 
   return (
