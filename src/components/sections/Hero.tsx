@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-primary/80 via-primary/60 to-background flex flex-col items-center justify-center text-center p-4 overflow-hidden">
+    <section className="relative min-h-screen bg-background flex flex-col items-center justify-center text-center p-4 overflow-hidden">
       <Image
         src="/PC-Elements-16.jpg"
         alt="Primal Cuts background of textured meat or rustic wood"
