@@ -8,10 +8,20 @@ import ContactCTA from '@/components/sections/ContactCTA';
 import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
 
+const highlightContent = {
+  imageSrc: "/PC-Elements-11.png",
+  imageAlt: "Grass-fed premium protein product shot",
+  imageAiHint: "product ingredient quality",
+  features: [
+    { text: "HIGH PROTEIN CONTENT (16G PROTEIN PER OUNCE)" },
+    { text: "NO ARTIFICIAL PRESERVATIVES OR NITRATES" },
+    { text: "NUTRIENT-DENSE" },
+  ],
+};
+
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      {/* Hero section typically doesn't need fade-in as it's immediately visible, but can be added for consistency */}
       <FadeInScroll threshold={0.01}>
         <Hero />
       </FadeInScroll>
@@ -25,7 +35,23 @@ export default function HomePage() {
       </FadeInScroll>
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
-        <Highlight />
+        <Highlight
+          imageSrc={highlightContent.imageSrc}
+          imageAlt={highlightContent.imageAlt}
+          imageAiHint={highlightContent.imageAiHint}
+          features={highlightContent.features}
+          imagePosition="left" // Explicitly set for clarity, though it's the default
+        />
+      </FadeInScroll>
+
+      <FadeInScroll threshold={0.1} delay="md:delay-100">
+        <Highlight
+          imageSrc={highlightContent.imageSrc} // Using the same content
+          imageAlt={highlightContent.imageAlt}
+          imageAiHint={highlightContent.imageAiHint}
+          features={highlightContent.features}
+          imagePosition="right" // Image on the right for this instance
+        />
       </FadeInScroll>
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
