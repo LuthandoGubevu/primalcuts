@@ -1,6 +1,7 @@
 
 import Image from 'next/image';
-import { VenetianMask, ShieldCheck, type LucideProps } from 'lucide-react';
+import type { LucideProps } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 interface FeatureItem {
   name: string;
@@ -13,7 +14,7 @@ const featuresData: FeatureItem[] = [
   { name: 'Gluten Free', icon: '/PC-Elements-06.png', description: 'Product is free from gluten.', isImage: true },
   { name: 'Keto Friendly', icon: '/PC-Elements-07.png', description: 'Suitable for ketogenic diets.', isImage: true },
   { name: '32G Protein', icon: '/PC-Elements-08.png', description: 'Contains 32 grams of protein per serving.', isImage: true },
-  { name: 'Zero Sugar', icon: VenetianMask, description: 'Contains no added sugar.' },
+  { name: 'Zero Sugar', icon: '/PC-Elements-09.png', description: 'Contains no added sugar.', isImage: true },
   { name: 'Whole30 Approved', icon: ShieldCheck, description: 'Approved for the Whole30 program.' },
 ];
 
