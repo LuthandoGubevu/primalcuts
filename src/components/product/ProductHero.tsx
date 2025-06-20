@@ -6,13 +6,13 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const placeholderImages = [
-  { src: 'https://placehold.co/600x800.png', alt: 'Product Image 1 - Front View', hint: 'product front' },
-  { src: 'https://placehold.co/600x800.png', alt: 'Product Image 2 - Back View', hint: 'product back' },
-  { src: 'https://placehold.co/600x800.png', alt: 'Product Image 3 - Angled View', hint: 'product angle' },
-  { src: 'https://placehold.co/600x800.png', alt: 'Product Image 4 - Lifestyle', hint: 'product lifestyle' },
-  { src: 'https://placehold.co/600x800.png', alt: 'Product Image 5 - Close-up', hint: 'product closeup' },
-  { src: 'https://placehold.co/600x800.png', alt: 'Product Image 6 - Texture Detail', hint: 'product texture' },
+const productImages = [
+  { src: '/Image-1.png', alt: 'Product Image 1', hint: 'product detail' },
+  { src: '/Image-2.png', alt: 'Product Image 2', hint: 'product packaging' },
+  { src: '/Image-3.png', alt: 'Product Image 3', hint: 'product feature' },
+  { src: '/Image-4.png', alt: 'Product Image 4', hint: 'product lifestyle' },
+  { src: '/Image-5.png', alt: 'Product Image 5', hint: 'product ingredients' },
+  { src: '/Image-6.png', alt: 'Product Image 6', hint: 'product texture' },
 ];
 
 export default function ProductHero() {
@@ -20,22 +20,17 @@ export default function ProductHero() {
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
-      // If prevIndex is 0, wrap to the start of the last possible pair (length - 2).
-      // Otherwise, decrement by 1.
-      prevIndex === 0 ? Math.max(0, placeholderImages.length - 2) : prevIndex - 1
+      prevIndex === 0 ? Math.max(0, productImages.length - 2) : prevIndex - 1
     );
   };
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) =>
-      // If prevIndex is at or beyond the start of the last pair (length - 2), wrap to 0.
-      // Otherwise, increment by 1.
-      prevIndex >= Math.max(0, placeholderImages.length - 2) ? 0 : prevIndex + 1
+      prevIndex >= Math.max(0, productImages.length - 2) ? 0 : prevIndex + 1
     );
   };
 
-  // Ensure we have at least one image to display
-  if (placeholderImages.length === 0) {
+  if (productImages.length === 0) {
     return (
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -72,34 +67,34 @@ export default function ProductHero() {
             {/* Left Image */}
             <div className="w-1/2 aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden shadow-lg">
               <Image
-                key={placeholderImages[currentIndex].src + '-1'}
-                src={placeholderImages[currentIndex].src}
-                alt={placeholderImages[currentIndex].alt}
-                width={600} // Original dimensions for quality hint
+                key={productImages[currentIndex].src + '-1'}
+                src={productImages[currentIndex].src}
+                alt={productImages[currentIndex].alt}
+                width={600} 
                 height={800}
                 className="object-cover w-full h-full"
-                data-ai-hint={placeholderImages[currentIndex].hint}
-                priority={currentIndex === 0} // Prioritize loading the first image of the initial pair
+                data-ai-hint={productImages[currentIndex].hint}
+                priority={currentIndex === 0} 
               />
             </div>
 
             {/* Right Image - render if available */}
-            {placeholderImages.length > 1 && placeholderImages[currentIndex + 1] && (
+            {productImages.length > 1 && productImages[currentIndex + 1] && (
               <div className="w-1/2 aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  key={placeholderImages[currentIndex + 1].src + '-2'}
-                  src={placeholderImages[currentIndex + 1].src}
-                  alt={placeholderImages[currentIndex + 1].alt}
+                  key={productImages[currentIndex + 1].src + '-2'}
+                  src={productImages[currentIndex + 1].src}
+                  alt={productImages[currentIndex + 1].alt}
                   width={600}
                   height={800}
                   className="object-cover w-full h-full"
-                  data-ai-hint={placeholderImages[currentIndex + 1].hint}
-                  priority={currentIndex === 0} // Prioritize loading the second image of the initial pair
+                  data-ai-hint={productImages[currentIndex + 1].hint}
+                  priority={currentIndex === 0} 
                 />
               </div>
             )}
              {/* Fallback for single image or last image if odd number */}
-            {placeholderImages.length === 1 || (placeholderImages.length % 2 !== 0 && currentIndex === placeholderImages.length -1) && placeholderImages.length > 1 && !placeholderImages[currentIndex+1] && (
+            {productImages.length === 1 || (productImages.length % 2 !== 0 && currentIndex === productImages.length -1) && productImages.length > 1 && !productImages[currentIndex+1] && (
                  <div className="w-1/2 aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden shadow-lg flex items-center justify-center text-gray-400">
                     {/* Optional: Placeholder for the second slot if only one image is left and total is odd */}
                  </div>
@@ -107,7 +102,7 @@ export default function ProductHero() {
           </div>
 
           {/* Navigation Buttons (only if more than one pair can be shown) */}
-          {placeholderImages.length > 2 && (
+          {productImages.length > 2 && (
             <>
               <Button
                 variant="outline"
@@ -134,3 +129,4 @@ export default function ProductHero() {
     </section>
   );
 }
+
