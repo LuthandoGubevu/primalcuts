@@ -8,11 +8,10 @@ export default function Hero() {
         alt="Primal Cuts background of textured meat or rustic wood"
         layout="fill"
         objectFit="cover"
-        className="absolute inset-0 z-0 opacity-25"
+        className="absolute inset-0 z-0"
         priority
         data-ai-hint="meat texture"
       />
-      {/* <div className="absolute inset-0 bg-black/30 z-0"></div> */} {/* Darkening overlay for text readability REMOVED */}
       <div className="relative z-10 flex flex-col items-center">
         <div 
           className="w-32 h-32 md:w-40 md:h-40 bg-background/10 border-2 border-primary-foreground/50 rounded-full mb-6 flex items-center justify-center shadow-xl backdrop-blur-sm"
