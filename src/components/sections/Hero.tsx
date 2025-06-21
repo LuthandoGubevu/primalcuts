@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
@@ -19,9 +20,9 @@ interface HeroProps {
 }
 
 export default function Hero({
-  backgroundImageSrc = "/PC-Elements-16.png",
-  backgroundImageAlt = "Primal Cuts background of textured meat or rustic wood",
-  backgroundImageAiHint = "meat texture",
+  backgroundImageSrc = "https://placehold.co/1920x1080.png",
+  backgroundImageAlt = "People sitting around a campfire on a beach at dusk",
+  backgroundImageAiHint = "campfire beach",
   logoImageSrc = "/Primal-Logo.png",
   logoImageAlt = "Primal Cuts Logo",
   logoImageAiHint = "company logo",
@@ -72,7 +73,7 @@ export default function Hero({
           alt="Decorative element"
           width={1920}
           height={120}
-          className="w-full h-auto"
+          className="w-full h-auto translate-y-20"
           data-ai-hint="decorative element"
         />
         <Image
