@@ -65,26 +65,6 @@ export default function Hero({
         />
         {children}
       </div>
-
-      {/* Decorative Elements at Bottom */}
-      <div className="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
-        <Image
-          src="/PC-Elements-21.png"
-          alt="Decorative element"
-          width={1920}
-          height={120}
-          className="w-full h-auto"
-          data-ai-hint="decorative element"
-        />
-        <Image
-          src="/PC-Elements-25.png"
-          alt="Decorative element"
-          width={1920}
-          height={120}
-          className="w-full h-auto -mt-16"
-          data-ai-hint="decorative element"
-        />
-      </div>
     </section>
   );
 }
