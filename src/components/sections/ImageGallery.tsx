@@ -8,7 +8,7 @@ export default function ImageGallery() {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-background">
+    <section className="py-12 md:py-16 bg-[linear-gradient(to_bottom,hsl(var(--button-cta-background))_50%,hsl(var(--background))_50%)]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 md:gap-x-8 gap-y-10 md:gap-y-12">
           {images.map((image) => (
