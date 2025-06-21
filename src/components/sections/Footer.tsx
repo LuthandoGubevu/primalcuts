@@ -22,8 +22,8 @@ export default function Footer() {
           aria-label="Primal Cuts Logo"
         >
           <Image
-            src="/PC-Elements-15.png"
-            alt="Primal Cuts Footer Logo"
+            src="/PC-Elements-17.png"
+            alt="Primal Cuts Biltong Logo"
             width={150} 
             height={150}
             className="object-contain"
