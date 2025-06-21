@@ -57,7 +57,8 @@ export default function HomePage() {
         features={anotherNewSectionContent.features}
         imagePosition="left"
         className="bg-background"
-        displayMode="list" 
+        displayMode="list"
+        variant="bleed" 
       />
       
       <Highlight
