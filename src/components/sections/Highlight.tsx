@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import FadeInScroll from '@/components/utils/FadeInScroll';
 
@@ -31,6 +31,10 @@ export default function Highlight({
 }: HighlightProps) {
   const imageSlideDirection = imagePosition === 'left' ? 'left' : 'right';
   const textSlideDirection = imagePosition === 'left' ? 'right' : 'left';
+
+  const formatFeatureText = (text: string) => {
+    return text.replace('(', '<br />(');
+  };
 
   return (
     <section className={cn("py-16 md:py-24 overflow-hidden", className)}>
@@ -86,11 +90,11 @@ export default function Highlight({
                         "flex items-start",
                         imagePosition === 'right' && "md:flex-row-reverse"
                       )}>
-                        <CheckCircle 
-                          className={cn("w-6 h-6 shrink-0 mt-1", imagePosition === 'right' ? 'ml-3' : 'mr-3')} 
+                        <CheckCircle2
+                          className={cn("w-6 h-6 shrink-0 mt-1 text-buttonCta-text", imagePosition === 'right' ? 'ml-3' : 'mr-3')} 
                           aria-hidden="true" 
                         />
-                        <span>{feature.text}</span>
+                        <span dangerouslySetInnerHTML={{ __html: formatFeatureText(feature.text) }} />
                       </li>
                     ))}
                   </ul>
