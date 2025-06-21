@@ -52,8 +52,8 @@ export default function Hero({
         priority={priorityBackgroundImage}
         data-ai-hint={backgroundImageAiHint}
       />
-      {overlay && <div className="absolute inset-0 z-5 bg-black/40" />}
-      <div className="relative z-10 flex flex-col items-center">
+      {overlay && <div className="absolute inset-0 z-10 bg-black/40" />}
+      <div className="relative z-20 flex flex-col items-center">
         <Image
           src={logoImageSrc}
           alt={logoImageAlt}
@@ -67,9 +67,9 @@ export default function Hero({
       </div>
 
       {/* Decorative Elements at Bottom */}
-      <div className="absolute bottom-0 left-0 w-full z-0 flex flex-col items-center pointer-events-none">
+      <div className="absolute bottom-0 left-0 w-full z-20 flex flex-col items-center pointer-events-none">
         <Image
-          src="/PC Elements-26.png"
+          src="/PC-Elements-26.png"
           alt="Decorative element"
           width={1920}
           height={240}
