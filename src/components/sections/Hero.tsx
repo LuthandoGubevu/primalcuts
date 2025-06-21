@@ -63,15 +63,14 @@ export default function Hero({
       </div>
 
       {/* Golden Curve Element at Bottom */}
-      <div className="absolute bottom-0 left-0 w-full h-[15vw] max-h-[200px] z-5 pointer-events-none">
-        <Image
-          src="/PC-Elements-02.png"
-          alt="Golden decorative curve"
-          layout="fill"
-          objectFit="fill"
-          data-ai-hint="decorative curve gold"
-        />
-      </div>
+      <Image
+        src="/PC-Elements-02.png"
+        alt="Golden decorative curve"
+        width={1920}
+        height={240}
+        className="absolute bottom-0 left-0 w-full h-auto z-0 pointer-events-none"
+        data-ai-hint="decorative curve gold"
+      />
     </section>
   );
 }
