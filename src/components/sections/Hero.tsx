@@ -70,7 +70,7 @@ export default function Hero({
           alt="Decorative border element"
           width={1920}
           height={100}
-          className="w-full h-auto translate-y-10"
+          className="w-full h-auto translate-y-24"
           data-ai-hint="decorative border"
         />
         <Image
