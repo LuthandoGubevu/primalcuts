@@ -33,16 +33,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <FadeInScroll threshold={0.01}>
-        <Hero>
-          <div className="text-center text-primary-foreground">
-            <h2 className="font-headline text-2xl sm:text-3xl font-bold uppercase tracking-tight">
-              American Made
-            </h2>
-            <p className="font-body text-sm sm:text-base uppercase tracking-wider mt-1 sm:mt-2">
-              Air Dried Steak
-            </p>
-          </div>
-        </Hero>
+        <Hero />
       </FadeInScroll>
 
       <FadeInScroll threshold={0.1} delay="md:delay-100">
