@@ -70,6 +70,7 @@ export default function HomePage() {
         imagePosition="right" 
         className="bg-[#05080b] text-primary-foreground dark:text-foreground"
         displayMode="paragraph"
+        variant="bleed"
       />
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
