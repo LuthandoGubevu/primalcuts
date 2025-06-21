@@ -65,7 +65,7 @@ export default function Hero({
 
       {/* Golden Curve Element at Bottom */}
       <Image
-        src="/PC-Elements-02-New-01.png"
+        src="/PC Elements-02-New-01.png"
         alt="Golden decorative curve"
         width={1920}
         height={240}
