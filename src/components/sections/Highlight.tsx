@@ -77,7 +77,7 @@ export default function Highlight({
                       imagePosition === 'right' ? "md:justify-end" : "md:justify-start"
                     )}>
                       <CheckCircle 
-                        className="w-6 h-6 mr-3 text-current shrink-0 mt-1" 
+                        className="w-6 h-6 mr-3 text-accent shrink-0 mt-1" 
                         aria-hidden="true" 
                       />
                       <span>{feature.text}</span>
