@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -65,7 +64,7 @@ export default function ProductHero() {
         <div className="relative max-w-3xl mx-auto"> {/* Increased max-width */}
           <div className="flex gap-4 justify-center"> {/* Flex container for two images */}
             {/* Left Image */}
-            <div className="w-1/2 aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+            <div className="w-1/2 aspect-[3/4]">
               <Image
                 key={productImages[currentIndex].src + '-1'}
                 src={productImages[currentIndex].src}
@@ -80,7 +79,7 @@ export default function ProductHero() {
 
             {/* Right Image - render if available */}
             {productImages.length > 1 && productImages[currentIndex + 1] && (
-              <div className="w-1/2 aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+              <div className="w-1/2 aspect-[3/4]">
                 <Image
                   key={productImages[currentIndex + 1].src + '-2'}
                   src={productImages[currentIndex + 1].src}
@@ -95,8 +94,7 @@ export default function ProductHero() {
             )}
              {/* Fallback for single image or last image if odd number */}
             {productImages.length === 1 || (productImages.length % 2 !== 0 && currentIndex === productImages.length -1) && productImages.length > 1 && !productImages[currentIndex+1] && (
-                 <div className="w-1/2 aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden shadow-lg flex items-center justify-center text-gray-400">
-                    {/* Optional: Placeholder for the second slot if only one image is left and total is odd */}
+                 <div className="w-1/2 aspect-[3/4]">
                  </div>
             )}
           </div>
@@ -129,4 +127,3 @@ export default function ProductHero() {
     </section>
   );
 }
-
