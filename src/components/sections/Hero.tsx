@@ -66,14 +66,6 @@ export default function Hero({
       {/* Decorative Elements at Bottom */}
       <div className="absolute bottom-0 left-0 w-full z-0 flex flex-col items-center pointer-events-none">
         <Image
-          src="/PC Elements-21.png"
-          alt="Decorative border element"
-          width={1920}
-          height={100}
-          className="w-full h-auto translate-y-24"
-          data-ai-hint="decorative border"
-        />
-        <Image
           src="/PC Elements-26.png"
           alt="Decorative element"
           width={1920}
