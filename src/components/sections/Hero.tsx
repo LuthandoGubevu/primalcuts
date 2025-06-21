@@ -23,17 +23,17 @@ export default function Hero({
   backgroundImageSrc = "/PC-Elements-27.jpg",
   backgroundImageAlt = "People sitting around a campfire on a beach at dusk",
   backgroundImageAiHint = "campfire beach",
-  logoImageSrc = "/Primal-Logo.png",
-  logoImageAlt = "Primal Cuts Logo",
-  logoImageAiHint = "company logo",
+  logoImageSrc = "/PC-Elements-17.png",
+  logoImageAlt = "Primal Cuts Biltong Logo",
+  logoImageAiHint = "company logo icon",
   priorityBackgroundImage = true,
   priorityLogoImage = true,
-  logoWidth = 300,
+  logoWidth = 150,
   logoHeight = 150,
   children,
   className,
   minHeight = 'min-h-[60vh] sm:min-h-[75vh] md:min-h-screen', // Responsive minHeight
-  overlay = false,
+  overlay = true,
 }: HeroProps) {
   return (
     <section
