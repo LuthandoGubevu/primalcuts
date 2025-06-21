@@ -22,6 +22,7 @@ export default function ProductPage() {
           logoImageAiHint="company logo icon"
           priorityBackgroundImage={true}
           priorityLogoImage={true}
+          overlay={true}
           // Defaults for minHeight will be used from Hero component
         />
       </FadeInScroll>

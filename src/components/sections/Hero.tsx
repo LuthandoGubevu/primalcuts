@@ -16,6 +16,7 @@ interface HeroProps {
   children?: React.ReactNode;
   className?: string;
   minHeight?: string;
+  overlay?: boolean;
 }
 
 export default function Hero({
@@ -32,6 +33,7 @@ export default function Hero({
   children,
   className,
   minHeight = 'min-h-[60vh] sm:min-h-[75vh] md:min-h-screen', // Responsive minHeight
+  overlay = false,
 }: HeroProps) {
   return (
     <section
@@ -50,6 +52,7 @@ export default function Hero({
         priority={priorityBackgroundImage}
         data-ai-hint={backgroundImageAiHint}
       />
+      {overlay && <div className="absolute inset-0 z-5 bg-black/40" />}
       <div className="relative z-10 flex flex-col items-center">
         <Image
           src={logoImageSrc}
