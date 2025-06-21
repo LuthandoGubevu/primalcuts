@@ -33,27 +33,28 @@ export default function Highlight({
   const textSlideDirection = imagePosition === 'left' ? 'right' : 'left';
 
   return (
-    <section className={cn("py-16 md:py-24 overflow-hidden", className)}> {/* Added overflow-hidden for safety with horizontal slides */}
+    <section className={cn("py-16 md:py-24 overflow-hidden", className)}>
       <div className="container mx-auto px-4">
         <div className={cn(
           "flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16",
           imagePosition === 'right' && "md:flex-row-reverse"
         )}>
           <FadeInScroll slideDirection={imageSlideDirection} className="md:w-1/2 w-full" threshold={0.2}>
-            <div className="aspect-video md:aspect-[5/4] rounded-lg overflow-hidden shadow-xl group">
+            <div className="aspect-video md:aspect-[5/4] overflow-hidden">
               <Image
                 src={imageSrc}
                 alt={imageAlt}
                 width={600}
                 height={500}
-                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                className="object-cover w-full h-full"
                 data-ai-hint={imageAiHint}
               />
             </div>
           </FadeInScroll>
-          <FadeInScroll slideDirection={textSlideDirection} className="md:w-1/2 text-center" threshold={0.2} delay="delay-150">
+          <FadeInScroll slideDirection={textSlideDirection} className="md:w-1/2" threshold={0.2} delay="delay-150">
             <div className={cn(
-              imagePosition === 'right' ? "md:text-right" : "md:text-left"
+              "flex flex-col text-center",
+              imagePosition === 'right' ? "md:items-end md:text-right" : "md:items-start md:text-left"
             )}>
               {displayMode === 'paragraph' ? (
                 <div>
@@ -70,20 +71,30 @@ export default function Highlight({
                   </p>
                 </div>
               ) : (
-                <ul className="space-y-4 font-body text-lg md:text-xl leading-relaxed">
-                  {features.map((feature, index) => (
-                    <li key={index} className={cn(
-                      "flex items-start",
-                      imagePosition === 'right' ? "md:justify-end" : "md:justify-start"
-                    )}>
-                      <CheckCircle 
-                        className="w-6 h-6 mr-3 text-accent shrink-0 mt-1" 
-                        aria-hidden="true" 
-                      />
-                      <span>{feature.text}</span>
-                    </li>
-                  ))}
-                </ul>
+                <>
+                  {heading && (
+                    <>
+                      <h2 className="font-headline text-3xl md:text-4xl font-bold text-buttonCta-text mb-4">
+                        {heading}
+                      </h2>
+                      <div className="w-24 h-px bg-buttonCta-text mb-8"></div>
+                    </>
+                  )}
+                  <ul className="space-y-4 font-body text-lg md:text-xl leading-relaxed">
+                    {features.map((feature, index) => (
+                      <li key={index} className={cn(
+                        "flex items-start",
+                        imagePosition === 'right' && "md:flex-row-reverse"
+                      )}>
+                        <CheckCircle 
+                          className={cn("w-6 h-6 shrink-0 mt-1", imagePosition === 'right' ? 'ml-3' : 'mr-3')} 
+                          aria-hidden="true" 
+                        />
+                        <span>{feature.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
               )}
             </div>
           </FadeInScroll>
