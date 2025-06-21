@@ -22,7 +22,7 @@ const NutritionItem: React.FC<NutritionItemProps> = ({
   borderTop = true,
   thickBorder = false,
 }) => (
-  <div className={`flex justify-between items-baseline ${borderTop ? 'border-t' : ''} ${thickBorder ? 'border-t-4' : 'border-t-1'} border-black/30 py-1 ${isSubItem ? 'text-sm' : ''}`}>
+  <div className={`flex justify-between items-baseline ${borderTop ? 'border-t' : ''} ${thickBorder ? 'border-t-4' : 'border-t-1'} border-buttonCta-text/30 py-1 ${isSubItem ? 'text-sm' : ''}`}>
     <span className={`${bold ? 'font-bold' : ''} ${indent ? 'ml-4' : ''} ${isSubItem && !indent ? 'ml-1' : ''} font-body text-black`}>
       {label}
       {value && <span className="ml-1">{value}</span>}
@@ -37,13 +37,13 @@ export default function NutritionFacts() {
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto p-4 md:p-6 rounded-lg shadow-lg bg-white">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-buttonCta-text mb-1">NUTRITION FACTS</h2>
-          <Separator className="bg-black/50 my-1" />
+          <Separator className="bg-buttonCta-text/50 my-1" />
           <p className="font-body text-sm text-black/80">1 Serving Per Container</p>
           <div className="flex justify-between items-baseline">
             <p className="font-body font-bold text-lg text-black">Serving Size</p>
             <p className="font-body font-bold text-lg text-black">2 oz (56g)</p>
           </div>
-          <Separator className="bg-black/50 my-1 h-[2px]" />
+          <Separator className="bg-buttonCta-text/50 my-1 h-[2px]" />
           <div className="flex justify-between items-baseline mb-1">
             <p className="font-body text-sm font-bold text-black">Amount Per Serving</p>
           </div>
@@ -79,7 +79,7 @@ export default function NutritionFacts() {
           <NutritionItem label="Magnesium" value="33.6mg" percent="8%" />
           <NutritionItem label="Zinc" value="5.5mg" percent="50%" />
 
-          <Separator className="bg-black/50 my-2 h-[2px]" />
+          <Separator className="bg-buttonCta-text/50 my-2 h-[2px]" />
           <p className="font-body text-xs text-black/70 leading-relaxed">
             * The % Daily Value (DV) tells you how much a nutrient in a serving of food
             contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.
