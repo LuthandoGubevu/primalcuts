@@ -67,7 +67,7 @@ export default function Hero({
       </div>
 
       {/* Decorative Elements at Bottom */}
-      <div className="absolute bottom-0 left-0 w-full z-20 flex flex-col items-center pointer-events-none">
+      <div className="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
         <Image
           src="/PC-Elements-21.png"
           alt="Decorative element"
