@@ -13,7 +13,7 @@ interface HeroProps {
   priorityLogoImage?: boolean;
   logoWidth?: number;
   logoHeight?: number;
-  children?: React.Node;
+  children?: React.ReactNode;
   className?: string;
   minHeight?: string;
 }
@@ -70,7 +70,7 @@ export default function Hero({
           alt="Decorative border element"
           width={1920}
           height={100}
-          className="w-full h-auto"
+          className="w-full h-auto translate-y-10"
           data-ai-hint="decorative border"
         />
         <Image
