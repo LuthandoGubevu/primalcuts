@@ -15,18 +15,24 @@ const productImages = [
 ];
 
 export default function ProductHero() {
-  const [currentIndex, setCurrentIndex] = useState(0); // Index of the first image in the pair
-
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? Math.max(0, productImages.length - 2) : prevIndex - 1
-    );
-  };
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex >= Math.max(0, productImages.length - 2) ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => {
+      const newIndex = prevIndex + 2;
+      return newIndex >= productImages.length ? 0 : newIndex;
+    });
+  };
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => {
+      if (prevIndex === 0) {
+        // Wrap around to the last pair
+        const lastPairIndex = Math.floor((productImages.length - 1) / 2) * 2;
+        return lastPairIndex;
+      }
+      return prevIndex - 2;
+    });
   };
 
   if (productImages.length === 0) {
@@ -66,7 +72,7 @@ export default function ProductHero() {
             {/* Left Image */}
             <div className="w-1/2 aspect-[3/4]">
               <Image
-                key={productImages[currentIndex].src + '-1'}
+                key={productImages[currentIndex].src}
                 src={productImages[currentIndex].src}
                 alt={productImages[currentIndex].alt}
                 width={600} 
@@ -77,26 +83,21 @@ export default function ProductHero() {
               />
             </div>
 
-            {/* Right Image - render if available */}
-            {productImages.length > 1 && productImages[currentIndex + 1] && (
-              <div className="w-1/2 aspect-[3/4]">
-                <Image
-                  key={productImages[currentIndex + 1].src + '-2'}
-                  src={productImages[currentIndex + 1].src}
-                  alt={productImages[currentIndex + 1].alt}
-                  width={600}
-                  height={800}
-                  className="object-cover w-full h-full"
-                  data-ai-hint={productImages[currentIndex + 1].hint}
-                  priority={currentIndex === 0} 
-                />
-              </div>
-            )}
-             {/* Fallback for single image or last image if odd number */}
-            {productImages.length === 1 || (productImages.length % 2 !== 0 && currentIndex === productImages.length -1) && productImages.length > 1 && !productImages[currentIndex+1] && (
-                 <div className="w-1/2 aspect-[3/4]">
-                 </div>
-            )}
+            {/* Right Image or Placeholder */}
+            <div className="w-1/2 aspect-[3/4]">
+              {productImages[currentIndex + 1] ? (
+                  <Image
+                    key={productImages[currentIndex + 1].src}
+                    src={productImages[currentIndex + 1].src}
+                    alt={productImages[currentIndex + 1].alt}
+                    width={600}
+                    height={800}
+                    className="object-cover w-full h-full"
+                    data-ai-hint={productImages[currentIndex + 1].hint}
+                    priority={currentIndex === 0} 
+                  />
+              ) : null}
+            </div>
           </div>
 
           {/* Navigation Buttons (only if more than one pair can be shown) */}
