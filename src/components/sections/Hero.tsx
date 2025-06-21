@@ -20,7 +20,7 @@ interface HeroProps {
 }
 
 export default function Hero({
-  backgroundImageSrc = "https://placehold.co/1920x1080.png",
+  backgroundImageSrc = "/PC-Elements-27.jpg",
   backgroundImageAlt = "People sitting around a campfire on a beach at dusk",
   backgroundImageAiHint = "campfire beach",
   logoImageSrc = "/Primal-Logo.png",
@@ -73,7 +73,7 @@ export default function Hero({
           alt="Decorative element"
           width={1920}
           height={120}
-          className="w-full h-auto transform translate-y-24"
+          className="w-full h-auto"
           data-ai-hint="decorative element"
         />
         <Image
@@ -81,7 +81,7 @@ export default function Hero({
           alt="Decorative element"
           width={1920}
           height={120}
-          className="w-full h-auto"
+          className="w-full h-auto -mt-16"
           data-ai-hint="decorative element"
         />
       </div>
