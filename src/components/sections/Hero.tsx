@@ -63,14 +63,14 @@ export default function Hero({
         {children}
       </div>
 
-      {/* Golden Curve Element at Bottom */}
+      {/* Decorative Element at Bottom */}
       <Image
-        src="/PC Elements-02-New-01.png"
-        alt="Golden decorative curve"
+        src="/PC Elements-26.png"
+        alt="Decorative element"
         width={1920}
         height={240}
         className="absolute bottom-0 left-0 w-full h-auto z-0 pointer-events-none"
-        data-ai-hint="decorative curve gold"
+        data-ai-hint="decorative element"
       />
     </section>
   );
