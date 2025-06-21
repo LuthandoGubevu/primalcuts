@@ -73,7 +73,7 @@ export default function Hero({
           alt="Decorative element"
           width={1920}
           height={120}
-          className="w-full h-auto"
+          className="w-full h-auto transform translate-y-24"
           data-ai-hint="decorative element"
         />
         <Image
