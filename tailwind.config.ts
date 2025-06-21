@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['PT Sans', 'sans-serif'],
-        headline: ['PT Sans', 'sans-serif'], // Changed from Playfair Display
+        body: ['Montserrat', 'sans-serif'],
+        headline: ['Montserrat', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
