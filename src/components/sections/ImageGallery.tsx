@@ -16,7 +16,7 @@ export default function ImageGallery() {
               key={image.id} 
               className="flex flex-col items-center group transform transition-transform duration-300 hover:scale-105"
             >
-              <div className="aspect-[300/424] w-full rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-[300/424] w-full">
                 <Image
                   src={image.src}
                   alt={image.alt}
