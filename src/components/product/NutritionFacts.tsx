@@ -22,7 +22,7 @@ const NutritionItem: React.FC<NutritionItemProps> = ({
   borderTop = true,
   thickBorder = false,
 }) => (
-  <div className={`flex justify-between items-baseline ${borderTop ? 'border-t' : ''} ${thickBorder ? 'border-t-4' : 'border-t-1'} border-buttonCta-text/30 py-1 ${isSubItem ? 'text-sm' : ''}`}>
+  <div className={`flex justify-between items-baseline ${borderTop ? 'border-t' : ''} ${thickBorder ? 'border-t-4' : 'border-t-1'} border-black/30 py-1 ${isSubItem ? 'text-sm' : ''}`}>
     <span className={`${bold ? 'font-bold' : ''} ${indent ? 'ml-4' : ''} ${isSubItem && !indent ? 'ml-1' : ''} font-body text-black`}>
       {label}
       {value && <span className="ml-1">{value}</span>}
@@ -36,8 +36,8 @@ export default function NutritionFacts() {
     <section className="py-12 md:py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-buttonCta-text mb-1">NUTRITION FACTS</h2>
-          <Separator className="bg-buttonCta-text/50 my-1" />
+          <h2 className="font-headline text-3xl md:text-4xl font-bold text-black mb-1">NUTRITION FACTS</h2>
+          <Separator className="bg-black/50 my-1" />
 
           <div className="grid md:grid-cols-2 md:gap-x-12 lg:gap-x-16">
             {/* --- LEFT COLUMN --- */}
@@ -47,15 +47,15 @@ export default function NutritionFacts() {
                 <p className="font-body font-bold text-lg text-black">Serving Size</p>
                 <p className="font-body font-bold text-lg text-black">2 oz (56g)</p>
               </div>
-              <Separator className="bg-buttonCta-text/50 my-1 h-[2px]" />
+              <Separator className="bg-black/50 my-1 h-[2px]" />
               <div className="flex justify-between items-baseline mb-1">
                 <p className="font-body text-sm font-bold text-black">Amount Per Serving</p>
               </div>
               <div className="flex justify-between items-baseline">
-                <h3 className="font-headline text-3xl font-bold text-buttonCta-text">Calories</h3>
-                <p className="font-headline text-3xl font-bold text-buttonCta-text">180</p>
+                <h3 className="font-headline text-3xl font-bold text-black">Calories</h3>
+                <p className="font-headline text-3xl font-bold text-black">180</p>
               </div>
-              <Separator className="bg-buttonCta-text my-1 h-[2px]" />
+              <Separator className="bg-black my-1 h-[2px]" />
               <p className="font-body text-right font-bold text-sm text-black mb-1">% Daily Value*</p>
               
               <NutritionItem label="Total Fat" value="6g" percent="8%" bold borderTop={false}/>
@@ -70,7 +70,7 @@ export default function NutritionFacts() {
             </div>
 
             {/* --- RIGHT COLUMN --- */}
-            <div className="md:border-t-0 border-t border-buttonCta-text/30 mt-2 md:mt-0 pt-2 md:pt-0">
+            <div className="md:border-t-0 border-t border-black/30 mt-2 md:mt-0 pt-2 md:pt-0">
               <NutritionItem label="Vitamin D" value="0mcg" percent="0%" borderTop={false} />
               <NutritionItem label="Calcium" value="104mg" percent="8%" />
               <NutritionItem label="Iron" value="3.6mg" percent="20%" />
@@ -84,7 +84,7 @@ export default function NutritionFacts() {
               <NutritionItem label="Magnesium" value="33.6mg" percent="8%" />
               <NutritionItem label="Zinc" value="5.5mg" percent="50%" />
 
-              <Separator className="bg-buttonCta-text/50 my-2 h-[2px]" />
+              <Separator className="bg-black/50 my-2 h-[2px]" />
               <p className="font-body text-xs text-black/70 leading-relaxed">
                 * The % Daily Value (DV) tells you how much a nutrient in a serving of food
                 contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.
