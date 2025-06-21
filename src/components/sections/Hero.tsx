@@ -38,7 +38,7 @@ export default function Hero({
   return (
     <section
       className={cn(
-        'relative bg-background flex flex-col items-center justify-center text-center p-4 overflow-hidden',
+        'relative bg-background flex flex-col items-center justify-center text-center p-4',
         minHeight,
         className
       )}
