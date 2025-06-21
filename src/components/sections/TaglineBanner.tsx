@@ -15,7 +15,7 @@ export default function TaglineBanner({ className }: TaglineBannerProps) {
       )}
     >
       <div>
-        <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight">
+        <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight text-primary-foreground">
           American Made
         </h2>
         <p className="font-body text-sm sm:text-base md:text-lg uppercase tracking-wider mt-1 sm:mt-2">
