@@ -19,7 +19,7 @@ interface HeroProps {
 }
 
 export default function Hero({
-  backgroundImageSrc = "/PC-Elements-16.jpg",
+  backgroundImageSrc = "/PC-Elements-16.png",
   backgroundImageAlt = "Primal Cuts background of textured meat or rustic wood",
   backgroundImageAiHint = "meat texture",
   logoImageSrc = "/Primal-Logo.png",
@@ -68,10 +68,18 @@ export default function Hero({
       {/* Decorative Elements at Bottom */}
       <div className="absolute bottom-0 left-0 w-full z-20 flex flex-col items-center pointer-events-none">
         <Image
-          src="/PC-Elements-26.png"
+          src="/PC-Elements-21.png"
           alt="Decorative element"
           width={1920}
-          height={240}
+          height={120}
+          className="w-full h-auto"
+          data-ai-hint="decorative element"
+        />
+        <Image
+          src="/PC-Elements-25.png"
+          alt="Decorative element"
+          width={1920}
+          height={120}
           className="w-full h-auto"
           data-ai-hint="decorative element"
         />
