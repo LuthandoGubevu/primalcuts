@@ -49,7 +49,7 @@ export default function Hero({
         priority={priorityBackgroundImage}
         data-ai-hint={backgroundImageAiHint}
       />
-      <div className="relative z-20 flex flex-col items-center">
+      <div className="relative z-10 flex flex-col items-center">
         <Image
           src={logoImageSrc}
           alt={logoImageAlt}
@@ -63,7 +63,7 @@ export default function Hero({
       </div>
 
       {/* Golden Curve Element at Bottom */}
-      <div className="absolute bottom-0 left-0 w-full h-[15vw] max-h-[200px] z-10 pointer-events-none">
+      <div className="absolute bottom-0 left-0 w-full h-[15vw] max-h-[200px] z-5 pointer-events-none">
         <Image
           src="/PC-Elements-02.png"
           alt="Golden decorative curve"
