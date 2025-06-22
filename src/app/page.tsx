@@ -54,7 +54,7 @@ export default function HomePage() {
         imagePosition="left"
         variant="bleed"
         displayMode="paragraph"
-        className="bg-black text-primary-foreground"
+        className="bg-[#07080c] text-primary-foreground"
       />
 
       <Highlight
