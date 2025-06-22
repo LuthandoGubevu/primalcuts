@@ -25,18 +25,16 @@ export default function HomePage() {
         backgroundImageSrc="/PC Elements-16.jpg"
         backgroundImageAlt="People sitting around a campfire on a beach at dusk"
         backgroundImageAiHint="campfire beach"
-        className="justify-end pb-8"
+        className="justify-end p-0"
       >
-        <div className="px-4">
-          <Image
-            src="/PC Elements-02-New-01.png"
-            alt="Primal Cuts product packages"
-            width={800}
-            height={400}
-            className="w-full object-contain"
-            data-ai-hint="product packages"
-          />
-        </div>
+        <Image
+          src="/PC Elements-02-New-01.png"
+          alt="Primal Cuts product packages"
+          width={800}
+          height={400}
+          className="w-full object-contain"
+          data-ai-hint="product packages"
+        />
       </Hero>
 
       <ImageGallery />
