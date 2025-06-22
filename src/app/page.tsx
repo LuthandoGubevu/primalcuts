@@ -8,7 +8,7 @@ import ImageGallery from '@/components/sections/ImageGallery';
 import Image from 'next/image';
 
 const traditionFeatures = [
-  { text: "Enriched with a select blend of all-natural spices, unveiling a deep, refined umami reminiscent of the finest grilled steak." }
+  { text: "Since 2012, we've honored the South African tradition of biltong. Our process is simple: We use only the finest cuts of American beef, marinate them in our time-tested blend of spices, and air-dry them to perfection. The result is a snack that's not just delicious but also packed with protein and a a commitment to quality you can trust." }
 ];
 
 const differenceFeatures = [
@@ -50,7 +50,7 @@ export default function HomePage() {
         imageSrc="/black-pepper.jpg"
         imageAlt="Man seasoning strips of beef in a commercial kitchen"
         imageAiHint="chef seasoning meat"
-        heading="GRASS-FED. AIR-DRIED. PREMIUM PROTEIN"
+        heading="A TRADITION OF TASTE"
         features={traditionFeatures}
         imagePosition="right"
         variant="bleed"
@@ -67,6 +67,16 @@ export default function HomePage() {
         imagePosition="right"
         variant="bleed"
         displayMode="list"
+        className="bg-secondary/20"
+      />
+
+      <Highlight
+        imageSrc="https://placehold.co/600x500.png"
+        imageAlt="Primal cuts lifestyle"
+        imageAiHint="product lifestyle"
+        features={[]}
+        imagePosition="left"
+        variant="bleed"
         className="bg-secondary/20"
       />
       
