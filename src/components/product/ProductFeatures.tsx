@@ -12,6 +12,7 @@ const featuresData: FeatureItem[] = [
   { name: 'Keto Friendly', src: '/PC-Elements-23.png', hint: 'keto friendly icon' },
   { name: 'High Protein', src: '/PC-Elements-24.png', hint: 'protein icon' },
   { name: 'Zero Sugar', src: '/PC-Elements-25.png', hint: 'sugar free icon' },
+  { name: 'Whole30 Approved', src: '/PC-Elements-10.png', hint: 'whole30 approved icon' },
 ];
 
 export default function ProductFeatures() {
