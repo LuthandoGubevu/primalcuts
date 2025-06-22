@@ -30,8 +30,8 @@ export default function Hero({
   logoImageAiHint = "company logo icon",
   priorityBackgroundImage = true,
   priorityLogoImage = true,
-  logoWidth = 150,
-  logoHeight = 150,
+  logoWidth = 300,
+  logoHeight = 300,
   children,
   className,
   minHeight = 'min-h-[60vh] sm:min-h-[75vh] md:min-h-screen', // Responsive minHeight
@@ -60,7 +60,17 @@ export default function Hero({
         {icon ? (
           <div className="mb-8">{icon}</div>
         ) : (
-          <div className="h-72 w-72 bg-contain bg-no-repeat bg-center mb-8" style={{backgroundImage: "url('/PC-Elements-17.png')"}}></div>
+          logoImageSrc && (
+            <Image
+              src={logoImageSrc}
+              alt={logoImageAlt}
+              width={logoWidth}
+              height={logoHeight}
+              priority={priorityLogoImage}
+              data-ai-hint={logoImageAiHint}
+              className="object-contain mb-8"
+            />
+          )
         )}
         <Image
           src="/PC-Elements-14.png"
