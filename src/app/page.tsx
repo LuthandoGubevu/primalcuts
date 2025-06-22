@@ -29,7 +29,6 @@ export default function HomePage() {
         logoImageAiHint="company tagline"
         logoWidth={300}
         logoHeight={300}
-        logoClassName="dark:invert-0 invert"
       />
 
       <ImageGallery />
