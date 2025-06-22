@@ -36,14 +36,6 @@ export default function HomePage() {
             className="w-full object-contain mb-4"
             data-ai-hint="product benefits tagline"
           />
-          <Image
-            src="/PC Elements-02-New-01.png"
-            alt="Primal Cuts product package"
-            width={600}
-            height={450}
-            className="w-full max-w-lg mx-auto object-contain"
-            data-ai-hint="product package"
-          />
         </div>
       </Hero>
 
