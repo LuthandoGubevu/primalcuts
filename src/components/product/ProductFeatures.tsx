@@ -21,12 +21,12 @@ export default function ProductFeatures() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
           {featuresData.map((feat) => (
             <div key={feat.name} className="flex flex-col items-center">
-              <div className="w-full aspect-[300/424]">
+              <div className="w-full max-w-[150px] aspect-[300/424]">
                 <Image
                   src={feat.src}
                   alt={`${feat.name} icon`}
-                  width={300}
-                  height={424}
+                  width={150}
+                  height={212}
                   className="object-cover w-full h-full"
                   data-ai-hint={feat.hint}
                 />
