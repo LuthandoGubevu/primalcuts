@@ -13,11 +13,12 @@ export default function HomePage() {
         backgroundImageSrc="/PC-Elements-16.jpg"
         backgroundImageAlt="Primal Cuts product background"
         backgroundImageAiHint="product background"
-        logoImageSrc="/PC-Elements-16.jpg"
-        logoImageAlt="Primal Cuts logo"
-        logoImageAiHint="company logo"
+        logoImageSrc="/PC-Elements-14.png"
+        logoImageAlt="Primal Cuts tagline logo"
+        logoImageAiHint="company tagline"
         logoWidth={300}
         logoHeight={300}
+        logoClassName="dark:invert-0 invert"
       />
       
       {/* Features component now handles its own item animations */}

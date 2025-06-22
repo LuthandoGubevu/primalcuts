@@ -13,6 +13,7 @@ interface HeroProps {
   priorityLogoImage?: boolean;
   logoWidth?: number;
   logoHeight?: number;
+  logoClassName?: string;
   children?: ReactNode;
   className?: string;
   minHeight?: string;
@@ -31,6 +32,7 @@ export default function Hero({
   priorityLogoImage = true,
   logoWidth = 300,
   logoHeight = 300,
+  logoClassName,
   children,
   className,
   minHeight = 'min-h-[60vh] sm:min-h-[75vh] md:min-h-screen', // Responsive minHeight
@@ -67,7 +69,7 @@ export default function Hero({
               width={logoWidth}
               height={logoHeight}
               priority={priorityLogoImage}
-              className="object-contain"
+              className={cn("object-contain", logoClassName)}
               data-ai-hint={logoImageAiHint}
             />
           </div>
