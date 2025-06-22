@@ -17,19 +17,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-black/40 z-10"></div> {/* Overlay for text readability, opacity reduced */}
       
       <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center">
-        <div
-          className="h-40 w-40 bg-transparent rounded-full mb-4 flex items-center justify-center"
-          aria-label="Primal Cuts Logo"
-        >
-          <Image
-            src="/PC-Elements-17.png"
-            alt="Primal Cuts Biltong Logo"
-            width={150} 
-            height={150}
-            className="object-contain"
-            data-ai-hint="company logo icon"
-          />
-        </div>
+        
         <Link
           href="https://primalcutsusa.com"
           target="_blank"
