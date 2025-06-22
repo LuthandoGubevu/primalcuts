@@ -19,12 +19,10 @@ const differenceFeatures = [
 ];
 
 const newIconFeatures = [
-  { id: 1, src: '/Image-1.png', alt: 'Product Image 1', hint: 'product detail' },
-  { id: 2, src: '/Image-2.png', alt: 'Product Image 2', hint: 'product packaging' },
-  { id: 3, src: '/Image-3.png', alt: 'Product Image 3', hint: 'product feature' },
-  { id: 4, src: '/Image-4.png', alt: 'Product Image 4', hint: 'product lifestyle' },
-  { id: 5, src: '/Image-5.png', alt: 'Product Image 5', hint: 'product ingredients' },
-  { id: 6, src: '/Image-6.png', alt: 'Product Image 6', hint: 'product texture' },
+  { id: 1, src: '/PC-Elements-22.png', alt: 'Gluten Free icon', hint: 'gluten free icon' },
+  { id: 2, src: '/PC-Elements-23.png', alt: 'Keto Friendly icon', hint: 'keto friendly icon' },
+  { id: 3, src: '/PC-Elements-24.png', alt: 'High Protein icon', hint: 'protein icon' },
+  { id: 4, src: '/PC-Elements-25.png', alt: 'Zero Sugar icon', hint: 'sugar free icon' },
 ];
 
 export default function HomePage() {
