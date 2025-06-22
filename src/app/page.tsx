@@ -11,7 +11,6 @@ const highlightSectionOne = {
   imageSrc: "/PC-Elements-11.png",
   imageAlt: "Artisanal biltong product shot",
   imageAiHint: "product shot",
-  heading: "A TRADITION OF EXCELLENCE",
   features: [
     { text: "HIGH PROTEIN CONTENT (16G PROTEIN PER OUNCE)" },
     { text: "NO ARTIFICIAL PRESERVATIVES OR NITRATES" },
@@ -47,7 +46,6 @@ export default function HomePage() {
         imageSrc={highlightSectionOne.imageSrc}
         imageAlt={highlightSectionOne.imageAlt}
         imageAiHint={highlightSectionOne.imageAiHint}
-        heading={highlightSectionOne.heading}
         features={highlightSectionOne.features}
         imagePosition="left"
         displayMode="list"
