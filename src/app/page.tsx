@@ -51,7 +51,7 @@ export default function HomePage() {
         features={highlightSectionOne.features}
         imagePosition="left"
         displayMode="list"
-        variant="contained"
+        variant="bleed"
       />
       
       <Highlight
