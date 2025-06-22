@@ -18,6 +18,13 @@ const differenceFeatures = [
   { text: "Air-dried, never cooked (retaining more nutrients)" }
 ];
 
+const placeholderFeatures = Array.from({ length: 5 }, (_, i) => ({
+  id: i + 1,
+  name: `Placeholder ${i + 1}`,
+  src: 'https://placehold.co/300x424.png',
+  hint: 'placeholder icon',
+}));
+
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -63,6 +70,27 @@ export default function HomePage() {
       />
       
       <Features />
+
+      <FadeInScroll threshold={0.1}>
+        <section className="py-12 md:py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+              {placeholderFeatures.map((feat) => (
+                <div key={feat.id} className="w-[80px] aspect-[300/424]">
+                  <Image
+                    src={feat.src}
+                    alt={`${feat.name} icon`}
+                    width={80}
+                    height={113}
+                    className="object-contain w-full h-full"
+                    data-ai-hint={feat.hint}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </FadeInScroll>
 
       <FadeInScroll threshold={0.1} delay="md:delay-100">
         <ContactCTA />
