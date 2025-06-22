@@ -32,10 +32,21 @@ export default function HomePage() {
         logoClassName="dark:invert-0 invert"
       />
 
+      <ImageGallery />
+
       {/* Features component now handles its own item animations */}
       <Features />
 
-      <ImageGallery />
+      <Highlight
+        imageSrc="/black-pepper.jpg"
+        imageAlt="Man seasoning strips of beef in a commercial kitchen"
+        imageAiHint="chef seasoning meat"
+        features={traditionFeatures}
+        imagePosition="left"
+        variant="bleed"
+        displayMode="paragraph"
+        className="bg-black text-primary-foreground"
+      />
 
       <Highlight
         imageSrc="/PC-Elements-11.png"
@@ -47,17 +58,6 @@ export default function HomePage() {
         variant="contained"
         displayMode="list"
         className="bg-secondary/20"
-      />
-      
-      <Highlight
-        imageSrc="/black-pepper.jpg"
-        imageAlt="Man seasoning strips of beef in a commercial kitchen"
-        imageAiHint="chef seasoning meat"
-        features={traditionFeatures}
-        imagePosition="left"
-        variant="bleed"
-        displayMode="paragraph"
-        className="bg-black text-primary-foreground"
       />
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
