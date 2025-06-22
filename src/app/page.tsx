@@ -18,7 +18,7 @@ const newSectionContent = {
 };
 
 const anotherNewSectionContent = {
-  imageSrc: "/PC-Elements-11.png",
+  imageSrc: "/public/PC-Elements-11.png",
   imageAlt: "Primal Cuts ingredients",
   imageAiHint: "ingredients meat product",
   heading: "Another Quality Feature",

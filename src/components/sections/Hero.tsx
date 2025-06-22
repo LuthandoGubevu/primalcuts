@@ -60,15 +60,7 @@ export default function Hero({
         {icon ? (
           <div className="mb-8">{icon}</div>
         ) : (
-          <Image
-            src={logoImageSrc}
-            alt={logoImageAlt}
-            width={logoWidth}
-            height={logoHeight}
-            className="mb-8"
-            data-ai-hint={logoImageAiHint}
-            priority={priorityLogoImage}
-          />
+          <div className="h-40 w-40 bg-contain bg-no-repeat bg-center mb-8" style={{backgroundImage: "url('/PC-Elements-17.png')"}}></div>
         )}
         {children}
       </div>
