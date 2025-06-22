@@ -34,7 +34,6 @@ export default function HomePage() {
 
       <ImageGallery />
 
-      {/* Features component now handles its own item animations */}
       <Features />
 
       <Highlight
@@ -55,7 +54,7 @@ export default function HomePage() {
         heading="The Primal Cuts Difference"
         features={differenceFeatures}
         imagePosition="right"
-        variant="contained"
+        variant="bleed"
         displayMode="list"
         className="bg-secondary/20"
       />
