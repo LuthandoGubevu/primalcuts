@@ -24,7 +24,7 @@ export default function Hero({
   backgroundImageSrc = "/PC-Elements-16.jpg",
   backgroundImageAlt = "People sitting around a campfire on a beach at dusk",
   backgroundImageAiHint = "campfire beach",
-  logoImageSrc = "https://placehold.co/300x300.png",
+  logoImageSrc,
   logoImageAlt = "Logo placeholder",
   logoImageAiHint = "company logo",
   priorityBackgroundImage = true,
@@ -56,6 +56,25 @@ export default function Hero({
       />
       {overlay && <div className="absolute inset-0 z-10 bg-black/40" />}
       
+      <div className="relative z-20 flex flex-col items-center">
+        {logoImageSrc && (
+          <div
+            className="mb-4 flex items-center justify-center"
+          >
+            <Image
+              src={logoImageSrc}
+              alt={logoImageAlt}
+              width={logoWidth}
+              height={logoHeight}
+              priority={priorityLogoImage}
+              className="object-contain"
+              data-ai-hint={logoImageAiHint}
+            />
+          </div>
+        )}
+        {icon && <div className="mb-4">{icon}</div>}
+        {children}
+      </div>
     </section>
   );
 }

@@ -13,8 +13,8 @@ export default function HomePage() {
         backgroundImageSrc="/PC-Elements-16.jpg"
         backgroundImageAlt="Primal Cuts product background"
         backgroundImageAiHint="product background"
-        logoImageSrc="https://placehold.co/300x300.png"
-        logoImageAlt="Logo placeholder"
+        logoImageSrc="/PC-Elements-16.jpg"
+        logoImageAlt="Primal Cuts logo"
         logoImageAiHint="company logo"
         logoWidth={300}
         logoHeight={300}
@@ -28,12 +28,10 @@ export default function HomePage() {
         imageAlt={"Artisanal biltong product shot"}
         imageAiHint={"product shot"}
         features={[
-          { text: "HIGH PROTEIN CONTENT (16G PROTEIN PER OUNCE)" },
-          { text: "NO ARTIFICIAL PRESERVATIVES OR NITRATES" },
-          { text: "NUTRIENT-DENSE" },
+          { text: "Steeped in tradition, our biltong is crafted from a time-honored recipe passed down through generations. Each slice is a testament to our commitment to preserving the authentic, rich flavors of our heritage." },
         ]}
         imagePosition="left"
-        displayMode="list"
+        displayMode="paragraph"
         variant="bleed"
       />
       
