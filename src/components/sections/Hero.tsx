@@ -67,7 +67,7 @@ export default function Hero({
           alt="American Made Air Dried Steak tagline"
           width={400}
           height={150}
-          className="object-contain"
+          className="object-contain invert"
           data-ai-hint="tagline text"
         />
         {children}
