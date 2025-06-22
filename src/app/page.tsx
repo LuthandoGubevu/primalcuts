@@ -21,9 +21,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Hero
-        backgroundImageSrc="/PC-Elements-14.png"
-        backgroundImageAlt="Primal Cuts product background"
-        backgroundImageAiHint="product background"
+        backgroundImageSrc="/PC-Elements-16.jpg"
+        backgroundImageAlt="People sitting around a campfire on a beach at dusk"
+        backgroundImageAiHint="campfire beach"
         logoImageSrc="/Promal-Logo.png"
         logoImageAlt="Primal Cuts tagline logo"
         logoImageAiHint="company tagline"
