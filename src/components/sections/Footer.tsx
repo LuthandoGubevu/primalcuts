@@ -17,6 +17,17 @@ export default function Footer() {
       <div className="absolute inset-0 z-10 bg-black/50" />
       <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center">
         
+        <div className="mb-4">
+          <Image
+            src="/PC-Elements-17.png"
+            alt="Primal Cuts Logo"
+            width={100}
+            height={100}
+            className="object-contain"
+            data-ai-hint="company logo icon"
+          />
+        </div>
+
         <Link
           href="https://primalcutsusa.com"
           target="_blank"
