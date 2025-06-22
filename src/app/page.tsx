@@ -1,6 +1,5 @@
 
 import Hero from '@/components/sections/Hero';
-import ImageGallery from '@/components/sections/ImageGallery';
 import Features from '@/components/sections/Features';
 import Highlight from '@/components/sections/Highlight';
 import ContactCTA from '@/components/sections/ContactCTA';
@@ -40,10 +39,6 @@ export default function HomePage() {
           logoImageAlt="Placeholder for hero logo"
           logoImageAiHint="placeholder logo"
         />
-      </FadeInScroll>
-
-      <FadeInScroll threshold={0.1} delay="md:delay-100">
-        <ImageGallery />
       </FadeInScroll>
       
       {/* Features component now handles its own item animations */}
