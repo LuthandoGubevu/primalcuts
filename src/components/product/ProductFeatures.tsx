@@ -27,7 +27,7 @@ export default function ProductFeatures() {
                 alt={`${feat.name} icon`}
                 width={80}
                 height={113}
-                className="object-cover w-full h-full"
+                className="object-contain w-full h-full"
                 data-ai-hint={feat.hint}
               />
             </div>
