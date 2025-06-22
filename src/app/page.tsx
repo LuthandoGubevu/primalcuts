@@ -4,6 +4,7 @@ import Highlight from '@/components/sections/Highlight';
 import ContactCTA from '@/components/sections/ContactCTA';
 import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
+import Hero from '@/components/sections/Hero';
 
 const highlightSectionOne = {
   imageSrc: "/PC-Elements-11.png",
@@ -29,6 +30,16 @@ const newSectionContent = {
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
+      <Hero
+        backgroundImageSrc="https://placehold.co/1920x1080.png"
+        backgroundImageAlt="Hero background placeholder"
+        backgroundImageAiHint="abstract background"
+        logoImageSrc="https://placehold.co/300x300.png"
+        logoImageAlt="Logo placeholder"
+        logoImageAiHint="company logo"
+        logoWidth={300}
+        logoHeight={300}
+      />
       
       {/* Features component now handles its own item animations */}
       <Features />
