@@ -38,17 +38,6 @@ export default function HomePage() {
       <Features />
 
       <Highlight
-        imageSrc="/PC-Elements-12.jpg"
-        imageAlt="Man seasoning strips of beef in a commercial kitchen"
-        imageAiHint="chef seasoning meat"
-        features={traditionFeatures}
-        imagePosition="left"
-        variant="bleed"
-        displayMode="paragraph"
-        className="bg-black text-primary-foreground"
-      />
-
-      <Highlight
         imageSrc="/PC-Elements-11.png"
         imageAlt="Close-up of sliced biltong"
         imageAiHint="dried beef"
@@ -57,6 +46,17 @@ export default function HomePage() {
         imagePosition="right"
         variant="bleed"
         className="bg-background text-foreground"
+      />
+
+      <Highlight
+        imageSrc="/PC-Elements-12.jpg"
+        imageAlt="Man seasoning strips of beef in a commercial kitchen"
+        imageAiHint="chef seasoning meat"
+        features={traditionFeatures}
+        imagePosition="left"
+        variant="bleed"
+        displayMode="paragraph"
+        className="bg-black text-primary-foreground"
       />
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
