@@ -17,18 +17,6 @@ const newSectionContent = {
   ],
 };
 
-const anotherNewSectionContent = {
-  imageSrc: "/public/PC-Elements-11.png",
-  imageAlt: "Primal Cuts ingredients",
-  imageAiHint: "ingredients meat product",
-  heading: "Another Quality Feature",
-  features: [
-    { text: "HIGH PROTEIN CONTENT (16G PROTEIN PER OUNCE)" },
-    { text: "NO ARTIFICIAL PRESERVATIVES OR NITRATES" },
-    { text: "NUTRIENT-DENSE" }
-  ],
-};
-
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -42,19 +30,6 @@ export default function HomePage() {
       
       {/* Features component now handles its own item animations */}
       <Features />
-
-      {/* Highlight components now handle their own internal animations */}
-      <Highlight
-        imageSrc={anotherNewSectionContent.imageSrc}
-        imageAlt={anotherNewSectionContent.imageAlt}
-        imageAiHint={anotherNewSectionContent.imageAiHint}
-        heading={anotherNewSectionContent.heading}
-        features={anotherNewSectionContent.features}
-        imagePosition="left"
-        className="bg-background"
-        displayMode="list"
-        variant="bleed" 
-      />
       
       <Highlight
         imageSrc={newSectionContent.imageSrc}
