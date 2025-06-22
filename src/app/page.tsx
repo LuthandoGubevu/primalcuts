@@ -51,7 +51,7 @@ export default function HomePage() {
         imageAlt="Man seasoning strips of beef in a commercial kitchen"
         imageAiHint="chef seasoning meat"
         features={traditionFeatures}
-        imagePosition="left"
+        imagePosition="right"
         variant="bleed"
         displayMode="paragraph"
         className="bg-[#07080c] text-primary-foreground"
