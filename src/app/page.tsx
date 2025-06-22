@@ -8,9 +8,9 @@ import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
 
 const highlightSectionOne = {
-  imageSrc: "https://placehold.co/600x500.png",
-  imageAlt: "Premium biltong slices in a bowl",
-  imageAiHint: "biltong slices bowl",
+  imageSrc: "/PC-Elements-11.png",
+  imageAlt: "Artisanal biltong product shot",
+  imageAiHint: "product shot",
   heading: "A TRADITION OF EXCELLENCE",
   features: [
     { text: "Crafted using traditional air-drying techniques passed down through generations." },
