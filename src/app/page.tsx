@@ -17,6 +17,12 @@ const differenceFeatures = [
   { text: "Air-dried, never cooked (retaining more nutrients)" }
 ];
 
+const healthFeatures = [
+  { text: "HIGH PROTEIN CONTENT (16G PROTEIN PER OUNCE)" },
+  { text: "NO ARTIFICIAL PRESERVATIVES OR NITRATES" },
+  { text: "NUTRIENT-DENSE" },
+];
+
 const iconFeatures = [
   { id: 1, src: '/PC-Elements-06.png', alt: 'Gluten Free icon', hint: 'gluten free icon' },
   { id: 2, src: '/PC-Elements-07.png', alt: 'Keto Friendly icon', hint: 'keto friendly icon' },
@@ -66,7 +72,6 @@ export default function HomePage() {
         features={differenceFeatures}
         imagePosition="right"
         variant="bleed"
-        displayMode="list"
         className="bg-secondary/20"
       />
 
@@ -74,7 +79,7 @@ export default function HomePage() {
         imageSrc="/PC-Elements-11.png"
         imageAlt="Three packages of Primal Cuts biltong"
         imageAiHint="product packages lifestyle"
-        features={[]}
+        features={healthFeatures}
         imagePosition="left"
         variant="bleed"
         className="bg-secondary/20"
