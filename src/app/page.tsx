@@ -21,10 +21,10 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Hero
-        backgroundImageSrc="/PC-Elements-16.jpg"
+        backgroundImageSrc="/PC-Elements-14.png"
         backgroundImageAlt="Primal Cuts product background"
         backgroundImageAiHint="product background"
-        logoImageSrc="/PC-Elements-14.png"
+        logoImageSrc="/Promal-Logo.png"
         logoImageAlt="Primal Cuts tagline logo"
         logoImageAiHint="company tagline"
         logoWidth={300}
@@ -33,12 +33,24 @@ export default function HomePage() {
       />
 
       <ImageGallery />
+
+      <Highlight
+        imageSrc="/PC-Elements-11.png"
+        imageAlt="Three packages of Primal Cuts biltong"
+        imageAiHint="product packages lifestyle"
+        heading="The Primal Cuts Difference"
+        features={differenceFeatures}
+        imagePosition="right"
+        variant="contained"
+        displayMode="list"
+        className="bg-secondary/20"
+      />
       
       {/* Features component now handles its own item animations */}
       <Features />
 
       <Highlight
-        imageSrc="/PC-Elements-12.jpg"
+        imageSrc="/black-pepper.jpg"
         imageAlt="Man seasoning strips of beef in a commercial kitchen"
         imageAiHint="chef seasoning meat"
         features={traditionFeatures}
