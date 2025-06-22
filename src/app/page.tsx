@@ -29,14 +29,6 @@ export default function HomePage() {
       >
         <div className="px-4">
           <Image
-            src="/PC Elements-26.png"
-            alt="Tagline: 100% American Beef, 32g Protein, 0g Sugar"
-            width={800}
-            height={130}
-            className="w-full object-contain mb-4"
-            data-ai-hint="product benefits tagline"
-          />
-          <Image
             src="/PC Elements-02-New-01.png"
             alt="Primal Cuts product packages"
             width={800}
