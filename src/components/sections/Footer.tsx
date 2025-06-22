@@ -21,9 +21,10 @@ export default function Footer() {
           <Image
             src="/PC-Elements-17.png"
             alt="Primal Cuts Logo"
-            width={100}
-            height={100}
-            className="object-contain"
+            width={300}
+            height={300}
+            className="object-contain w-auto h-24"
+            priority
             data-ai-hint="company logo icon"
           />
         </div>
