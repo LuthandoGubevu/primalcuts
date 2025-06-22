@@ -9,6 +9,7 @@ import NutritionFacts from '@/components/product/NutritionFacts';
 import FadeInScroll from '@/components/utils/FadeInScroll';
 import Footer from '@/components/sections/Footer';
 import ProductFeatures from '@/components/product/ProductFeatures';
+import FlavorSelector from '@/components/product/FlavorSelector';
 
 export default function ProductPage() {
   return (
@@ -47,9 +48,13 @@ export default function ProductPage() {
           <ProductFeatures />
         </FadeInScroll>
 
+        <FadeInScroll threshold={0.1} delay="md:delay-400">
+          <FlavorSelector />
+        </FadeInScroll>
+
       </main>
 
-      <FadeInScroll threshold={0.1} delay="md:delay-400">
+      <FadeInScroll threshold={0.1} delay="md:delay-500">
         <div className="container mx-auto px-4 flex justify-center py-8">
           <Button variant="outline" asChild className="border-gray-400 text-black hover:bg-buttonCta-text hover:text-white hover:border-buttonCta-text">
             <Link href="/">
@@ -60,7 +65,7 @@ export default function ProductPage() {
         </div>
       </FadeInScroll>
 
-      <FadeInScroll threshold={0.1} delay="md:delay-500">
+      <FadeInScroll threshold={0.1} delay="md:delay-600">
         <Footer />
       </FadeInScroll>
     </div>
