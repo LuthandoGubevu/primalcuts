@@ -62,6 +62,14 @@ export default function Hero({
         ) : (
           <div className="h-72 w-72 bg-contain bg-no-repeat bg-center mb-8" style={{backgroundImage: "url('/PC-Elements-17.png')"}}></div>
         )}
+        <Image
+          src="/PC-Elements-14.png"
+          alt="American Made Air Dried Steak tagline"
+          width={400}
+          height={150}
+          className="object-contain"
+          data-ai-hint="tagline text"
+        />
         {children}
       </div>
     </section>
