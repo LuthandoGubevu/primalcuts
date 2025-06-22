@@ -1,5 +1,6 @@
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Hero from '@/components/sections/Hero'; // Import the Hero component
@@ -19,8 +20,18 @@ export default function ProductPage() {
           backgroundImageAiHint="product lifestyle background"
           priorityBackgroundImage={true}
           overlay={true}
-          // Defaults for minHeight will be used from Hero component
-        />
+          className="justify-end pb-12 sm:pb-20"
+          minHeight="min-h-[50vh] sm:min-h-[65vh]"
+        >
+          <Image
+            src="/PC Elements-26.png"
+            alt="Tagline: 100% American Beef, 32g Protein, 0g Sugar"
+            width={800}
+            height={130}
+            className="w-full max-w-3xl object-contain"
+            data-ai-hint="product benefits tagline"
+          />
+        </Hero>
       </FadeInScroll>
 
       <main className="container mx-auto px-4 py-8 flex-grow">
