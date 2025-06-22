@@ -19,10 +19,11 @@ const differenceFeatures = [
 ];
 
 const newIconFeatures = [
-  { id: 1, src: '/PC-Elements-22.png', alt: 'Gluten Free icon', hint: 'gluten free icon' },
-  { id: 2, src: '/PC-Elements-23.png', alt: 'Keto Friendly icon', hint: 'keto friendly icon' },
-  { id: 3, src: '/PC-Elements-24.png', alt: 'High Protein icon', hint: 'protein icon' },
-  { id: 4, src: '/PC-Elements-25.png', alt: 'Zero Sugar icon', hint: 'sugar free icon' },
+  { id: 1, src: '/PC-Elements-06.png', alt: 'Gluten Free icon', hint: 'gluten free icon' },
+  { id: 2, src: '/PC-Elements-07.png', alt: 'Keto Friendly icon', hint: 'keto friendly icon' },
+  { id: 3, src: '/PC-Elements-08.png', alt: '32G Protein icon', hint: 'protein icon' },
+  { id: 4, src: '/PC-Elements-09.png', alt: 'Zero Sugar icon', hint: 'sugar free icon' },
+  { id: 5, src: '/PC-Elements-10.png', alt: 'Whole30 Approved icon', hint: 'whole30 approved icon' },
 ];
 
 export default function HomePage() {
