@@ -20,7 +20,7 @@ export default function ProductPage() {
           backgroundImageAiHint="product lifestyle background"
           priorityBackgroundImage={true}
           overlay={true}
-          className="justify-end pb-12 sm:pb-20"
+          className="justify-end p-0"
           minHeight="min-h-[50vh] sm:min-h-[65vh]"
         >
           <Image
@@ -28,7 +28,7 @@ export default function ProductPage() {
             alt="Tagline: 100% American Beef, 32g Protein, 0g Sugar"
             width={800}
             height={130}
-            className="w-full max-w-3xl object-contain"
+            className="w-full object-contain"
             data-ai-hint="product benefits tagline"
           />
         </Hero>

@@ -43,7 +43,7 @@ export default function Hero({
   return (
     <section
       className={cn(
-        'relative bg-background flex flex-col items-center justify-center text-center p-4',
+        'relative bg-background flex flex-col items-center justify-center text-center',
         minHeight,
         className
       )}
@@ -59,7 +59,7 @@ export default function Hero({
       />
       {overlay && <div className="absolute inset-0 z-10 bg-black/40" />}
       
-      <div className="relative z-20 flex flex-col items-center">
+      <div className="relative z-20 flex w-full flex-col items-center">
         {logoImageSrc && (
           <div
             className="mb-4 flex items-center justify-center"
