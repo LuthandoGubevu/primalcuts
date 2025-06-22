@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="relative py-10 md:py-12 text-primary-foreground overflow-hidden">
       <Image
-        src="/PC-Elements-13.jpg"
+        src="/PC Elements-13.jpg"
         alt="Dried meat hanging"
         layout="fill"
         objectFit="cover"
@@ -19,7 +19,7 @@ export default function Footer() {
         
         <div className="mb-4">
           <Image
-            src="/PC-Elements-17.png"
+            src="/PC Elements-17.png"
             alt="Primal Cuts Logo"
             width={300}
             height={300}

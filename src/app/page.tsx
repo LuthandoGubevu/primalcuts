@@ -21,7 +21,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Hero
-        backgroundImageSrc="/PC-Elements-16.jpg"
+        backgroundImageSrc="/PC Elements-16.jpg"
         backgroundImageAlt="People sitting around a campfire on a beach at dusk"
         backgroundImageAiHint="campfire beach"
       />
@@ -42,7 +42,7 @@ export default function HomePage() {
       />
 
       <Highlight
-        imageSrc="/PC-Elements-11.png"
+        imageSrc="/PC Elements-11.png"
         imageAlt="Three packages of Primal Cuts biltong"
         imageAiHint="product packages lifestyle"
         heading="The Primal Cuts Difference"

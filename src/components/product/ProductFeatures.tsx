@@ -7,11 +7,11 @@ interface FeatureItem {
 }
 
 const featuresData: FeatureItem[] = [
-  { name: 'Gluten Free', icon: '/PC-Elements-06.png' },
-  { name: 'Keto Friendly', icon: '/PC-Elements-07.png' },
-  { name: '32G Protein', icon: '/PC-Elements-08.png' },
-  { name: 'Zero Sugar', icon: '/PC-Elements-09.png' },
-  { name: 'Whole30 Approved', icon: '/PC-Elements-10.png' },
+  { name: 'Gluten Free', icon: '/PC Elements-06.png' },
+  { name: 'Keto Friendly', icon: '/PC Elements-07.png' },
+  { name: '32G Protein', icon: '/PC Elements-08.png' },
+  { name: 'Zero Sugar', icon: '/PC Elements-09.png' },
+  { name: 'Whole30 Approved', icon: '/PC Elements-10.png' },
 ];
 
 export default function ProductFeatures() {

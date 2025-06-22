@@ -22,7 +22,7 @@ interface HeroProps {
 }
 
 export default function Hero({
-  backgroundImageSrc = "/PC-Elements-16.jpg",
+  backgroundImageSrc = "/PC Elements-16.jpg",
   backgroundImageAlt = "People sitting around a campfire on a beach at dusk",
   backgroundImageAiHint = "campfire beach",
   logoImageSrc,
