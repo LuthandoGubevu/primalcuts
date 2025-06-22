@@ -7,6 +7,18 @@ import ContactCTA from '@/components/sections/ContactCTA';
 import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
 
+const highlightSectionOne = {
+  imageSrc: "https://placehold.co/600x500.png",
+  imageAlt: "Premium biltong slices in a bowl",
+  imageAiHint: "biltong slices bowl",
+  heading: "A TRADITION OF EXCELLENCE",
+  features: [
+    { text: "Crafted using traditional air-drying techniques passed down through generations." },
+    { text: "Made from the finest cuts of American grass-fed beef." },
+    { text: "A healthy, high-protein snack for any occasion." },
+  ],
+};
+
 const newSectionContent = {
   imageSrc: "/black-pepper.jpg",
   imageAlt: "Black pepper corns with premium steak",
@@ -30,6 +42,17 @@ export default function HomePage() {
       
       {/* Features component now handles its own item animations */}
       <Features />
+
+      <Highlight
+        imageSrc={highlightSectionOne.imageSrc}
+        imageAlt={highlightSectionOne.imageAlt}
+        imageAiHint={highlightSectionOne.imageAiHint}
+        heading={highlightSectionOne.heading}
+        features={highlightSectionOne.features}
+        imagePosition="left"
+        displayMode="list"
+        variant="contained"
+      />
       
       <Highlight
         imageSrc={newSectionContent.imageSrc}
