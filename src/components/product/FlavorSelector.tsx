@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -35,7 +34,7 @@ export default function FlavorSelector() {
                       : 'border-buttonCta-text'
                   )}
                 />
-                <span className="font-body font-semibold text-sm uppercase tracking-wider text-buttonCta-text group-hover:text-primary transition-colors">
+                <span className="font-body font-semibold text-sm uppercase tracking-wider text-black group-hover:text-primary transition-colors">
                   {flavor.name}
                 </span>
               </div>
