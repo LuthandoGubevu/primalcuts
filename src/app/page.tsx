@@ -8,7 +8,7 @@ import ImageGallery from '@/components/sections/ImageGallery';
 import Image from 'next/image';
 
 const traditionFeatures = [
-  { text: "Since 2012, we've honored the South African tradition of biltong. Our process is simple: We use only the finest cuts of American beef, marinate them in our time-tested blend of spices, and air-dry them to perfection. The result is a snack that's not just delicious but also packed with protein and a a commitment to quality you can trust." }
+  { text: "Enriched with a select blend of all-natural spices, unveiling a deep, refined umami reminiscent of the finest grilled steak." }
 ];
 
 const healthFeatures = [
