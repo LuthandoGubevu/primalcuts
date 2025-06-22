@@ -36,20 +36,6 @@ export default function HomePage() {
         variant="bleed"
       />
       
-      <Highlight
-        imageSrc={"/black-pepper.jpg"}
-        imageAlt={"Black pepper corns with premium steak"}
-        imageAiHint={"black pepper steak"}
-        heading={"GRASS-FED. AIR-DRIED. PREMIUM PROTEIN"}
-        features={[
-          { text: "Enriched with a select blend of all-natural spices, unveiling a deep, refined umami reminiscent of the finest grilled steak." },
-        ]}
-        imagePosition="right" 
-        className="bg-[#05080b] text-primary-foreground dark:text-foreground"
-        displayMode="paragraph"
-        variant="bleed"
-      />
-      
       <FadeInScroll threshold={0.1} delay="md:delay-100">
         <ContactCTA />
       </FadeInScroll>
