@@ -27,16 +27,14 @@ export default function Features() {
             <FadeInScroll 
               key={feat.name} 
               threshold={0.1} 
-              // Example of simple incremental delay using Tailwind classes
-              // More complex staggering could involve dynamic style={{ transitionDelay: ... }}
               delay={index === 0 ? '' : `delay-${Math.min(index * 100, 500)}`} 
               slideDirection="up"
             >
               <div 
-                className="flex flex-col items-center space-y-3 group transform transition-transform duration-300 hover:scale-105" 
+                className="flex flex-col items-center space-y-2 group transform transition-transform duration-300 hover:scale-105" 
                 aria-label={feat.description}
               >
-                <div className="w-20 md:w-24 aspect-[2/3] bg-transparent rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-transparent shadow-md group-hover:shadow-lg p-2">
+                <div className="w-20 h-28 md:w-24 md:h-36 bg-transparent rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-transparent shadow-md group-hover:shadow-lg p-2">
                   {feat.isImage && typeof feat.icon === 'string' ? (
                     <Image
                       src={feat.icon}
@@ -51,6 +49,7 @@ export default function Features() {
                     typeof feat.icon !== 'string' && <feat.icon className="w-8 h-8 md:w-10 md:h-10 text-primary-foreground transition-colors duration-300 group-hover:text-accent-foreground" aria-hidden="true" />
                   )}
                 </div>
+                <p className="font-body text-xs md:text-sm uppercase tracking-wider px-1">{feat.name}</p>
               </div>
             </FadeInScroll>
           ))}

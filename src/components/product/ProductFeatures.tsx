@@ -20,8 +20,8 @@ export default function ProductFeatures() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8 text-center">
           {featuresData.map((feat) => (
-            <div key={feat.name} className="flex flex-col items-center">
-              <div className="w-16 h-24 md:w-20 md:h-30 flex items-center justify-center mb-2">
+            <div key={feat.name} className="flex flex-col items-center space-y-2">
+              <div className="w-16 h-24 md:w-20 md:h-30 flex items-center justify-center">
                 <Image
                   src={feat.icon}
                   alt={`${feat.name} icon`}
@@ -31,7 +31,7 @@ export default function ProductFeatures() {
                   data-ai-hint="feature icon product"
                 />
               </div>
-              {/* The paragraph displaying feat.name has been removed */}
+              <p className="font-body text-xs md:text-sm uppercase tracking-wider">{feat.name}</p>
             </div>
           ))}
         </div>
