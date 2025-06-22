@@ -24,7 +24,7 @@ export default function HomePage() {
         backgroundImageSrc="/PC-Elements-16.jpg"
         backgroundImageAlt="People sitting around a campfire on a beach at dusk"
         backgroundImageAiHint="campfire beach"
-        logoImageSrc="/Promal-Logo.png"
+        logoImageSrc="/Primal-Logo.png"
         logoImageAlt="Primal Cuts tagline logo"
         logoImageAiHint="company tagline"
         logoWidth={300}
