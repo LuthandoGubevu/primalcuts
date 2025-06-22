@@ -21,12 +21,12 @@ interface HeroProps {
 }
 
 export default function Hero({
-  backgroundImageSrc = "/PC-Elements-27.jpg",
+  backgroundImageSrc = "/PC-Elements-16.jpg",
   backgroundImageAlt = "People sitting around a campfire on a beach at dusk",
   backgroundImageAiHint = "campfire beach",
-  logoImageSrc = "/PC-Elements-17.png",
-  logoImageAlt = "Primal Cuts Biltong Logo",
-  logoImageAiHint = "company logo icon",
+  logoImageSrc = "https://placehold.co/300x300.png",
+  logoImageAlt = "Logo placeholder",
+  logoImageAiHint = "company logo",
   priorityBackgroundImage = true,
   priorityLogoImage = true,
   logoWidth = 300,
@@ -55,32 +55,7 @@ export default function Hero({
         data-ai-hint={backgroundImageAiHint}
       />
       {overlay && <div className="absolute inset-0 z-10 bg-black/40" />}
-      <div className="relative z-20 flex flex-col items-center">
-        {icon ? (
-          <div className="mb-8">{icon}</div>
-        ) : (
-          logoImageSrc && (
-            <Image
-              src={logoImageSrc}
-              alt={logoImageAlt}
-              width={logoWidth}
-              height={logoHeight}
-              priority={priorityLogoImage}
-              data-ai-hint={logoImageAiHint}
-              className="object-contain mb-8"
-            />
-          )
-        )}
-        <Image
-          src="/PC-Elements-14.png"
-          alt="American Made Air Dried Steak tagline"
-          width={400}
-          height={150}
-          className="object-contain invert"
-          data-ai-hint="tagline text"
-        />
-        {children}
-      </div>
+      
     </section>
   );
 }
