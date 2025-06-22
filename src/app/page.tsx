@@ -72,7 +72,7 @@ export default function HomePage() {
       <Features />
 
       <FadeInScroll threshold={0.1}>
-        <section className="py-12 md:py-16 bg-background">
+        <section className="py-12 md:py-16 bg-black">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-6 md:gap-8">
               {placeholderFeatures.map((feat) => (
