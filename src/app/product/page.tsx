@@ -17,11 +17,7 @@ export default function ProductPage() {
           backgroundImageSrc="/PC Elements-27.jpg"
           backgroundImageAlt="Primal Cuts product page hero background"
           backgroundImageAiHint="product lifestyle background"
-          logoImageSrc="/PC Elements-17.png"
-          logoImageAlt="Primal Cuts Biltong Logo"
-          logoImageAiHint="company logo icon"
           priorityBackgroundImage={true}
-          priorityLogoImage={true}
           overlay={true}
           // Defaults for minHeight will be used from Hero component
         />
