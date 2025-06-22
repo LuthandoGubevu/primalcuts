@@ -11,7 +11,7 @@ import Footer from '@/components/sections/Footer';
 
 export default function ProductPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-white text-black">
+    <div className="flex flex-col min-h-screen bg-background">
       <FadeInScroll threshold={0.01}>
         <Hero
           backgroundImageSrc="/PC-Elements-27.jpg"
