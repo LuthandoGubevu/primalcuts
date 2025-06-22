@@ -24,11 +24,6 @@ export default function HomePage() {
         backgroundImageSrc="/PC-Elements-16.jpg"
         backgroundImageAlt="People sitting around a campfire on a beach at dusk"
         backgroundImageAiHint="campfire beach"
-        logoImageSrc="/Primal-Cuts-logo-tagline-white.png"
-        logoImageAlt="Primal Cuts tagline logo"
-        logoImageAiHint="company tagline"
-        logoWidth={300}
-        logoHeight={300}
       />
 
       <ImageGallery />
