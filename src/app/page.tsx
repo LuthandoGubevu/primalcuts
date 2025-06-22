@@ -50,7 +50,7 @@ export default function HomePage() {
         imageSrc="/black-pepper.jpg"
         imageAlt="Man seasoning strips of beef in a commercial kitchen"
         imageAiHint="chef seasoning meat"
-        heading="A TRADITION OF TASTE"
+        heading="GRASS-FED. AIR-DRIED. PREMIUM PROTEIN"
         features={traditionFeatures}
         imagePosition="right"
         variant="bleed"
