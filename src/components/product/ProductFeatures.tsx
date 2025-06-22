@@ -18,19 +18,17 @@ export default function ProductFeatures() {
   return (
     <section className="py-12 md:py-16 bg-background">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           {featuresData.map((feat) => (
-            <div key={feat.name} className="flex flex-col items-center">
-              <div className="w-full max-w-[80px] aspect-[300/424]">
-                <Image
-                  src={feat.src}
-                  alt={`${feat.name} icon`}
-                  width={80}
-                  height={113}
-                  className="object-cover w-full h-full"
-                  data-ai-hint={feat.hint}
-                />
-              </div>
+            <div key={feat.name} className="w-[80px] aspect-[300/424]">
+              <Image
+                src={feat.src}
+                alt={`${feat.name} icon`}
+                width={80}
+                height={113}
+                className="object-cover w-full h-full"
+                data-ai-hint={feat.hint}
+              />
             </div>
           ))}
         </div>
