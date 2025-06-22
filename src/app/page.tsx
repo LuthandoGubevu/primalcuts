@@ -59,7 +59,7 @@ export default function HomePage() {
       />
 
       <Highlight
-        imageSrc="/PC Elements-11.png"
+        imageSrc="/PC-Elements-11.png"
         imageAlt="Three packages of Primal Cuts biltong"
         imageAiHint="product packages lifestyle"
         heading="The Primal Cuts Difference"
@@ -71,9 +71,9 @@ export default function HomePage() {
       />
 
       <Highlight
-        imageSrc="https://placehold.co/600x500.png"
-        imageAlt="Primal cuts lifestyle"
-        imageAiHint="product lifestyle"
+        imageSrc="/PC-Elements-11.png"
+        imageAlt="Three packages of Primal Cuts biltong"
+        imageAiHint="product packages lifestyle"
         features={[]}
         imagePosition="left"
         variant="bleed"
