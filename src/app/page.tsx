@@ -32,7 +32,14 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <FadeInScroll threshold={0.01}>
-        <Hero />
+        <Hero 
+          backgroundImageSrc="https://placehold.co/1920x1080.png"
+          backgroundImageAlt="Placeholder for hero background"
+          backgroundImageAiHint="placeholder background"
+          logoImageSrc="https://placehold.co/300x300.png"
+          logoImageAlt="Placeholder for hero logo"
+          logoImageAiHint="placeholder logo"
+        />
       </FadeInScroll>
 
       <FadeInScroll threshold={0.1} delay="md:delay-100">
