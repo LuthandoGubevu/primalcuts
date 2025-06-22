@@ -1,6 +1,5 @@
 
 import Features from '@/components/sections/Features';
-import Highlight from '@/components/sections/Highlight';
 import ContactCTA from '@/components/sections/ContactCTA';
 import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
@@ -23,18 +22,6 @@ export default function HomePage() {
       
       {/* Features component now handles its own item animations */}
       <Features />
-
-      <Highlight
-        imageSrc={"/PC-Elements-11.png"}
-        imageAlt={"Artisanal biltong product shot"}
-        imageAiHint={"product shot"}
-        features={[
-          { text: "Steeped in tradition, our biltong is crafted from a time-honored recipe passed down through generations. Each slice is a testament to our commitment to preserving the authentic, rich flavors of our heritage." },
-        ]}
-        imagePosition="left"
-        displayMode="paragraph"
-        variant="bleed"
-      />
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
         <ContactCTA />
