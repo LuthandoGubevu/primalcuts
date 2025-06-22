@@ -31,6 +31,8 @@ export default function HomePage() {
         logoHeight={300}
         logoClassName="dark:invert-0 invert"
       />
+
+      <ImageGallery />
       
       {/* Features component now handles its own item animations */}
       <Features />
@@ -45,8 +47,6 @@ export default function HomePage() {
         displayMode="paragraph"
         className="bg-black text-primary-foreground"
       />
-
-      <ImageGallery />
 
       <Highlight
         imageSrc="/PC-Elements-11.png"
