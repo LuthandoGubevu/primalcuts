@@ -13,9 +13,9 @@ const highlightSectionOne = {
   imageAiHint: "product shot",
   heading: "A TRADITION OF EXCELLENCE",
   features: [
-    { text: "Crafted using traditional air-drying techniques passed down through generations." },
-    { text: "Made from the finest cuts of American grass-fed beef." },
-    { text: "A healthy, high-protein snack for any occasion." },
+    { text: "HIGH PROTEIN CONTENT (16G PROTEIN PER OUNCE)" },
+    { text: "NO ARTIFICIAL PRESERVATIVES OR NITRATES" },
+    { text: "NUTRIENT-DENSE" },
   ],
 };
 
