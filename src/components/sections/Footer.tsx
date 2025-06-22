@@ -1,11 +1,22 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-buttonCta py-10 md:py-12 text-primary-foreground">
-      <div className="container mx-auto px-4 flex flex-col items-center text-center">
+    <footer className="relative py-10 md:py-12 text-primary-foreground overflow-hidden">
+      <Image
+        src="/PC-Elements-13.jpg"
+        alt="Dark wood texture background"
+        layout="fill"
+        objectFit="cover"
+        className="absolute inset-0 z-0"
+        data-ai-hint="wood texture"
+      />
+      <div className="absolute inset-0 z-10 bg-black/60" />
+
+      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center">
         
         <Link
           href="https://primalcutsusa.com"
