@@ -8,7 +8,7 @@ import ImageGallery from '@/components/sections/ImageGallery';
 import Image from 'next/image';
 
 const traditionFeatures = [
-  { text: "Since 2012, we've honored the South African tradition of biltong. Our process is simple: We use only the finest cuts of American beef, marinate them in our time-tested blend of spices, and air-dry them to perfection. The result is a snack that's not just delicious but also packed with protein and a a commitment to quality you can trust." }
+  { text: "Enriched with a select blend of all-natural spices, unveiling a deep, refined umami reminiscent of the finest grilled steak." }
 ];
 
 const differenceFeatures = [
@@ -17,7 +17,7 @@ const differenceFeatures = [
   { text: "Air-dried, never cooked (retaining more nutrients)" }
 ];
 
-const newIconFeatures = [
+const iconFeatures = [
   { id: 1, src: '/PC-Elements-06.png', alt: 'Gluten Free icon', hint: 'gluten free icon' },
   { id: 2, src: '/PC-Elements-07.png', alt: 'Keto Friendly icon', hint: 'keto friendly icon' },
   { id: 3, src: '/PC-Elements-08.png', alt: '32G Protein icon', hint: 'protein icon' },
@@ -50,6 +50,7 @@ export default function HomePage() {
         imageSrc="/black-pepper.jpg"
         imageAlt="Man seasoning strips of beef in a commercial kitchen"
         imageAiHint="chef seasoning meat"
+        heading="GRASS-FED. AIR-DRIED. PREMIUM PROTEIN"
         features={traditionFeatures}
         imagePosition="right"
         variant="bleed"
@@ -73,7 +74,7 @@ export default function HomePage() {
         <section className="py-12 md:py-16 bg-black">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-              {newIconFeatures.map((feat) => (
+              {iconFeatures.map((feat) => (
                 <div key={feat.id} className="w-[80px] aspect-[300/424]">
                   <Image
                     src={feat.src}
