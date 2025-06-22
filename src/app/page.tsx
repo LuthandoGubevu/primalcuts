@@ -39,8 +39,6 @@ export default function HomePage() {
 
       <ImageGallery />
 
-      <Features />
-
       <Highlight
         imageSrc="/black-pepper.jpg"
         imageAlt="Man seasoning strips of beef in a commercial kitchen"
@@ -64,6 +62,8 @@ export default function HomePage() {
         className="bg-secondary/20"
       />
       
+      <Features />
+
       <FadeInScroll threshold={0.1} delay="md:delay-100">
         <ContactCTA />
       </FadeInScroll>
