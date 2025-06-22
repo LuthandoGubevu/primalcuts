@@ -31,7 +31,6 @@ export default function ProductFeatures() {
                   data-ai-hint="feature icon product"
                 />
               </div>
-              <p className="font-body text-xs md:text-sm uppercase tracking-wider">{feat.name}</p>
             </div>
           ))}
         </div>

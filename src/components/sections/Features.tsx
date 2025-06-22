@@ -49,7 +49,6 @@ export default function Features() {
                     typeof feat.icon !== 'string' && <feat.icon className="w-8 h-8 md:w-10 md:h-10 text-primary-foreground transition-colors duration-300 group-hover:text-accent-foreground" aria-hidden="true" />
                   )}
                 </div>
-                <p className="font-body text-xs md:text-sm uppercase tracking-wider px-1">{feat.name}</p>
               </div>
             </FadeInScroll>
           ))}
