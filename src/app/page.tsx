@@ -1,5 +1,4 @@
 
-import Features from '@/components/sections/Features';
 import ContactCTA from '@/components/sections/ContactCTA';
 import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
@@ -70,8 +69,6 @@ export default function HomePage() {
         className="bg-secondary/20"
       />
       
-      <Features />
-
       <FadeInScroll threshold={0.1}>
         <section className="py-12 md:py-16 bg-black">
           <div className="container mx-auto px-4">
