@@ -18,12 +18,14 @@ const differenceFeatures = [
   { text: "Air-dried, never cooked (retaining more nutrients)" }
 ];
 
-const placeholderFeatures = Array.from({ length: 5 }, (_, i) => ({
-  id: i + 1,
-  name: `Placeholder ${i + 1}`,
-  src: 'https://placehold.co/300x424.png',
-  hint: 'placeholder icon',
-}));
+const newIconFeatures = [
+  { id: 1, src: '/Image-1.png', alt: 'Product Image 1', hint: 'product detail' },
+  { id: 2, src: '/Image-2.png', alt: 'Product Image 2', hint: 'product packaging' },
+  { id: 3, src: '/Image-3.png', alt: 'Product Image 3', hint: 'product feature' },
+  { id: 4, src: '/Image-4.png', alt: 'Product Image 4', hint: 'product lifestyle' },
+  { id: 5, src: '/Image-5.png', alt: 'Product Image 5', hint: 'product ingredients' },
+  { id: 6, src: '/Image-6.png', alt: 'Product Image 6', hint: 'product texture' },
+];
 
 export default function HomePage() {
   return (
@@ -75,11 +77,11 @@ export default function HomePage() {
         <section className="py-12 md:py-16 bg-black">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-              {placeholderFeatures.map((feat) => (
+              {newIconFeatures.map((feat) => (
                 <div key={feat.id} className="w-[80px] aspect-[300/424]">
                   <Image
                     src={feat.src}
-                    alt={`${feat.name} icon`}
+                    alt={feat.alt}
                     width={80}
                     height={113}
                     className="object-contain w-full h-full"
