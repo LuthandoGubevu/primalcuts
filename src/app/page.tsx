@@ -32,6 +32,9 @@ export default function HomePage() {
         logoClassName="dark:invert-0 invert"
       />
 
+      {/* Features component now handles its own item animations */}
+      <Features />
+
       <ImageGallery />
 
       <Highlight
@@ -46,9 +49,6 @@ export default function HomePage() {
         className="bg-secondary/20"
       />
       
-      {/* Features component now handles its own item animations */}
-      <Features />
-
       <Highlight
         imageSrc="/black-pepper.jpg"
         imageAlt="Man seasoning strips of beef in a commercial kitchen"
