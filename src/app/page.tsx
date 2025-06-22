@@ -11,12 +11,6 @@ const traditionFeatures = [
   { text: "Since 2012, we've honored the South African tradition of biltong. Our process is simple: We use only the finest cuts of American beef, marinate them in our time-tested blend of spices, and air-dry them to perfection. The result is a snack that's not just delicious but also packed with protein and a a commitment to quality you can trust." }
 ];
 
-const differenceFeatures = [
-  { text: "Made with 100% American Beef" },
-  { text: "Marinated for 24 hours" },
-  { text: "Air-dried, never cooked (retaining more nutrients)" }
-];
-
 const healthFeatures = [
   { text: "HIGH PROTEIN CONTENT (16G PROTEIN PER OUNCE)" },
   { text: "NO ARTIFICIAL PRESERVATIVES OR NITRATES" },
@@ -62,17 +56,6 @@ export default function HomePage() {
         variant="bleed"
         displayMode="paragraph"
         className="bg-[#07080c] text-primary-foreground"
-      />
-
-      <Highlight
-        imageSrc="/PC-Elements-11.png"
-        imageAlt="Three packages of Primal Cuts biltong"
-        imageAiHint="product packages lifestyle"
-        heading="The Primal Cuts Difference"
-        features={differenceFeatures}
-        imagePosition="right"
-        variant="bleed"
-        className="bg-secondary/20"
       />
 
       <Highlight
