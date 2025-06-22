@@ -6,6 +6,7 @@ import Highlight from '@/components/sections/Highlight';
 import ContactCTA from '@/components/sections/ContactCTA';
 import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
+import { Beef } from 'lucide-react';
 
 const newSectionContent = {
   imageSrc: "/black-pepper.jpg",
@@ -33,7 +34,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <FadeInScroll threshold={0.01}>
-        <Hero />
+        <Hero icon={<Beef className="h-32 w-32 text-primary-foreground" />} />
       </FadeInScroll>
 
       <FadeInScroll threshold={0.1} delay="md:delay-100">

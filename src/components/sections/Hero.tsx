@@ -1,6 +1,7 @@
 
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import type { ReactNode } from 'react';
 
 interface HeroProps {
   backgroundImageSrc?: string;
@@ -13,10 +14,11 @@ interface HeroProps {
   priorityLogoImage?: boolean;
   logoWidth?: number;
   logoHeight?: number;
-  children?: React.ReactNode;
+  children?: ReactNode;
   className?: string;
   minHeight?: string;
   overlay?: boolean;
+  icon?: ReactNode;
 }
 
 export default function Hero({
@@ -34,6 +36,7 @@ export default function Hero({
   className,
   minHeight = 'min-h-[60vh] sm:min-h-[75vh] md:min-h-screen', // Responsive minHeight
   overlay = true,
+  icon,
 }: HeroProps) {
   return (
     <section
@@ -54,15 +57,19 @@ export default function Hero({
       />
       {overlay && <div className="absolute inset-0 z-10 bg-black/40" />}
       <div className="relative z-20 flex flex-col items-center">
-        <Image
-          src={logoImageSrc}
-          alt={logoImageAlt}
-          width={logoWidth}
-          height={logoHeight}
-          className="mb-8"
-          data-ai-hint={logoImageAiHint}
-          priority={priorityLogoImage}
-        />
+        {icon ? (
+          <div className="mb-8">{icon}</div>
+        ) : (
+          <Image
+            src={logoImageSrc}
+            alt={logoImageAlt}
+            width={logoWidth}
+            height={logoHeight}
+            className="mb-8"
+            data-ai-hint={logoImageAiHint}
+            priority={priorityLogoImage}
+          />
+        )}
         {children}
       </div>
     </section>
