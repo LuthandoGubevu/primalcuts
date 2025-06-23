@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function HeroLanding() {
   return (
@@ -10,12 +11,19 @@ export default function HeroLanding() {
         aria-hidden="true"
       ></div>
 
-      {/* Decorative Bottom Shape Placeholder */}
+      {/* Decorative Bottom Shape */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-32 z-10 bg-gray-600"
-        data-ai-hint="decorative bottom shape placeholder 1080px wide"
+        className="absolute bottom-0 left-0 right-0 h-32 md:h-64 lg:h-96 z-10"
         aria-hidden="true"
-      ></div>
+      >
+        <Image
+          src="/PC Elements-02-New-01.png"
+          alt="Decorative bottom shape"
+          fill
+          className="object-contain object-bottom"
+          data-ai-hint="decorative shape"
+        />
+      </div>
 
       {/* Centered Content */}
       <div className="relative z-20 flex h-full items-center justify-center">
