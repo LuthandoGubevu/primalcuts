@@ -5,6 +5,7 @@ import FadeInScroll from '@/components/utils/FadeInScroll';
 import Highlight from '@/components/sections/Highlight';
 import Image from 'next/image';
 import ImageGallery from '@/components/sections/ImageGallery';
+import Hero from '@/components/sections/Hero';
 
 const traditionFeatures = [
   { text: "Enriched with a select blend of all-natural spices, unveiling a deep, refined umami reminiscent of the finest grilled steak." }
@@ -28,6 +29,8 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       
+      <Hero />
+
       <FadeInScroll threshold={0.1}>
         <ImageGallery />
       </FadeInScroll>
