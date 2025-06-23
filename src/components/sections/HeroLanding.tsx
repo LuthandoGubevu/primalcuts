@@ -16,7 +16,7 @@ export default function HeroLanding() {
 
       {/* Decorative Bottom Shape */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-32 md:h-64 lg:h-96 z-10"
+        className="absolute bottom-0 left-0 right-0 h-32 md:h-64 lg:h-96 z-20"
         aria-hidden="true"
       >
         <Image
@@ -29,7 +29,7 @@ export default function HeroLanding() {
       </div>
 
       {/* Centered Content */}
-      <div className="relative z-20 flex h-full items-center justify-center">
+      <div className="relative z-10 flex h-full items-center justify-center">
         <h1 className="text-5xl md:text-7xl font-bold font-headline text-white">
           PRIMAL CUTS
         </h1>

@@ -12,13 +12,13 @@ export default function HeroProduct() {
 
       {/* Decorative Bottom Shape Placeholder */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-40 z-10 bg-gray-700"
+        className="absolute bottom-0 left-0 right-0 h-40 z-20 bg-gray-700"
         data-ai-hint="product page decorative bottom shape placeholder"
         aria-hidden="true"
       ></div>
 
       {/* Centered Content */}
-      <div className="relative z-20 flex h-full items-center justify-center">
+      <div className="relative z-10 flex h-full items-center justify-center">
         <h1 className="text-5xl md:text-7xl font-bold font-headline text-white">
           PRODUCT HERO
         </h1>
