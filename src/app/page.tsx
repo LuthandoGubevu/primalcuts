@@ -4,7 +4,6 @@ import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
 import Highlight from '@/components/sections/Highlight';
 import Image from 'next/image';
-import HeroSection from '@/components/sections/HeroSection';
 
 const traditionFeatures = [
   { text: "Enriched with a select blend of all-natural spices, unveiling a deep, refined umami reminiscent of the finest grilled steak." }
@@ -28,8 +27,6 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       
-      <HeroSection />
-
       <Highlight
         imageSrc="/PC-Elements-11.png"
         imageAlt="Three packages of Primal Cuts biltong"
