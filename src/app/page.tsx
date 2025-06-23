@@ -29,6 +29,10 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen bg-background">
       
       <FadeInScroll threshold={0.1}>
+        <ImageGallery />
+      </FadeInScroll>
+
+      <FadeInScroll threshold={0.1}>
         <section className="py-12 md:py-16 bg-black">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-6 md:gap-8">
@@ -70,10 +74,6 @@ export default function HomePage() {
         displayMode="paragraph"
         className="bg-[#07080c] text-primary-foreground"
       />
-      
-      <FadeInScroll threshold={0.1}>
-        <ImageGallery />
-      </FadeInScroll>
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
         <ContactCTA />
