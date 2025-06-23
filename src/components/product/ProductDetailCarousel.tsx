@@ -1,10 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 
 const products = [
   {
@@ -36,9 +34,12 @@ const products = [
   },
 ];
 
-export default function ProductDetailCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(1); // Default to Original
+interface ProductDetailCarouselProps {
+  currentIndex: number;
+  setCurrentIndex: (index: number) => void;
+}
 
+export default function ProductDetailCarousel({ currentIndex, setCurrentIndex }: ProductDetailCarouselProps) {
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? products.length - 1 : currentIndex - 1;
@@ -56,31 +57,6 @@ export default function ProductDetailCarousel() {
   return (
     <section className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4">
-        
-        {/* Custom Flavor Selector */}
-        <div className="relative w-full max-w-xs md:max-w-sm mx-auto mb-10 md:mb-12">
-          <div className="absolute top-2.5 left-0 w-full h-[2px] bg-buttonCta-text -translate-y-1/2" />
-          <div className="relative flex justify-between items-start">
-            {products.map((product, index) => (
-              <div key={product.name} className="flex flex-col items-center text-center">
-                <button
-                  onClick={() => setCurrentIndex(index)}
-                  className={cn(
-                    "w-5 h-5 rounded-full border-2 transition-all duration-200",
-                    currentIndex === index
-                      ? "bg-buttonCta border-buttonCta-text transform scale-110"
-                      : "bg-background border-buttonCta-text hover:bg-buttonCta/20"
-                  )}
-                  aria-label={`Select ${product.name} flavor`}
-                />
-                <span className="mt-3 text-xs md:text-sm font-bold uppercase tracking-wider text-black">
-                  {product.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <div className="relative flex items-center justify-center">
            <Button variant="ghost" size="icon" onClick={goToPrevious} className="absolute left-0 md:-left-4 lg:-left-16 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/50 hover:bg-white/80 shadow-md">
             <ChevronLeft className="h-8 w-8 text-black" />

@@ -1,3 +1,4 @@
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,6 +9,8 @@ import FadeInScroll from '@/components/utils/FadeInScroll';
 import Footer from '@/components/sections/Footer';
 import ProductImage from '@/components/product/ProductImage';
 import ProductDetailCarousel from '@/components/product/ProductDetailCarousel';
+import FlavorSelector from '@/components/product/FlavorSelector';
+import { useState } from 'react';
 
 const iconFeatures = [
   { id: 1, src: '/PC-Elements-06.png', alt: 'Gluten Free icon', hint: 'gluten free icon' },
@@ -18,13 +21,19 @@ const iconFeatures = [
 ];
 
 export default function ProductPage() {
+  const [currentIndex, setCurrentIndex] = useState(1);
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <main className="flex-grow">
         <ProductImage />
 
+        <FadeInScroll threshold={0.1}>
+          <FlavorSelector currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+        </FadeInScroll>
+
         <FadeInScroll threshold={0.1} delay="md:delay-100">
-          <ProductDetailCarousel />
+          <ProductDetailCarousel currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
         </FadeInScroll>
 
         <FadeInScroll threshold={0.1} delay="md:delay-200">
