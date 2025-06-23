@@ -20,7 +20,7 @@ export default function ProductPage() {
           backgroundImageAlt="Primal Cuts product page hero background"
           backgroundImageAiHint="product lifestyle background"
           priorityBackgroundImage={true}
-          overlay={true}
+          overlay={false}
           className="justify-end p-0"
           minHeight="min-h-[50vh] sm:min-h-[65vh]"
         >
