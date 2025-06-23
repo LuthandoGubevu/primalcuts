@@ -3,9 +3,9 @@
 import { cn } from '@/lib/utils';
 
 const products = [
-  { name: 'ORIGINAL' },
   { name: 'SMOKE' },
   { name: 'FIRE' },
+  { name: 'ORIGINAL' },
 ];
 
 interface FlavorSelectorProps {
