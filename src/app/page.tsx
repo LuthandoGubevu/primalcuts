@@ -46,6 +46,27 @@ export default function HomePage() {
 
       <ImageGallery />
 
+      <FadeInScroll threshold={0.1}>
+        <section className="py-12 md:py-16 bg-black">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+              {iconFeatures.map((feat) => (
+                <div key={feat.id} className="w-[80px] aspect-[300/424]">
+                  <Image
+                    src={feat.src}
+                    alt={feat.alt}
+                    width={80}
+                    height={113}
+                    className="object-contain w-full h-full"
+                    data-ai-hint={feat.hint}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </FadeInScroll>
+
       <Highlight
         imageSrc="/black-pepper.jpg"
         imageAlt="Man seasoning strips of beef in a commercial kitchen"
@@ -68,27 +89,6 @@ export default function HomePage() {
         className="bg-secondary/20"
       />
       
-      <FadeInScroll threshold={0.1}>
-        <section className="py-12 md:py-16 bg-black">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-              {iconFeatures.map((feat) => (
-                <div key={feat.id} className="w-[80px] aspect-[300/424]">
-                  <Image
-                    src={feat.src}
-                    alt={feat.alt}
-                    width={80}
-                    height={113}
-                    className="object-contain w-full h-full"
-                    data-ai-hint={feat.hint}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </FadeInScroll>
-
       <FadeInScroll threshold={0.1} delay="md:delay-100">
         <ContactCTA />
       </FadeInScroll>
