@@ -2,21 +2,18 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import ProductHero from '@/components/product/ProductHero';
 import NutritionFacts from '@/components/product/NutritionFacts';
 import FadeInScroll from '@/components/utils/FadeInScroll';
 import Footer from '@/components/sections/Footer';
 import ProductFeatures from '@/components/product/ProductFeatures';
 import FlavorSelector from '@/components/product/FlavorSelector';
+import HeroProduct from '@/components/sections/HeroProduct';
 
 export default function ProductPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <main className="flex-grow pt-16">
-        <FadeInScroll threshold={0.1} delay="md:delay-100">
-          <ProductHero />
-        </FadeInScroll>
-
+      <HeroProduct />
+      <main className="flex-grow">
         <FadeInScroll threshold={0.1} delay="md:delay-200">
           <NutritionFacts />
         </FadeInScroll>

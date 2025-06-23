@@ -5,6 +5,7 @@ import FadeInScroll from '@/components/utils/FadeInScroll';
 import Highlight from '@/components/sections/Highlight';
 import ImageGallery from '@/components/sections/ImageGallery';
 import Image from 'next/image';
+import HeroLanding from '@/components/sections/HeroLanding';
 
 const traditionFeatures = [
   { text: "Enriched with a select blend of all-natural spices, unveiling a deep, refined umami reminiscent of the finest grilled steak." }
@@ -27,6 +28,8 @@ const iconFeatures = [
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
+      <HeroLanding />
+      
       <ImageGallery />
 
       <Highlight
