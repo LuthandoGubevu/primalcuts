@@ -4,21 +4,19 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+
+const iconFeatures = [
+  { id: 1, src: '/PC-Elements-06.png', alt: 'Gluten Free icon', hint: 'gluten free icon' },
+  { id: 2, src: '/PC-Elements-07.png', alt: 'Keto Friendly icon', hint: 'keto friendly icon' },
+  { id: 3, src: '/PC-Elements-08.png', alt: '32G Protein icon', hint: 'protein icon' },
+  { id: 4, src: '/PC-Elements-09.png', alt: 'Zero Sugar icon', hint: 'sugar free icon' },
+  { id: 5, src: '/PC-Elements-10.png', alt: 'Whole30 Approved icon', hint: 'whole30 approved icon' },
+];
 
 const products = [
   {
-    name: 'ORIGINAL',
-    subtitle: '2OZ SLICED BILTONG',
-    imageSrcFront: '/Image-1.png',
-    imageAltFront: 'Original flavor Primal Cuts package, front view',
-    imageHintFront: 'product package original front',
-    imageSrcBack: '/Image-2.png',
-    imageAltBack: 'Original flavor Primal Cuts package, back view',
-    imageHintBack: 'product package original back',
-  },
-  {
     name: 'SMOKE',
-    subtitle: '2OZ SLICED BILTONG',
     imageSrcFront: '/Image-3.png',
     imageAltFront: 'Smoke flavor Primal Cuts package, front view',
     imageHintFront: 'product package smoke front',
@@ -27,8 +25,16 @@ const products = [
     imageHintBack: 'product package smoke back',
   },
   {
+    name: 'ORIGINAL',
+    imageSrcFront: '/Image-1.png',
+    imageAltFront: 'Original flavor Primal Cuts package, front view',
+    imageHintFront: 'product package original front',
+    imageSrcBack: '/Image-2.png',
+    imageAltBack: 'Original flavor Primal Cuts package, back view',
+    imageHintBack: 'product package original back',
+  },
+  {
     name: 'FIRE',
-    subtitle: '2OZ SLICED BILTONG',
     imageSrcFront: '/Image-5.png',
     imageAltFront: 'Fire flavor Primal Cuts package, front view',
     imageHintFront: 'product package fire front',
@@ -39,7 +45,7 @@ const products = [
 ];
 
 export default function ProductDetailCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1); // Default to Original
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -58,13 +64,45 @@ export default function ProductDetailCarousel() {
   return (
     <section className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold uppercase tracking-wider text-black">
-            {currentProduct.name}
-          </h2>
-          <p className="font-body text-lg md:text-xl uppercase tracking-wide text-black/80 mt-2">
-            {currentProduct.subtitle}
-          </p>
+        
+        {/* Icons Section */}
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-12 md:mb-16">
+          {iconFeatures.map((feat) => (
+            <div key={feat.id} className="w-[60px] md:w-[70px]">
+              <Image
+                src={feat.src}
+                alt={feat.alt}
+                width={70}
+                height={70}
+                className="object-contain w-full h-full"
+                data-ai-hint={feat.hint}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Custom Flavor Selector */}
+        <div className="relative w-full max-w-xs md:max-w-sm mx-auto mb-10 md:mb-12">
+          <div className="absolute top-2.5 left-0 w-full h-[2px] bg-buttonCta-text -translate-y-1/2" />
+          <div className="relative flex justify-between items-start">
+            {products.map((product, index) => (
+              <div key={product.name} className="flex flex-col items-center text-center">
+                <button
+                  onClick={() => setCurrentIndex(index)}
+                  className={cn(
+                    "w-5 h-5 rounded-full border-2 transition-all duration-200",
+                    currentIndex === index
+                      ? "bg-buttonCta border-buttonCta-text transform scale-110"
+                      : "bg-background border-buttonCta-text hover:bg-buttonCta/20"
+                  )}
+                  aria-label={`Select ${product.name} flavor`}
+                />
+                <span className="mt-3 text-xs md:text-sm font-bold uppercase tracking-wider text-black">
+                  {product.name}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="relative flex items-center justify-center">
@@ -84,7 +122,7 @@ export default function ProductDetailCarousel() {
                             height={565}
                             className="object-contain w-full h-full drop-shadow-2xl"
                             data-ai-hint={currentProduct.imageHintFront}
-                            priority={currentIndex === 0}
+                            priority={true}
                         />
                     </div>
                 </div>
@@ -98,7 +136,7 @@ export default function ProductDetailCarousel() {
                             height={565}
                             className="object-contain w-full h-full drop-shadow-2xl"
                             data-ai-hint={currentProduct.imageHintBack}
-                            priority={currentIndex === 0}
+                            priority={true}
                         />
                     </div>
                 </div>
