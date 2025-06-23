@@ -4,12 +4,15 @@ import Image from 'next/image';
 export default function HeroLanding() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image Placeholder */}
-      <div
-        className="absolute inset-0 z-0 bg-gray-400"
-        data-ai-hint="background image placeholder 1920x1080"
-        aria-hidden="true"
-      ></div>
+      {/* Background Image */}
+      <Image
+        src="/crocodile.jpg"
+        alt="Lush, green jungle background with a crocodile"
+        fill
+        className="object-cover z-0"
+        data-ai-hint="jungle crocodile"
+        priority
+      />
 
       {/* Decorative Bottom Shape */}
       <div
@@ -17,7 +20,7 @@ export default function HeroLanding() {
         aria-hidden="true"
       >
         <Image
-          src="/PC Elements-02-New-01.png"
+          src="/PC-Elements-02-New-01.png"
           alt="Decorative bottom shape"
           fill
           className="object-contain object-bottom"
