@@ -29,9 +29,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Hero
-        backgroundImageSrc="/PC Elements-16.jpg"
-        backgroundImageAlt="People sitting around a campfire on a beach at dusk"
-        backgroundImageAiHint="campfire beach"
+        backgroundImageSrc="/crocodile.jpg"
+        backgroundImageAlt="A close-up of a crocodile in the water"
+        backgroundImageAiHint="crocodile wildlife"
         className="justify-end p-0"
       >
         <Image
