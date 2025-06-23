@@ -5,9 +5,8 @@ import { Button } from '@/components/ui/button';
 import NutritionFacts from '@/components/product/NutritionFacts';
 import FadeInScroll from '@/components/utils/FadeInScroll';
 import Footer from '@/components/sections/Footer';
-import ProductFeatures from '@/components/product/ProductFeatures';
-import FlavorSelector from '@/components/product/FlavorSelector';
 import ProductImage from '@/components/product/ProductImage';
+import ProductDetailCarousel from '@/components/product/ProductDetailCarousel';
 
 export default function ProductPage() {
   return (
@@ -17,18 +16,13 @@ export default function ProductPage() {
           <ProductImage />
         </FadeInScroll>
 
+        <FadeInScroll threshold={0.1} delay="md:delay-100">
+          <ProductDetailCarousel />
+        </FadeInScroll>
+
         <FadeInScroll threshold={0.1} delay="md:delay-200">
           <NutritionFacts />
         </FadeInScroll>
-        
-        <FadeInScroll threshold={0.1} delay="md:delay-300">
-          <ProductFeatures />
-        </FadeInScroll>
-
-        <FadeInScroll threshold={0.1} delay="md:delay-400">
-          <FlavorSelector />
-        </FadeInScroll>
-
       </main>
 
       <FadeInScroll threshold={0.1} delay="md:delay-500">
