@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function HeroLanding() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image - bottom layer */}
+      {/* Background Image - Layer 1 (Bottom) */}
       <Image
         src="/crocodile.jpg"
         alt="Lush, green jungle background with a crocodile"
@@ -14,16 +14,15 @@ export default function HeroLanding() {
         priority
       />
 
-      {/* Decorative Bottom Shape - top layer */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 h-32 w-full md:h-64 lg:h-96">
-        <Image
-          src="/PC-Elements-02-New-01.png"
-          alt="Decorative bottom shape"
-          fill
-          className="object-contain object-bottom"
-          data-ai-hint="decorative shape"
-        />
-      </div>
+      {/* Decorative Bottom Shape - Layer 2 (Top) */}
+      <Image
+        src="/PC-Elements-02-New-01.png"
+        alt="Decorative bottom shape"
+        width={1080}
+        height={400}
+        className="absolute bottom-0 left-0 right-0 z-10 h-auto w-full"
+        data-ai-hint="decorative shape"
+      />
     </section>
   );
 }
