@@ -15,7 +15,7 @@ export default function ProductImage() {
       />
       
       {/* Foreground Image container */}
-      <div className="relative z-10 container mx-auto px-4 flex justify-center">
+      <div className="relative z-10 w-full flex justify-center items-center">
         <Image
           src="/PC Elements-26.png"
           alt="Primal Cuts Product Package"

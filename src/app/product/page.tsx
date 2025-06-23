@@ -12,7 +12,7 @@ import ProductImage from '@/components/product/ProductImage';
 export default function ProductPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <main className="flex-grow pt-16">
+      <main className="flex-grow">
         <FadeInScroll threshold={0.1}>
           <ProductImage />
         </FadeInScroll>
