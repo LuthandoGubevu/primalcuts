@@ -29,11 +29,11 @@ export default function ProductPage() {
         <ProductImage />
 
         <FadeInScroll threshold={0.1}>
-          <FlavorSelector currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+          <ProductDetailCarousel currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
         </FadeInScroll>
 
         <FadeInScroll threshold={0.1} delay="md:delay-100">
-          <ProductDetailCarousel currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+          <FlavorSelector currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
         </FadeInScroll>
 
         <FadeInScroll threshold={0.1} delay="md:delay-200">
