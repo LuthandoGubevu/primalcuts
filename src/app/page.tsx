@@ -4,6 +4,7 @@ import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
 import Highlight from '@/components/sections/Highlight';
 import Image from 'next/image';
+import ImageGallery from '@/components/sections/ImageGallery';
 
 const traditionFeatures = [
   { text: "Enriched with a select blend of all-natural spices, unveiling a deep, refined umami reminiscent of the finest grilled steak." }
@@ -69,6 +70,10 @@ export default function HomePage() {
         displayMode="paragraph"
         className="bg-[#07080c] text-primary-foreground"
       />
+      
+      <FadeInScroll threshold={0.1}>
+        <ImageGallery />
+      </FadeInScroll>
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
         <ContactCTA />
