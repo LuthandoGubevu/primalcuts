@@ -1,70 +1,40 @@
-
 'use client';
 
 import { useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
 
 const products = [
   {
     name: 'ORIGINAL',
     subtitle: '2OZ SLICED BILTONG',
-    imageSrc: '/Original-Package.png',
-    imageAlt: 'Original flavor Primal Cuts package',
-    imageHint: 'product package original',
-    whyBiltong: 'Because we believe that less is more, and the only ingredients we have used in this bag are ingredients that we feed our family and children. So from our family to yours, eat well.',
-    signature: '- Zan, Haley, TK and Max',
-    ingredients: [
-      'Grass-Fed Beef',
-      'Red Wine Vinegar',
-      'Himalayan Salt',
-      'Coriander',
-      'Black Pepper',
-      'Garlic Powder',
-      'Onion Powder',
-      'Paprika',
-    ],
+    imageSrcFront: '/Image-1.png',
+    imageAltFront: 'Original flavor Primal Cuts package, front view',
+    imageHintFront: 'product package original front',
+    imageSrcBack: '/Image-2.png',
+    imageAltBack: 'Original flavor Primal Cuts package, back view',
+    imageHintBack: 'product package original back',
   },
   {
     name: 'SMOKE',
     subtitle: '2OZ SLICED BILTONG',
-    imageSrc: '/Smoke-Package.png',
-    imageAlt: 'Smoke flavor Primal Cuts package',
-    imageHint: 'product package smoke',
-    whyBiltong: 'Experience a subtle, savory smoke flavor that complements the rich taste of our premium, air-dried beef. A classic choice for a reason.',
-    signature: '- The Primal Cuts Team',
-    ingredients: [
-      'Grass-Fed Beef',
-      'Red Wine Vinegar',
-      'Himalayan Salt',
-      'Coriander',
-      'Natural Smoke Flavor',
-      'Black Pepper',
-      'Garlic Powder',
-      'Onion Powder',
-    ],
+    imageSrcFront: '/Image-3.png',
+    imageAltFront: 'Smoke flavor Primal Cuts package, front view',
+    imageHintFront: 'product package smoke front',
+    imageSrcBack: '/Image-4.png',
+    imageAltBack: 'Smoke flavor Primal Cuts package, back view',
+    imageHintBack: 'product package smoke back',
   },
   {
     name: 'FIRE',
     subtitle: '2OZ SLICED BILTONG',
-    imageSrc: '/Red-Package.png',
-    imageAlt: 'Fire flavor Primal Cuts package',
-    imageHint: 'product package fire',
-    whyBiltong: 'For those who like a little heat. We\'ve added a kick of chili and cayenne to our traditional recipe for a bold, spicy finish that builds with every bite.',
-    signature: '- The Primal Cuts Team',
-    ingredients: [
-      'Grass-Fed Beef',
-      'Red Wine Vinegar',
-      'Himalayan Salt',
-      'Chili Powder',
-      'Cayenne Pepper',
-      'Coriander',
-      'Black Pepper',
-      'Garlic Powder',
-      'Onion Powder',
-    ],
+    imageSrcFront: '/Image-5.png',
+    imageAltFront: 'Fire flavor Primal Cuts package, front view',
+    imageHintFront: 'product package fire front',
+    imageSrcBack: '/Image-6.png',
+    imageAltBack: 'Fire flavor Primal Cuts package, back view',
+    imageHintBack: 'product package fire back',
   },
 ];
 
@@ -98,45 +68,44 @@ export default function ProductDetailCarousel() {
         </div>
 
         <div className="relative flex items-center justify-center">
-           <Button variant="ghost" size="icon" onClick={goToPrevious} className="absolute left-0 md:-left-16 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/50 hover:bg-white/80 shadow-md">
+           <Button variant="ghost" size="icon" onClick={goToPrevious} className="absolute left-0 md:-left-4 lg:-left-16 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/50 hover:bg-white/80 shadow-md">
             <ChevronLeft className="h-8 w-8 text-black" />
           </Button>
 
           <div className="w-full max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
-                <div className="w-full flex justify-center items-center">
-                    <div className="aspect-[300/424] w-full max-w-sm transition-opacity duration-300" key={currentIndex}>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-2" key={currentIndex}>
+                {/* Front Image */}
+                <div className="w-full md:w-auto flex justify-center items-center transition-opacity duration-300">
+                    <div className="aspect-[300/424] w-full max-w-sm">
                         <Image
-                            src={currentProduct.imageSrc}
-                            alt={currentProduct.imageAlt}
+                            src={currentProduct.imageSrcFront}
+                            alt={currentProduct.imageAltFront}
                             width={400}
                             height={565}
                             className="object-contain w-full h-full drop-shadow-2xl"
-                            data-ai-hint={currentProduct.imageHint}
+                            data-ai-hint={currentProduct.imageHintFront}
+                            priority={currentIndex === 0}
                         />
                     </div>
                 </div>
-
-                <div className="space-y-8 text-black/90 text-left">
-                    <div className="border-l-4 border-buttonCta-text pl-4">
-                        <h3 className="font-headline text-xl font-bold text-black mb-2 uppercase">Why Our Biltong?</h3>
-                        <p className="font-body text-base leading-relaxed">
-                            {currentProduct.whyBiltong}
-                        </p>
-                        <p className="font-body text-base leading-relaxed mt-2 italic">{currentProduct.signature}</p>
-                    </div>
-                    <div className="border-l-4 border-buttonCta-text pl-4">
-                        <h3 className="font-headline text-xl font-bold text-black mb-2 uppercase">Ingredients:</h3>
-                        <p className="font-body text-base leading-relaxed">
-                            {currentProduct.ingredients.join(', ')}.
-                        </p>
+                 {/* Back Image */}
+                <div className="w-full md:w-auto flex justify-center items-center transition-opacity duration-300">
+                    <div className="aspect-[300/424] w-full max-w-sm">
+                        <Image
+                            src={currentProduct.imageSrcBack}
+                            alt={currentProduct.imageAltBack}
+                            width={400}
+                            height={565}
+                            className="object-contain w-full h-full drop-shadow-2xl"
+                            data-ai-hint={currentProduct.imageHintBack}
+                            priority={currentIndex === 0}
+                        />
                     </div>
                 </div>
             </div>
-            <Separator className="mt-12 md:mt-16 bg-buttonCta-text/50 h-[1px]" />
           </div>
           
-          <Button variant="ghost" size="icon" onClick={goToNext} className="absolute right-0 md:-right-16 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/50 hover:bg-white/80 shadow-md">
+          <Button variant="ghost" size="icon" onClick={goToNext} className="absolute right-0 md:-right-4 lg:-right-16 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/50 hover:bg-white/80 shadow-md">
             <ChevronRight className="h-8 w-8 text-black" />
           </Button>
         </div>
