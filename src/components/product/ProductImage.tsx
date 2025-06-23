@@ -12,7 +12,7 @@ export default function ProductImage() {
         </defs>
       </svg>
       <section
-        className="relative h-[40vh] md:h-[50vh] lg:h-[60vh] w-full"
+        className="relative h-[1080px] w-full"
         style={{ clipPath: 'url(#hero-bottom-clip)' }}
       >
         {/* Background Image */}
