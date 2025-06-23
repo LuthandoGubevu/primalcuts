@@ -27,16 +27,6 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       
-      <Highlight
-        imageSrc="/PC-Elements-11.png"
-        imageAlt="Three packages of Primal Cuts biltong"
-        imageAiHint="product packages lifestyle"
-        features={healthFeatures}
-        imagePosition="left"
-        variant="bleed"
-        className="bg-[#f0f0f0]"
-      />
-
       <FadeInScroll threshold={0.1}>
         <section className="py-12 md:py-16 bg-black">
           <div className="container mx-auto px-4">
@@ -57,6 +47,16 @@ export default function HomePage() {
           </div>
         </section>
       </FadeInScroll>
+
+      <Highlight
+        imageSrc="/PC-Elements-11.png"
+        imageAlt="Three packages of Primal Cuts biltong"
+        imageAiHint="product packages lifestyle"
+        features={healthFeatures}
+        imagePosition="left"
+        variant="bleed"
+        className="bg-[#f0f0f0]"
+      />
 
       <Highlight
         imageSrc="/black-pepper.jpg"
