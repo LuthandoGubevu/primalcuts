@@ -29,9 +29,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Hero
-        backgroundImageSrc="/flamingo.jpg"
-        backgroundImageAlt="A pink flamingo in water"
-        backgroundImageAiHint="flamingo bird"
+        backgroundImageSrc="/crocodile.jpg"
+        backgroundImageAlt="A crocodile in the water"
+        backgroundImageAiHint="crocodile water"
         className="justify-end p-0"
         overlay={false}
       >
