@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -9,6 +10,7 @@ import Footer from '@/components/sections/Footer';
 import ProductImage from '@/components/product/ProductImage';
 import ProductDetailCarousel from '@/components/product/ProductDetailCarousel';
 import FlavorSelector from '@/components/product/FlavorSelector';
+import IconsRow from '@/components/sections/IconsRow';
 import { useState } from 'react';
 
 const products = [
@@ -80,6 +82,10 @@ export default function ProductPage() {
 
         <FadeInScroll threshold={0.1} delay="md:delay-200">
           <NutritionFacts />
+        </FadeInScroll>
+
+        <FadeInScroll threshold={0.1} delay="md:delay-300">
+          <IconsRow />
         </FadeInScroll>
       </main>
 
