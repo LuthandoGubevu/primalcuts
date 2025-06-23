@@ -6,11 +6,11 @@ export default function ProductImage() {
     <section className="relative h-[400px] md:h-[500px] lg:h-[1080px] w-full">
       {/* Background Image */}
       <Image
-        src="https://placehold.co/1920x1080.png"
-        alt="Woman practicing yoga near a window and a heron standing in water"
+        src="/black-pepper.jpg"
+        alt="Man seasoning strips of beef in a commercial kitchen"
         fill
         className="object-cover z-0"
-        data-ai-hint="yoga heron"
+        data-ai-hint="chef seasoning meat"
         priority
       />
       
