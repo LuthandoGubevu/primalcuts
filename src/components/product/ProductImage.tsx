@@ -15,14 +15,25 @@ export default function ProductImage() {
         className="relative h-[40vh] md:h-[50vh] lg:h-[60vh] w-full"
         style={{ clipPath: 'url(#hero-bottom-clip)' }}
       >
-        <div className="h-full w-full relative">
+        {/* Background Image */}
+        <Image
+          src="/flamingo.jpg"
+          alt="Flamingo background"
+          fill
+          className="object-cover object-center z-0"
+          data-ai-hint="flamingo nature"
+          priority
+        />
+        
+        {/* Foreground Image container */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
           <Image
-            src="/black-pepper.jpg"
-            alt="Chef preparing seasoned meat"
-            fill
-            className="object-cover object-center"
-            data-ai-hint="chef seasoning meat"
-            priority
+            src="/PC Elements-26.png"
+            alt="Primal Cuts Product Display"
+            width={1200}
+            height={400}
+            className="w-full h-auto object-contain"
+            data-ai-hint="product packages banner"
           />
         </div>
       </section>
