@@ -51,9 +51,8 @@ export default function Hero({
       <Image
         src={backgroundImageSrc}
         alt={backgroundImageAlt}
-        layout="fill"
-        objectFit="cover"
-        className="absolute inset-0 z-0"
+        fill
+        className="absolute inset-0 z-0 object-cover"
         priority={priorityBackgroundImage}
         data-ai-hint={backgroundImageAiHint}
       />
