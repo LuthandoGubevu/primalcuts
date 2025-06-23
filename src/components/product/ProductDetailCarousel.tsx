@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -7,28 +8,28 @@ import { Button } from '@/components/ui/button';
 const products = [
   {
     name: 'SMOKE',
-    imageSrcFront: '/Image-3.png',
+    imageSrcFront: '/Image-1.png',
     imageAltFront: 'Smoke flavor Primal Cuts package, front view',
     imageHintFront: 'product package smoke front',
-    imageSrcBack: '/Image-4.png',
+    imageSrcBack: '/Image-2.png',
     imageAltBack: 'Smoke flavor Primal Cuts package, back view',
     imageHintBack: 'product package smoke back',
   },
   {
     name: 'FIRE',
-    imageSrcFront: '/Image-5.png',
+    imageSrcFront: '/Image-3.png',
     imageAltFront: 'Fire flavor Primal Cuts package, front view',
     imageHintFront: 'product package fire front',
-    imageSrcBack: '/Image-6.png',
+    imageSrcBack: '/Image-4.png',
     imageAltBack: 'Fire flavor Primal Cuts package, back view',
     imageHintBack: 'product package fire back',
   },
   {
     name: 'ORIGINAL',
-    imageSrcFront: '/Image-1.png',
+    imageSrcFront: '/Image-5.png',
     imageAltFront: 'Original flavor Primal Cuts package, front view',
     imageHintFront: 'product package original front',
-    imageSrcBack: '/Image-2.png',
+    imageSrcBack: '/Image-6.png',
     imageAltBack: 'Original flavor Primal Cuts package, back view',
     imageHintBack: 'product package original back',
   },
