@@ -84,7 +84,7 @@ export default function Highlight({
                 {heading && (
                   <h3 className={cn(
                     "font-body text-2xl md:text-3xl font-semibold mb-4",
-                    "text-accent"
+                    "text-buttonCta-text"
                   )}>
                     {heading}
                   </h3>
