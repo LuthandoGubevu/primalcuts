@@ -1,9 +1,7 @@
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import Hero from '@/components/sections/Hero'; 
 import ProductHero from '@/components/product/ProductHero';
 import NutritionFacts from '@/components/product/NutritionFacts';
 import FadeInScroll from '@/components/utils/FadeInScroll';
@@ -14,28 +12,7 @@ import FlavorSelector from '@/components/product/FlavorSelector';
 export default function ProductPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <FadeInScroll threshold={0.01}>
-        <Hero
-          backgroundImageSrc="/PC Elements-27.jpg"
-          backgroundImageAlt="Primal Cuts product page hero background"
-          backgroundImageAiHint="product lifestyle background"
-          priorityBackgroundImage={true}
-          overlay={false}
-          className="justify-end p-0"
-          minHeight="min-h-[50vh] sm:min-h-[65vh]"
-        >
-          <Image
-            src="/PC Elements-26.png"
-            alt="Tagline: 100% American Beef, 32g Protein, 0g Sugar"
-            width={800}
-            height={130}
-            className="w-full object-contain"
-            data-ai-hint="product benefits tagline"
-          />
-        </Hero>
-      </FadeInScroll>
-
-      <main className="flex-grow">
+      <main className="flex-grow pt-16">
         <FadeInScroll threshold={0.1} delay="md:delay-100">
           <ProductHero />
         </FadeInScroll>
