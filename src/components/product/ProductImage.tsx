@@ -3,28 +3,43 @@ import Image from 'next/image';
 
 export default function ProductImage() {
   return (
-    <section className="relative h-[400px] md:h-[500px] lg:h-[1080px] w-full">
-      {/* Background Image */}
-      <Image
-        src="/black-pepper.jpg"
-        alt="Man seasoning strips of beef in a commercial kitchen"
-        fill
-        className="object-cover z-0"
-        data-ai-hint="chef seasoning meat"
-        priority
-      />
-      
-      {/* Foreground Image container, absolutely positioned at the bottom */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <Image
-          src="/PC-Elements-25.png"
-          alt="Primal Cuts Product Packages"
-          width={600}
-          height={600}
-          className="object-contain w-full h-auto"
-          data-ai-hint="product packages collage"
-        />
-      </div>
-    </section>
+    <>
+      <svg className="w-0 h-0 absolute">
+        <defs>
+          <clipPath id="hero-clip" clipPathUnits="objectBoundingBox">
+            <path d="M0,0.2 C0.16,0.05, 0.33,0.05, 0.5,0.2 C0.66,0.35, 0.83,0.35, 1,0.2 V1 H0 Z" />
+          </clipPath>
+        </defs>
+      </svg>
+      <section 
+        className="relative h-[40vh] md:h-[50vh] lg:h-[60vh] w-full"
+        style={{ clipPath: 'url(#hero-clip)'}}
+      >
+        <div className="flex h-full">
+          {/* Left Image */}
+          <div className="w-1/2 h-full relative">
+            <Image
+              src="https://placehold.co/800x600.png"
+              alt="Woman doing yoga"
+              fill
+              className="object-cover object-center"
+              data-ai-hint="woman yoga"
+              priority
+            />
+          </div>
+          {/* Right Image */}
+          <div className="w-1/2 h-full relative">
+            <Image
+              src="https://placehold.co/800x600.png"
+              alt="Heron in water"
+              fill
+              className="object-cover object-center"
+              data-ai-hint="heron water"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
