@@ -6,14 +6,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-const iconFeatures = [
-  { id: 1, src: '/PC-Elements-06.png', alt: 'Gluten Free icon', hint: 'gluten free icon' },
-  { id: 2, src: '/PC-Elements-07.png', alt: 'Keto Friendly icon', hint: 'keto friendly icon' },
-  { id: 3, src: '/PC-Elements-08.png', alt: '32G Protein icon', hint: 'protein icon' },
-  { id: 4, src: '/PC-Elements-09.png', alt: 'Zero Sugar icon', hint: 'sugar free icon' },
-  { id: 5, src: '/PC-Elements-10.png', alt: 'Whole30 Approved icon', hint: 'whole30 approved icon' },
-];
-
 const products = [
   {
     name: 'SMOKE',
@@ -65,22 +57,6 @@ export default function ProductDetailCarousel() {
     <section className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         
-        {/* Icons Section */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-12 md:mb-16">
-          {iconFeatures.map((feat) => (
-            <div key={feat.id} className="w-[60px] md:w-[70px]">
-              <Image
-                src={feat.src}
-                alt={feat.alt}
-                width={70}
-                height={70}
-                className="object-contain w-full h-full"
-                data-ai-hint={feat.hint}
-              />
-            </div>
-          ))}
-        </div>
-
         {/* Custom Flavor Selector */}
         <div className="relative w-full max-w-xs md:max-w-sm mx-auto mb-10 md:mb-12">
           <div className="absolute top-2.5 left-0 w-full h-[2px] bg-buttonCta-text -translate-y-1/2" />
