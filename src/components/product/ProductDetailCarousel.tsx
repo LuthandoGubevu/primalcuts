@@ -5,42 +5,24 @@ import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const products = [
-  {
-    name: 'SMOKE',
-    imageSrcFront: '/Image-1.png',
-    imageAltFront: 'Smoke flavor Primal Cuts package, front view',
-    imageHintFront: 'product package smoke front',
-    imageSrcBack: '/Image-2.png',
-    imageAltBack: 'Smoke flavor Primal Cuts package, back view',
-    imageHintBack: 'product package smoke back',
-  },
-  {
-    name: 'FIRE',
-    imageSrcFront: '/Image-3.png',
-    imageAltFront: 'Fire flavor Primal Cuts package, front view',
-    imageHintFront: 'product package fire front',
-    imageSrcBack: '/Image-4.png',
-    imageAltBack: 'Fire flavor Primal Cuts package, back view',
-    imageHintBack: 'product package fire back',
-  },
-  {
-    name: 'ORIGINAL',
-    imageSrcFront: '/Image-5.png',
-    imageAltFront: 'Original flavor Primal Cuts package, front view',
-    imageHintFront: 'product package original front',
-    imageSrcBack: '/Image-6.png',
-    imageAltBack: 'Original flavor Primal Cuts package, back view',
-    imageHintBack: 'product package original back',
-  },
-];
+interface Product {
+  name: string;
+  description: string;
+  imageSrcFront: string;
+  imageAltFront: string;
+  imageHintFront: string;
+  imageSrcBack: string;
+  imageAltBack: string;
+  imageHintBack: string;
+}
 
 interface ProductDetailCarouselProps {
+  products: Product[];
   currentIndex: number;
   setCurrentIndex: (index: number) => void;
 }
 
-export default function ProductDetailCarousel({ currentIndex, setCurrentIndex }: ProductDetailCarouselProps) {
+export default function ProductDetailCarousel({ products, currentIndex, setCurrentIndex }: ProductDetailCarouselProps) {
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? products.length - 1 : currentIndex - 1;
@@ -56,7 +38,7 @@ export default function ProductDetailCarousel({ currentIndex, setCurrentIndex }:
   const currentProduct = products[currentIndex];
 
   return (
-    <section className="py-12 md:py-20 bg-background">
+    <section className="pb-12 md:pb-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="relative flex items-center justify-center">
            <Button variant="ghost" size="icon" onClick={goToPrevious} className="absolute left-0 md:-left-4 lg:-left-16 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/50 hover:bg-white/80 shadow-md">
