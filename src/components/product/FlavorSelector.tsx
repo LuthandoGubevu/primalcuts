@@ -3,8 +3,8 @@
 import { cn } from '@/lib/utils';
 
 const products = [
-  { name: 'SMOKE' },
   { name: 'ORIGINAL' },
+  { name: 'SMOKE' },
   { name: 'FIRE' },
 ];
 

@@ -21,7 +21,7 @@ const iconFeatures = [
 ];
 
 export default function ProductPage() {
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
     <div className="flex flex-col min-h-screen bg-background">

@@ -6,15 +6,6 @@ import { Button } from '@/components/ui/button';
 
 const products = [
   {
-    name: 'SMOKE',
-    imageSrcFront: '/Image-3.png',
-    imageAltFront: 'Smoke flavor Primal Cuts package, front view',
-    imageHintFront: 'product package smoke front',
-    imageSrcBack: '/Image-4.png',
-    imageAltBack: 'Smoke flavor Primal Cuts package, back view',
-    imageHintBack: 'product package smoke back',
-  },
-  {
     name: 'ORIGINAL',
     imageSrcFront: '/Image-1.png',
     imageAltFront: 'Original flavor Primal Cuts package, front view',
@@ -22,6 +13,15 @@ const products = [
     imageSrcBack: '/Image-2.png',
     imageAltBack: 'Original flavor Primal Cuts package, back view',
     imageHintBack: 'product package original back',
+  },
+  {
+    name: 'SMOKE',
+    imageSrcFront: '/Image-3.png',
+    imageAltFront: 'Smoke flavor Primal Cuts package, front view',
+    imageHintFront: 'product package smoke front',
+    imageSrcBack: '/Image-4.png',
+    imageAltBack: 'Smoke flavor Primal Cuts package, back view',
+    imageHintBack: 'product package smoke back',
   },
   {
     name: 'FIRE',
