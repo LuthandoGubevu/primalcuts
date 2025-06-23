@@ -13,20 +13,13 @@ export default function HeroProduct() {
         data-ai-hint="flamingo feathers"
       />
 
-      {/* Centered Content */}
-      <div className="relative z-20 text-center text-white">
-        <h1 className="text-5xl md:text-7xl font-bold font-headline text-primary-foreground">
-          Product Hero
-        </h1>
-      </div>
-
       {/* Decorative Bottom Image */}
       <div className="absolute bottom-0 left-0 w-full z-10">
          <Image
           src="/PC-Elements-26.png"
           alt="Primal Cuts single product package"
-          width={1920}
-          height={1080}
+          width={100}
+          height={100}
           className="w-full h-auto object-contain"
           data-ai-hint="product package"
         />
