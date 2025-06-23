@@ -2,7 +2,6 @@
 import ContactCTA from '@/components/sections/ContactCTA';
 import Footer from '@/components/sections/Footer';
 import FadeInScroll from '@/components/utils/FadeInScroll';
-import Hero from '@/components/sections/Hero';
 import Highlight from '@/components/sections/Highlight';
 import ImageGallery from '@/components/sections/ImageGallery';
 import Image from 'next/image';
@@ -28,24 +27,17 @@ const iconFeatures = [
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <Hero
-        backgroundImageSrc="/crocodile.jpg"
-        backgroundImageAlt="A crocodile in the water"
-        backgroundImageAiHint="crocodile water"
-        className="justify-end p-0"
-        overlay={false}
-      >
-        <Image
-          src="/PC Elements-02-New-01.png"
-          alt="Primal Cuts product packages"
-          width={800}
-          height={400}
-          className="w-full max-w-3xl object-contain"
-          data-ai-hint="product packages"
-        />
-      </Hero>
-
       <ImageGallery />
+
+      <Highlight
+        imageSrc="/PC-Elements-11.png"
+        imageAlt="Three packages of Primal Cuts biltong"
+        imageAiHint="product packages lifestyle"
+        features={healthFeatures}
+        imagePosition="left"
+        variant="bleed"
+        className="bg-[#f0f0f0]"
+      />
 
       <FadeInScroll threshold={0.1}>
         <section className="py-12 md:py-16 bg-black">
@@ -78,16 +70,6 @@ export default function HomePage() {
         variant="bleed"
         displayMode="paragraph"
         className="bg-[#07080c] text-primary-foreground"
-      />
-
-      <Highlight
-        imageSrc="/PC-Elements-11.png"
-        imageAlt="Three packages of Primal Cuts biltong"
-        imageAiHint="product packages lifestyle"
-        features={healthFeatures}
-        imagePosition="left"
-        variant="bleed"
-        className="bg-[#f0f0f0]"
       />
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
