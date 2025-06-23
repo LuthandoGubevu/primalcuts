@@ -17,12 +17,12 @@ export default function ProductImage() {
       {/* Foreground Image container, absolutely positioned at the bottom */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
         <Image
-          src="/PC Elements-26.png"
-          alt="Primal Cuts Product Package"
+          src="/PC-Elements-25.png"
+          alt="Primal Cuts Product Packages"
           width={600}
           height={600}
           className="object-contain w-full h-auto"
-          data-ai-hint="product package"
+          data-ai-hint="product packages collage"
         />
       </div>
     </section>
