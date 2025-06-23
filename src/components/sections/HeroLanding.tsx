@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function HeroLanding() {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center">
+    <section className="relative h-screen w-full">
       {/* Background Image */}
       <Image
         src="/crocodile.jpg"
@@ -12,11 +12,6 @@ export default function HeroLanding() {
         priority
         data-ai-hint="crocodile skin texture"
       />
-
-      {/* Centered Content (Optional) - now on a lower layer */}
-      <div className="relative z-10 text-center p-4">
-        {/* You can add text or a CTA button here */}
-      </div>
 
       {/* Decorative Bottom Image - now on the top layer */}
       <div className="absolute bottom-0 left-0 w-full z-20">
