@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="bg-black">
       <div className="container mx-auto px-4 py-8 flex justify-center items-center">
         <Image
-          src="/PC-Elements-02-New-01.png"
+          src="/PC Elements-02-New-01.png"
           alt="Primal Cuts Banner"
           width={1200}
           height={400}
