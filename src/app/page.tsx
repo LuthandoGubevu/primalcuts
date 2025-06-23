@@ -68,6 +68,16 @@ export default function HomePage() {
       </FadeInScroll>
 
       <Highlight
+        imageSrc="/PC-Elements-11.png"
+        imageAlt="Three packages of Primal Cuts biltong"
+        imageAiHint="product packages lifestyle"
+        features={healthFeatures}
+        imagePosition="left"
+        variant="bleed"
+        className="bg-secondary/20"
+      />
+
+      <Highlight
         imageSrc="/black-pepper.jpg"
         imageAlt="Man seasoning strips of beef in a commercial kitchen"
         imageAiHint="chef seasoning meat"
@@ -77,16 +87,6 @@ export default function HomePage() {
         variant="bleed"
         displayMode="paragraph"
         className="bg-[#07080c] text-primary-foreground"
-      />
-
-      <Highlight
-        imageSrc="/PC-Elements-11.png"
-        imageAlt="Three packages of Primal Cuts biltong"
-        imageAiHint="product packages lifestyle"
-        features={healthFeatures}
-        imagePosition="left"
-        variant="bleed"
-        className="bg-secondary/20"
       />
       
       <FadeInScroll threshold={0.1} delay="md:delay-100">
