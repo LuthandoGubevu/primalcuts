@@ -33,6 +33,7 @@ export default function HomePage() {
         backgroundImageAlt="A pink flamingo in water"
         backgroundImageAiHint="flamingo bird"
         className="justify-end p-0"
+        overlay={false}
       >
         <Image
           src="/PC Elements-02-New-01.png"
