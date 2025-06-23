@@ -7,11 +7,16 @@ import FadeInScroll from '@/components/utils/FadeInScroll';
 import Footer from '@/components/sections/Footer';
 import ProductFeatures from '@/components/product/ProductFeatures';
 import FlavorSelector from '@/components/product/FlavorSelector';
+import ProductImage from '@/components/product/ProductImage';
 
 export default function ProductPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <main className="flex-grow pt-16">
+        <FadeInScroll threshold={0.1}>
+          <ProductImage />
+        </FadeInScroll>
+
         <FadeInScroll threshold={0.1} delay="md:delay-200">
           <NutritionFacts />
         </FadeInScroll>
