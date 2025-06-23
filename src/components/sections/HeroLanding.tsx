@@ -13,13 +13,6 @@ export default function HeroLanding() {
         data-ai-hint="crocodile skin texture"
       />
 
-      {/* Centered Content */}
-      <div className="relative z-20 text-center text-white">
-        <h1 className="text-5xl md:text-7xl font-bold font-headline text-primary-foreground">
-          Primal Cuts
-        </h1>
-      </div>
-
       {/* Decorative Bottom Image */}
       <div className="absolute bottom-0 left-0 w-full z-10">
          <Image
