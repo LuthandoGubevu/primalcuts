@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function ProductImage() {
   return (
-    <section className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full">
+    <section className="relative h-[400px] md:h-[500px] lg:h-[1080px] w-full">
       {/* Background Image */}
       <Image
         src="/flamingo.jpg"
