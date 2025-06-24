@@ -9,7 +9,7 @@ export default function ProductImage() {
       >
         {/* Background Image */}
         <Image
-          src="/flamingo.jpg"
+          src="/flamingo-new.jpg"
           alt="Flamingo background"
           fill
           className="object-cover object-center z-0"
