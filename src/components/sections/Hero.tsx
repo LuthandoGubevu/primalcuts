@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative h-[720px] w-full">
+    <section className="relative h-[500px] sm:h-[600px] lg:h-[720px] w-full">
       {/* Background Image */}
       <Image
         src="/crocodile-new.jpg"
