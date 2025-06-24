@@ -8,7 +8,7 @@ export default function Hero() {
         src="/crocodile-new.jpg"
         alt="Crocodile skin background"
         fill
-        className="object-cover z-0"
+        className="object-contain z-0"
         data-ai-hint="crocodile skin"
         priority
       />
