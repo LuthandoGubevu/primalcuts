@@ -5,14 +5,15 @@ export default function ProductImage() {
   return (
     <>
       <section
-        className="relative h-[1080px] w-full"
+        className="relative w-full"
       >
         {/* Background Image */}
         <Image
           src="/flamingo-new.jpg"
           alt="Flamingo background"
-          fill
-          className="object-cover object-center z-0"
+          width={1920}
+          height={1080}
+          className="w-full h-auto object-contain z-0"
           data-ai-hint="flamingo nature"
           priority
         />
