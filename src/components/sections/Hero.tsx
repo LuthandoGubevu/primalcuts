@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative h-[400px] md:h-[500px] lg:h-[1080px] w-full">
       {/* Background Image */}
       <Image
-        src="/crocodile.jpg"
+        src="/crocodile-new.jpg"
         alt="Crocodile skin background"
         fill
         className="object-cover z-0"
