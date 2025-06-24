@@ -14,12 +14,13 @@ export default function Hero() {
       />
       
       {/* Foreground Image container, absolutely positioned at the bottom */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 h-1/2">
+      <div className="absolute bottom-0 left-0 right-0 z-10">
         <Image
           src="/PC Elements-02-New-01.png"
           alt="Primal Cuts Banner"
-          fill
-          className="object-contain object-bottom"
+          width={1200}
+          height={400}
+          className="w-full h-auto"
           data-ai-hint="decorative banner"
         />
       </div>
